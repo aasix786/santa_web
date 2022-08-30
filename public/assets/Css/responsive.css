@@ -1,0 +1,150 @@
+@media only screen and (max-width: 768px) {
+    .main-boody {
+        width: 100%;
+    }
+    .overlay-clr {
+        padding: 10px;
+    }
+    .text5 {
+        font-size: 24px;
+    }
+    .text6 {
+        font-size: 60px;
+    }
+    .bg-santa-img {
+    width: 100%;
+    }
+    .paypal {
+        width: 85%;
+        font-size: 17px;
+    }
+.payment-method {
+    width: 85%;
+}
+.img-size {
+    height: 75px;
+}
+.santa-dp4 {
+    left: 30px;
+}
+.padding {
+    padding: 10px!important;
+}
+.santa-dp2 {
+    height: 120px;
+}
+  }
+  @media only screen and (max-width: 425px) {
+    .padding {
+        padding: 5px!important;
+    }
+.overlay-clr {
+    padding: 0px;
+}
+.santa-dp4 {
+    height: 180px;
+    width: 180px;
+}
+.main-banner {
+    padding: 10px;
+    margin-top: 30px;
+}
+.bg-santa-img {
+    height: 340px;
+}
+.text4 {
+    font-size: 55px;
+}
+.fist-section {
+    height: 285px;
+}
+.second-section {
+    height: 300px;
+    margin-top: 20px;
+}
+.top-heading1 {
+    top: -52px;
+}
+.bottom-heading1 {
+    bottom: -22px;
+}
+.top-heading {
+    top: -33px;
+}
+.bottom-heading {
+    bottom: -55px;
+}
+.text3 {
+    font-size: 16px;
+}
+.text-shade {
+    font-size: 15px;
+}
+.catch {
+    margin-top: 10px;    
+}
+.text5 {
+    font-size: 21px;
+}
+.text6 {
+    font-size: 50px;
+}
+.santa-dp2 {
+    height: 90px;
+}
+.camera-img {
+    height: 110px;
+    width: 110px;
+}
+.input-type {
+    height: 110px;
+    width: 110px;
+}
+}
+@media only screen and (max-width: 320px) {
+    .main-banner {
+        padding: 0px;
+        margin-top: 45px;
+    }
+    .santa-dp2 {
+        height: 70px;
+    }
+    .santa-dp3 {
+        height: 28px;
+        width: 28px;
+    }
+    .text4 {
+        font-size: 45px;
+    }   
+    .top-heading1 {
+        top: -45px;
+    }
+    .top-heading {
+        top: -25px;
+    } 
+    .paypal {
+        width: 95%;
+    }
+    .payment-method {
+        width: 95%;
+    }
+    .text5 {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .input-type {
+    right: 40%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .input-type {
+        right: 36%;
+        }
+}
+
+@media only screen and (max-width: 320px) {
+    .input-type {
+        right: 32%;
+        }
+}
