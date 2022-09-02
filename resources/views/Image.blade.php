@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image</title>
-    <link rel="stylesheet" href="assets/Css/style.css">
-    <link rel="stylesheet" href="assets/Css/responsive.css">
+    <link rel="stylesheet" href="{{asset('assets/Css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/Css/responsive.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
@@ -36,7 +36,7 @@
 <body>
 <div class="main-boody">
     <header class="main-header">
-        <img src="assets/imgs/header.jpeg" class="w-100" alt="">
+        <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
     </header>
     <div class="main-area">
         <div class="overlay-clr">
@@ -44,16 +44,16 @@
                 <h1 class="text3">CHOOSE A SANTA IMAGE</h1>
                 <div class="row imgs20">
                     <div class="col-md-3 col-3">
-                        <img src="assets/imgs/santa12.jpeg" class="santa-dp2 selectSanta">
+                        <img src="{{asset('assets/imgs/santa12.jpeg')}}" class="santa-dp2 selectSanta">
                     </div>
                     <div class="col-md-3 col-3 col-3">
-                        <img src="assets/imgs/santa9.jpeg" class="santa-dp2 selectSanta">
+                        <img src="{{asset('assets/imgs/santa9.jpeg')}}" class="santa-dp2 selectSanta">
                     </div>
                     <div class="col-md-3 col-3">
-                        <img src="assets/imgs/santa13.jpeg" class="santa-dp2 selectSanta">
+                        <img src="{{asset('assets/imgs/santa13.jpeg')}}" class="santa-dp2 selectSanta">
                     </div>
                     <div class="col-md-3 col-3">
-                        <img src="assets/imgs/santa12.jpeg" class="santa-dp2 selectSanta">
+                        <img src="{{asset('assets/imgs/santa12.jpeg')}}" class="santa-dp2 selectSanta">
                     </div>
                 </div>
             </div>
@@ -72,25 +72,25 @@
                         <h1 class="text-shade">RESET</h1>
                     </div>
                     <div class="col-md-4 col-4">
-                        <img src="assets/imgs/bright.png" class="santa-dp3" id="brightness-pic">
+                        <img src="{{asset('assets/imgs/bright.png')}}" class="santa-dp3" id="brightness-pic">
                         <div id="brightness"></div>
                     </div>
                     <div class="col-md-4 col-4">
-                        <img src="assets/imgs/contrast.PNG" class="santa-dp3" id="contrast-pic">
+                        <img src="{{asset('assets/imgs/contrast.PNG')}}" class="santa-dp3" id="contrast-pic">
                         <div id="contrast"></div>
                     </div>
                     <!-- <div class="col-md-4 col-4">
-                        <img src="assets/imgs/hue1.png" class="santa-dp3" id="rotate-pic">
+                        <img src="{{asset('assets/imgs/hue1.png')}}" class="santa-dp3" id="rotate-pic">
                         <div id="rotate"></div>
                     </div> -->
                     <div class="col-md-4 col-4">
-                        <img src="assets/imgs/reset.png" class="santa-dp3" id="reset">
+                        <img src="{{asset('assets/imgs/reset.png')}}" class="santa-dp3" id="reset">
                     </div>
                 </div>
             </div>
             <div class="bg-santa-img showimg w-100">
                 <!-- <div id="draggable" class="ui-widget-content">
-                    <img src="assets/imgs/santa12.jpeg"  id="santaImg" class="image santa-dp4 border-class">
+                    <img src="{{asset('assets/imgs/santa12.jpeg')}}"  id="santaImg" class="image santa-dp4 border-class">
                 </div> -->
                 <div id="container">
                     <div id="canvas-border-hide">
@@ -103,12 +103,12 @@
                     <div data-clickable="true" class="topRight"></div>
                     <div data-clickable="true" class="bottomLeft"></div>
                     </div>
-                    <img src="assets/imgs/santa12.jpeg" id="santaImg"  class="image santa-dp4 border-class" alt="missing">
+                    <img src="{{asset('assets/imgs/santa12.jpeg')}}" id="santaImg"  class="image santa-dp4 border-class" alt="missing">
                 </div>
             </div>
 
             <div class="catch radius" id="img-button-section">
-                <button type="button" class="btn text5 red bg-transparent tap-btn">TAPE HERE TO SAVE IMAGE</button>
+                <button type="button" class="btn text5 red bg-transparent tap-btn">TAP HERE TO SAVE IMAGE</button>
             </div>
 
             <div class="save-img" id="save-img-section">
@@ -177,6 +177,8 @@
             html2canvas(document.querySelector('.bg-santa-img')).then(canvas => {
                 document.getElementById('save-img-section').appendChild(canvas);
 
+                $('#save-img-section').hide();
+
 
 
                 var canvas = $("canvas")[0];
@@ -201,7 +203,8 @@
                 dataURL = canvas.toDataURL("image/png");
                 $('#download_image').val(dataURL);
 
-                $("#formImg").submit();
+                // $("#formImg").submit();
+                window.location.href = "http://santa.onismsolution.com/paypal";
             //console.log(dataURL);
 
 

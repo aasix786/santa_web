@@ -34,7 +34,6 @@ class Homecontroller extends Controller
             return redirect()->route('paypal',['a'=>$customer_image->image]);
 
         }
-
         if($request->hasFile('image'))
         {
            $file= $request->file('image');
@@ -44,8 +43,9 @@ class Homecontroller extends Controller
             $customer_image->save();
             return redirect()->route('paypal',['a'=>$customer_image->image]);
         }
-
-
+        $customer_image->save();
+       // return view('image',['image'=>$customer_image->image]);
+        return redirect()->route('image',['a'=>$customer_image->image]);
     }
     public function paypal()
     {

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/Css/style.css">
-    <link rel="stylesheet" href="assets/Css/responsive.css">
+    <link rel="stylesheet" href="{{asset('assets/Css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/Css/responsive.css')}}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
       function readURL(input) {
@@ -27,13 +27,13 @@
     
     <div class="main-boody">
         <header class="main-header">
-            <img src="assets/imgs/header.jpeg" class="w-100" alt="">
+            <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
         </header>
         <div class="main-area">
             <div class="overlay-clr">
                 <div class="itro-text padding text-black">
                 <h1 class="text3">CLICK THE CAMERA ICON TO TAKE OR CHOOSE A PHOTO OF YOUR CHRISTMAS TREE</h1>
-                <img id="blah" src="assets/imgs/camera1.png" class="camera-img" alt="" />
+                <img id="blah" src="{{asset('assets/imgs/camera1.png')}}" class="camera-img" alt="" />
                 <input class="input-type" type='file' onchange="readURL(this);" />
             </div>
              

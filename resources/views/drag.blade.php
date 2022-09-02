@@ -21,7 +21,7 @@
  
 <div id="draggable" class="ui-widget-content">
   <span>Drag me around</span>
-  <img src="assets/imgs/bright.png" alt="">
+  <img src="{{asset('assets/imgs/bright.png')}}" alt="">
 </div>
  
  
