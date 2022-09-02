@@ -225,6 +225,7 @@ font-size: 45px!important;
         background-color: #232020a6;
         background-blend-mode: darken;
         position: relative;
+        overflow: hidden;
     }
     .santa-dp2 {
         height: 160px;
@@ -439,4 +440,20 @@ font-size: 45px!important;
                 width: 100%;
                 height: 100%;
                 
+            }
+            @import url(https://fonts.googleapis.com/css?family=Denk+One);
+            .rotingtxt {
+                -webkit-transform: rotate(331deg);
+                -moz-transform: rotate(331deg);
+                -o-transform: rotate(331deg);
+                transform: rotate(338deg);
+                font-size: 65px;
+                color: #d6d6d6ab;
+                font-family: 'Denk One', sans-serif;
+                text-transform: uppercase;
+                font-weight: 900;
+                top: -43px;
+                line-height: 144px;
+                position: absolute;
+                right: -34px;
             }

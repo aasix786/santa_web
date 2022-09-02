@@ -51,9 +51,6 @@
                             <div class="col-md-4 col-4 left-border">
                                 <h1 class="text-shade">CONTRAST</h1>
                             </div>
-                            <!-- <div class="col-md-4 col-4 left-border">
-                                <h1 class="text-shade">HUE</h1>
-                            </div> -->
                             <div class="col-md-4 col-4 left-border">
                                 <h1 class="text-shade">RESET</h1>
                             </div>
@@ -62,19 +59,15 @@
                                 <div id="brightness"></div>
                             </div>
                             <div class="col-md-4 col-4">
-                                <img src="assets/imgs/contrast.PNG" class="santa-dp3" id="contrast-pic"> 
+                                <img src="assets/imgs/contrast.PNG" class="santa-dp3" id="contrast-pic">
                                 <div id="contrast"></div>
                             </div>
-                            <!-- <div class="col-md-4 col-4">
-                                <img src="assets/imgs/hue1.png" class="santa-dp3" id="rotate-pic">
-                                <div id="rotate"></div>
-                            </div> -->
                             <div class="col-md-4 col-4">
                                 <img src="assets/imgs/reset.png" class="santa-dp3" id="reset">
                             </div>
                         </div>
                     </div>
-                    <div class="bg-santa-img showimg w-100">
+                    <div class="bg-santa-img showimg w-100" id="my-node">
                         <!-- <div id="draggable" class="ui-widget-content">
                             <img src="assets/imgs/santa12.jpeg"  id="santaImg" class="image santa-dp4 border-class">
                         </div> -->
@@ -91,7 +84,7 @@
                         </div>
                     </div>
                     <div class="catch radius">
-                        <a href="paypal.html" class="text5 red">TAPE HERE TO SAVE IMAGE</a>
+                        <a href="{{url('paypal')}}" class="text5 red">TAPE HERE TO SAVE IMAGE</a>
                     </div>
                     <div class="notes">
                         <h1 class="text3">NOTES:
@@ -108,10 +101,32 @@
 
             </div>
         </div>
-        
+        <div>
+            <button id="btn">Preview</button>
+            <img src="" id="image1" alt="">
+        </div>
+        <script src="https://cdn.bootcss.com/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+        <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
+        <script>
+            var node = document.getElementById('my-node');
+                var btn = document.getElementById('btn');
+                btn.onclick = function() {
+                $("#my-node #container>div").hide();
+                domtoimage.toBlob(document.getElementById('my-node'))
+                    .then(function(blob) {
+                        console.log(blob);
+                        const blobUrl = URL.createObjectURL(blob)
+                        console.log(blobUrl)
+                        document.getElementById('image1').src=blobUrl
+                        $("#my-node #container>div").show();
+                    // window.saveAs(blob, 'my-node.png');
+                    });
+                }
+
+        </script>
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-        
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -148,29 +163,29 @@
         $('#brightness-pic').click(function(){
         $('#brightness').show()
         $('#brightness-pic').hide()
-  }); 
+  });
   $('#contrast-pic').click(function(){
         $('#contrast').show()
         $('#contrast-pic').hide()
-  }); 
+  });
   $('#rotate-pic').click(function(){
         $('#rotate').show()
         $('#rotate-pic').hide()
   });
 
-}); 
+});
             $(document).ready(function() {
                 $('.selectSanta').on('click', function() {
                    let img = $(this).attr("src");
                    $("#santaImg").attr("src",img);
                 });
-            }); 
-            
+            });
+
             // $( function() {
             //     $('#draggable').resizable();
             //     $( "#draggable" ).draggable();
             // } );
-               
+
         </script>
          <script>
             function blur() {
@@ -205,7 +220,7 @@
                 $("#brightness").slider("value", 0);
             });
         </script>
-        
+
 
         <script>
             var $container = document.getElementById("container");

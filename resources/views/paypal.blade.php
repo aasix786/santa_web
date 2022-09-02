@@ -35,7 +35,16 @@
                         <h1 class="text6">$5.00</h1>
                     </div>
                     <div class="bg-santa-img">
-                        <img src="assets/imgs/santa12.jpeg"  class="santa-dp4">     
+                        <img src="assets/imgs/santa12.jpeg"  class="santa-dp4">    
+                        <p class="rotingtxt">we caught santa we caught santa we caught santa we caught santa we caught santa  </p>
+                            
+                    </div>
+                    <div class="container d-none">
+                        <div class="bg-img-setion">     
+                            <div class="santabg-img">
+                                <p class="rotingtxt">we caught santa we caught santa we caught santa we caught santa we caught santa  </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="paypal">
                         <!-- <i class="fa-brands fa-paypal"></i> -->
@@ -59,7 +68,7 @@
                         <div class=""></div>
                            </div>
                     <div class="catch radius">
-                        <a href="Image.html" class="red text5">OR RETURN TO EDITOR</a>
+                        <a href="{{url('image')}}" class="red text5">OR RETURN TO EDITOR</a>
                         </div>
                   </div>    
             </div>      

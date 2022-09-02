@@ -28,7 +28,6 @@
             </header>
             <div class="main-area">
                 <div class="overlay-clr">
-
                     <div class="itro-text">
                         <h1 class="text3">INTRO PARAGRAGH [EDITABLE]</h1>
                         <h1>" "</h1>
@@ -72,7 +71,7 @@
                 <input class="input-type" type='file' onchange="readURL(this);" />
                 </div>
           <button type="button" class="btn cancel-btn" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary save-btn"> <a href="Image.html" class="text-white">Continue</a></button>
+          <button type="button" class="btn btn-primary save-btn"> <a href="{{url('image')}}" class="text-white">Continue</a></button>
         </div>
       </div>
     </div>
