@@ -10,7 +10,7 @@ class IntroductionController extends Controller
 {
     public function introduction(Request $request)
     {
-        $intro  = Introduction::select('description')->first();
-        return response()->json(['success'=>true,'description'=>$intro->description],200) ;
+        $intro  = Introduction::select('description','custom_text')->first();
+        return response()->json(['success'=>true,'description'=>$intro->description,'custom-text'=>$intro->custom_text],200) ;
     }
 }

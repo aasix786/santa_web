@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\IntroductionController;
 use App\Http\Controllers\Api\ImagesController;
-
+use App\Http\Controllers\api\PayPalController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -22,3 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('introduction',[IntroductionController::class,'introduction']);
 Route::get('images',[ImagesController::class,'images']);
+Route::get('payment', [PayPalController::class,'payment'])->name('payment');
+Route::get('cancel', [PayPalController::class,'cancel'])->name('payment.cancel');
+Route::get('payment/success', [PayPalController::class,'success'])->name('payment.success');
+

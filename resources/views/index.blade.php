@@ -30,9 +30,8 @@
                 <div class="overlay-clr">
 
                     <div class="itro-text">
-                        <h1 class="text3">INTRO PARAGRAGH [EDITABLE]</h1>
-                        <h1>" "</h1>
-                        <h1>" "</h1>
+                        <h1 class="text3">INTRO PARAGRAGH</h1>
+                        <h3>{{$introduction->description}}</h3>
                     </div>
                     <div class="main-banner">
                         <div class="fist-section">
@@ -60,21 +59,23 @@
 <button type="button" class="btn red text5 bg-transparent w-100" data-toggle="modal" data-target="#exampleModalCenter">
     CATCH SANTA NOW!
   </button>
-  
+
   <!-- Modal -->
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-    
+<form method="post" action="{{route('store.image')}}" enctype="multipart/form-data">
+    @csrf
         <div class="modal-body">
             <div class="add-img">
                 <img id="blah" src="assets/imgs/upload.png" class="w-100" alt="" />
-                <input class="input-type" type='file' onchange="readURL(this);" />
+                <input class="input-type" type='file' name="image" onchange="readURL(this);" />
                 </div>
           <button type="button" class="btn cancel-btn" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary save-btn"> <a href="Image.html" class="text-white">Continue</a></button>
+          <button type="submit" class="btn btn-primary save-btn"> Continue</button>
         </div>
-      </div>
+</form>
+      </div>c
     </div>
   </div>
                     </div>
@@ -87,12 +88,12 @@
             function readURL(input) {
              if (input.files && input.files[0]) {
                  var reader = new FileReader();
-      
+
                  reader.onload = function (e) {
                   //    window.location.replace("image.html");
                      $('#blah').attr('src', e.target.result);
                  };
-      
+
                  reader.readAsDataURL(input.files[0]);
              }
          }
