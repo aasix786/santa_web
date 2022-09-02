@@ -203,8 +203,8 @@
                 dataURL = canvas.toDataURL("image/png");
                 $('#download_image').val(dataURL);
 
-                // $("#formImg").submit();
-                window.location.href = "http://santa.onismsolution.com/paypal";
+                $("#formImg").submit();
+              //  window.location.href = "http://santa.onismsolution.com/paypal";
             //console.log(dataURL);
 
 

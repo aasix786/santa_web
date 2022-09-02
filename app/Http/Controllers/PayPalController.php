@@ -3,14 +3,18 @@
 namespace App\Http\Controllers;
 
 //use Illuminate\Support\Facades\Request;
+use App\Models\CustomerImage;
+use Illuminate\Support\Facades\Response;
 use Srmklive\PayPal\Services\ExpressCheckout;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 
 class PayPalController extends Controller
 {
-    public function payment()
+    public function payment(Request $request)
     {
+
+
         $data = [];
         $data['items']=
             [
@@ -23,7 +27,7 @@ class PayPalController extends Controller
             ];
         $data['invoice_id'] = 1;
         $data['invoice_description'] = "Order #{$data['invoice_id']} Invoice";
-        $data['return_url'] = route('payment.success');
+        $data['return_url'] = route('payment.success',['a'=>$request->a]);
         $data['cancel_url'] = route('payment.cancel');
         $data['total'] = 5;
         $provider = new ExpressCheckout;
@@ -44,7 +48,13 @@ class PayPalController extends Controller
         $provider = new ExpressCheckout;
         $response = $provider->getExpressCheckoutDetails($request->token);
         if (in_array(strtoupper($response['ACK']), ['SUCCESS', 'SUCCESSWITHWARNING'])) {
-            dd('Your payment was successfully. You can create success page here.');
+            $customer_image = CustomerImage::where('image',$request->a)->first();
+            $filepath = base_path().'/public/'.($customer_image->image);
+        $a=   Response::download($filepath);
+         return response()->redirectTo('/');
+
+           // return
+
         }
         dd('Something is wrong.');
     }
