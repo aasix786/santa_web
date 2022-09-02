@@ -54,7 +54,6 @@ class PayPalController extends Controller
          return response()->redirectTo('/');
 
            // return
-
         }
         dd('Something is wrong.');
     }
