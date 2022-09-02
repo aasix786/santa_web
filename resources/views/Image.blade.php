@@ -84,7 +84,7 @@
                         </div>
                     </div>
                     <div class="catch radius">
-                        <a href="{{url('paypal')}}" class="text5 red">TAPE HERE TO SAVE IMAGE</a>
+                        <a href="{{url('paypal')}}" class="text5 red">CLICK HERE TO SAVE IMAGE</a>
                     </div>
                     <div class="notes">
                         <h1 class="text3">NOTES:
