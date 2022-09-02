@@ -214,7 +214,7 @@ font-size: 45px!important;
         height: 100px;
         border-radius: 7px;
     }
-    /*.bg-santa-img {
+    .bg-santa-img {
         background-image: url(../imgs/santa5.jpeg);
         width: 75%;
         border: 3px solid gray;
@@ -225,7 +225,8 @@ font-size: 45px!important;
         background-color: #232020a6;
         background-blend-mode: darken;
         position: relative;
-    }*/
+        overflow: hidden;
+    }
     .santa-dp2 {
         height: 160px;
         width: 100%;
@@ -255,8 +256,8 @@ font-size: 45px!important;
         width: 280px;
         /* position: absolute; */
         /* bottom: 0; */
-        left: 115px;
-        top: 60px;
+        left: 115px; 
+        top: 60px;  
         object-fit: contain;
         /* padding: 4px; */
     }
@@ -284,12 +285,18 @@ font-size: 45px!important;
         width: 210px;
     }
     .input-type {
-        height: 210px;
-        width: 210px;
         position: absolute;
-        right: 42%;
+        right: 21%;
         opacity: 0;
         cursor: pointer;
+    }
+    .uploadbtn{
+        position: relative;
+        padding: 4px 19px;
+        border: navajowhite;
+        color: red;
+        font-size: 18px;
+        letter-spacing: 1px;
     }
     .select-options {
         background-color: white;
@@ -309,7 +316,7 @@ font-size: 45px!important;
     .showimg img{
         cursor: pointer;
     }
-
+    
             #myCanvas {
                 width: 300px;
                 float: left;
@@ -371,36 +378,36 @@ font-size: 45px!important;
             .bottomRight {
                 display: block;
                 position: absolute;
-                height: 8px;
-                width: 8px;
-                background: white;
+                height: 2px;
+                width: 2px;
+                background: #9be1f899;
                 right: 0;
                 bottom: 0;
             }
             .bottomLeft {
                 display: block;
                 position: absolute;
-                height: 8px;
-                width: 8px;
-                background: white;
+                height: 2px;
+                width: 2px;
+                background: #9be1f899;
                 left: 0;
                 bottom: 0;
             }
             .topLeft {
                 display: block;
                 position: absolute;
-                height: 8px;
-                width: 8px;
-                background: white;
+                height: 2px;
+                width: 2px;
+                background: #9be1f899;
                 left: 0;
                 top: 0;
             }
             .topRight {
                 display: block;
                 position: absolute;
-                height: 8px;
-                width: 8px;
-                background: white;
+                height: 2px;
+                width: 2px;
+                background: #9be1f899;
                 right: 0;
                 top: 0;
             }
@@ -409,14 +416,14 @@ font-size: 45px!important;
                 position: absolute;
                 height: 2px;
                 width: 100%;
-                background: #ffffff4f;
+                background: #9be1f899;
             }
             .left {
                 display: block;
                 position: absolute;
                 height: 100%;
                 width: 2px;
-                background: #ffffff4f;
+                background: #9be1f899;
                 left: 0;
             }
             .right {
@@ -424,7 +431,7 @@ font-size: 45px!important;
                 position: absolute;
                 height: 100%;
                 width: 2px;
-                background: #ffffff4f;
+                background: #9be1f899;
                 right: 0;
             }
             .bottom {
@@ -432,11 +439,45 @@ font-size: 45px!important;
                 position: absolute;
                 height: 2px;
                 width: 100%;
-                background: #ffffff4f;
+                background: #9be1f899;
                 bottom: 0;
             }
             #container img {
                 width: 100%;
                 height: 100%;
-
+                
+            }
+            @import url(https://fonts.googleapis.com/css?family=Denk+One);
+            .rotingtxt {
+                -webkit-transform: rotate(331deg);
+                -moz-transform: rotate(331deg);
+                -o-transform: rotate(331deg);
+                transform: rotate(338deg);
+                font-size: 65px;
+                color: #d6d6d6ab;
+                font-family: 'Denk One', sans-serif;
+                text-transform: uppercase;
+                font-weight: 900;
+                top: -43px;
+                line-height: 144px;
+                position: absolute;
+                right: -34px;
+            }
+            
+            .rotingtxt1 {
+                -webkit-transform: rotate(331deg);
+                -moz-transform: rotate(331deg);
+                -o-transform: rotate(331deg);
+                transform: rotate(345deg);
+                font-size: 61px;
+                color: #d6d6d6ab;
+                font-family: 'Denk One', sans-serif;
+                text-transform: uppercase;
+                font-weight: 900;
+                top: -43px;
+                line-height: 169px;
+                position: absolute;
+                right: -25px;
+                text-align: justify;
+                vertical-align: text-top;
             }

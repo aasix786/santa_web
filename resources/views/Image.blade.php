@@ -92,6 +92,8 @@
                 <!-- <div id="draggable" class="ui-widget-content">
                     <img src="{{asset('assets/imgs/santa12.jpeg')}}"  id="santaImg" class="image santa-dp4 border-class">
                 </div> -->
+                <p class="rotingtxt1">we caught santa we caught santa we caught santa we caught santa we caught santa  </p>
+                            
                 <div id="container">
                     <div id="canvas-border-hide">
                     <div class="right"></div>

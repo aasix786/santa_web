@@ -36,9 +36,14 @@
                         <img src="{{asset('assets/imgs/santa12.jpeg')}}" class="santa-dp">
                         <h1 class="text6">$5.00</h1>
                     </div>
-                    <div class="bg-santa-img">
+                    <!-- <div class="bg-santa-img">
                         <img src="{{asset('assets/imgs/santa12.jpeg')}}"  class="santa-dp4">
-                    </div>
+                    </div> -->
+                    <div class="bg-santa-img">
+                        <img src="assets/imgs/santa12.jpeg"  class="santa-dp4">    
+                            <p class="rotingtxt">we caught santa we caught santa we caught santa we caught santa we caught santa  </p>
+                                
+                        </div>
                     <div class="paypal">
                         <!-- <i class="fa-brands fa-paypal"></i> -->
                      <a href="{{route('payment')}}">   <i class="fab fa-paypal"></i>
