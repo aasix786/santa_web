@@ -75,7 +75,7 @@
           <button type="submit" class="btn btn-primary save-btn"> Continue</button>
         </div>
 </form>
-      </div>c
+      </div>
     </div>
   </div>
                     </div>
