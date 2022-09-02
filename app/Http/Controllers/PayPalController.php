@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 //use Illuminate\Support\Facades\Request;
 use App\Models\CustomerImage;
 //use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\URL;
 use Srmklive\PayPal\Services\ExpressCheckout;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
@@ -50,12 +51,13 @@ class PayPalController extends Controller
         $response = $provider->getExpressCheckoutDetails($request->token);
         if (in_array(strtoupper($response['ACK']), ['SUCCESS', 'SUCCESSWITHWARNING'])) {
             $customer_image = CustomerImage::where('image',$request->a)->first();
-            $filepath = base_path().'/public/'.($customer_image->image);
-        $a=   Response::download($filepath);
+            $url=URL::to('/');
+            $filepath = public_path($customer_image->image);
+            return Response::download($filepath);
+            echo "<script>";
+            echo "alert('hello');";
+            echo "</script>";
 
-         return response()->redirectTo('/');
-
-           // return
         }
         dd('Something is wrong.');
     }
