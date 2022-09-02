@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 //use Illuminate\Support\Facades\Request;
 use App\Models\CustomerImage;
-use Illuminate\Support\Facades\Response;
+//use Illuminate\Support\Facades\Response;
 use Srmklive\PayPal\Services\ExpressCheckout;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
-
+use File;
+use Response;
 class PayPalController extends Controller
 {
     public function payment(Request $request)
@@ -51,6 +52,7 @@ class PayPalController extends Controller
             $customer_image = CustomerImage::where('image',$request->a)->first();
             $filepath = base_path().'/public/'.($customer_image->image);
         $a=   Response::download($filepath);
+
          return response()->redirectTo('/');
 
            // return
