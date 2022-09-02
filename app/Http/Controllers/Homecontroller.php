@@ -49,7 +49,7 @@ class Homecontroller extends Controller
         }
         $customer_image->save();
        // return view('image',['image'=>$customer_image->image]);
-        return redirect()->route('paypal',['a'=>$customer_image->image]);
+        return redirect()->route('image',['a'=>$customer_image->image]);
     }
     public function paypal()
     {

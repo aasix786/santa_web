@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paypal</title>
-    <link rel="stylesheet" href="assets/Css/style.css">
-    <link rel="stylesheet" href="assets/Css/responsive.css">
+    <link rel="stylesheet" href="{{asset('assets/Css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/Css/responsive.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
@@ -22,7 +22,7 @@
         <header class="main-header">
             <!-- <h1 class="text1">WE CAUGHT SANTA!</h1>
             <h1 class="text2">Custom Pictures of Santa under YOUR TREE!</h1> -->
-            <img src="assets/imgs/header.jpeg" class="w-100" alt="">
+            <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
             </header>
 
         <div class="main-area">
@@ -33,11 +33,11 @@
 
                 </div>
                     <div class="santa-profile">
-                        <img src="assets/imgs/santa12.jpeg" class="santa-dp">
+                        <img src="{{asset('assets/imgs/santa12.jpeg')}}" class="santa-dp">
                         <h1 class="text6">$5.00</h1>
                     </div>
                     <div class="bg-santa-img">
-                        <img src="assets/imgs/santa12.jpeg"  class="santa-dp4">
+                        <img src="{{asset('assets/imgs/santa12.jpeg')}}"  class="santa-dp4">
                     </div>
                     <div class="paypal">
                         <!-- <i class="fa-brands fa-paypal"></i> -->
@@ -53,15 +53,15 @@
                         PayPal CREDIT
                        </div>
                        <div class="payment-method">
-                        <div class="payment-cards"><img src="assets/imgs/card1.png" class="img-size"></div>
-                        <div class="payment-cards"><img src="assets/imgs/card2.png" class="img-size"></div>
-                        <div class="payment-cards"><img src="assets/imgs/card3.png" class="img-size"></div>
-                        <div class="payment-cards"><img src="assets/imgs/card4.png" class="img-size"></div>
+                        <div class="payment-cards"><img src="{{asset('assets/imgs/card1.png')}}" class="img-size"></div>
+                        <div class="payment-cards"><img src="{{asset('assets/imgs/card2.png')}}" class="img-size"></div>
+                        <div class="payment-cards"><img src="{{asset('assets/imgs/card3.png')}}" class="img-size"></div>
+                        <div class="payment-cards"><img src="{{asset('assets/imgs/card4.png')}}" class="img-size"></div>
                         <div class=""></div>
                         <div class=""></div>
                            </div>
                     <div class="catch radius">
-                        <a href="Image.html" class="red text5">OR RETURN TO EDITOR</a>
+                        <a href="{{url('image')}}" class="red text5">OR RETURN TO EDITOR</a>
                         </div>
                   </div>
             </div>

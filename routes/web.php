@@ -24,7 +24,7 @@ use App\Http\Controllers\PayPalController;
             return view('effects');
         });
         Route::get('/image', function () {
-            return view('image');
+            return view('Image');
         })->name('image');
         Route::get('/paypal', [Homecontroller::class,'paypal'])->name('paypal');
         Route::get('/plugin', function () {
@@ -34,7 +34,7 @@ use App\Http\Controllers\PayPalController;
             return view('resize');
         });
         Route::get('/upload', function () {
-            return view('upload');
+            return view('Upload');
         })->name('upload-image');
 
         Route::get('/',[Homecontroller::class,'home']);

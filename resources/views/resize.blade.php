@@ -114,7 +114,7 @@
             <div data-clickable="true" class="topLeft"></div>
             <div data-clickable="true" class="topRight"></div>
             <div data-clickable="true" class="bottomLeft"></div>
-            <img src="assets/imgs/santa1.jpg" alt="">
+            <img src="{{asset('assets/imgs/santa1.jpg')}}" alt="">
         </div>
 
 

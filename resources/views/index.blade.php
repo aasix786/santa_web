@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
-        <link rel="stylesheet" href="assets/Css/style.css">
-        <link rel="stylesheet" href="assets/Css/responsive.css">
+        <link rel="stylesheet" href="{{asset('assets/Css/style.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/Css/responsive.css')}}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
@@ -24,7 +24,7 @@
                 class="main-header">
                 <!-- <h1 class="text1">WE CAUGHT SANTA!</h1>
                           <h1 class="text2">Custom Pictures of Santa under YOUR TREE!</h1> -->
-                <img src="assets/imgs/header.jpeg" class="w-100" alt="">
+                <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
             </header>
             <div class="main-area">
                 <div class="overlay-clr">
@@ -68,7 +68,7 @@
     @csrf
         <div class="modal-body">
             <div class="add-img">
-                <img id="blah" src="assets/imgs/upload.png" class="w-100" alt="" />
+                <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="w-100" alt="" />
                 <input class="input-type" type='file' name="image" onchange="readURL(this);" />
                 </div>
           <button type="button" class="btn cancel-btn" data-dismiss="modal">Cancel</button>

@@ -29,10 +29,10 @@
     <body>
         <!-- Main Wrapper -->
         <div class="imgs20">
-            <img src="assets/imgs/santa1.jpg" class="selectSanta">
-            <img src="assets/imgs/santa2.jpg" class="selectSanta">
-            <img src="assets/imgs/santa3.jpg" class="selectSanta">
-            <img src="assets/imgs/santa4.jpg" class="selectSanta">
+            <img src="{{asset('assets/imgs/santa1.jpg')}}" class="selectSanta">
+            <img src="{{asset('assets/imgs/santa2.jpg')}}" class="selectSanta">
+            <img src="{{asset('assets/imgs/santa3.jpg')}}" class="selectSanta">
+            <img src="{{asset('assets/imgs/santa4.jpg')}}" class="selectSanta">
         </div>
         <div class="showimg">
             <div id="draggable" class="ui-widget-content">
