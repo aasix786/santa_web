@@ -67,12 +67,13 @@
 <form method="post" action="{{route('store.image')}}" enctype="multipart/form-data">
     @csrf
         <div class="modal-body">
-            <div class="add-img">
-                <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="w-100" alt="" />
+            <div class="add-img pt-2">
+                <button class="uploadbtn">Click here to upload </button>
                 <input class="input-type" type='file' name="image" onchange="readURL(this);" />
+                <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="py-3 w-100" alt="" />
                 </div>
-          <button type="button" class="btn cancel-btn" data-dismiss="modal">Cancel</button>
-          <button type="submit" class="btn btn-primary save-btn"> Continue</button>
+          <button type="button" class="btn cancel-btn mb-2" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary save-btn mb-2"> Continue</button>
         </div>
 </form>
       </div>
