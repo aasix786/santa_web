@@ -46,7 +46,7 @@
                         </div>
                     <div class="paypal">
                         <!-- <i class="fa-brands fa-paypal"></i> -->
-                     <a href="{{route('payment')}}">   <i class="fab fa-paypal"></i>
+                     <a href="{{route('payment',['a'=>request()->query("a")])}}">   <i class="fab fa-paypal"></i>
                      Pay<span class="sky-clr">Pal</span></a>
                     </div>
                     <div class="paypal text-white venmo">

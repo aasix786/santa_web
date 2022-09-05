@@ -30,26 +30,19 @@ class Homecontroller extends Controller
             $file =  'public/customerImages/' . uniqid() . '.png';
             $success = file_put_contents($file, $data);
             $customer_image->image = $file;
-
+            $customer_image->save();
+            return redirect()->route('paypal',['a'=>$customer_image->image]);
         }
-        //$image = $request->download_image;  // your base64 encoded
-
-       // $success = file_put_contents($file, $data);
-
-
-
-
-
         if($request->hasFile('image'))
         {
            $file= $request->file('image');
            $filename= date('YmdHi').$file->getClientOriginalName();
            $file->move(public_path('public/customerImages'),$filename);
             $customer_image->image = 'public/customerImages'.'/'.$filename;
+            $customer_image->save();
+            return redirect()->route('image',['a'=>$customer_image->image]);
         }
-        $customer_image->save();
-       // return view('image',['image'=>$customer_image->image]);
-        return redirect()->route('image',['a'=>$customer_image->image]);
+
     }
     public function paypal()
     {

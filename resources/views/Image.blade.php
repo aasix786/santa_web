@@ -82,7 +82,7 @@
             </div>
             <div class="bg-santa-img showimg w-100">
                 <p class="rotingtxt1">we caught santa we caught santa we caught santa we caught santa we caught santa  </p>
-                            
+
                 <div id="container">
                     <div id="canvas-border-hide">
                     <div class="right"></div>
@@ -187,12 +187,23 @@
                 dataURL = canvas.toDataURL("image/png");
                 $('#download_image').val(dataURL);
 
-                window.location.href = "http://santa.onismsolution.com/paypal";
+// <<<<<<< HEAD
+//                 window.location.href = "http://santa.onismsolution.com/paypal";
+// =======
+                $("#formImg").submit();
+              //  window.location.href = "http://santa.onismsolution.com/paypal";
+            //console.log(dataURL);
+// >>>>>>> 2447743195443afe04a72a883657336cee20cdd4
             });
 
         }
         $('#img-button-section').click(function(){
             $('#canvas-border-hide').hide();
+// <<<<<<< HEAD
+// =======
+            $('.rotingtxt1').hide();
+          //  $('#save-img-section').show()
+// >>>>>>> 2447743195443afe04a72a883657336cee20cdd4
             download()
         });
 
