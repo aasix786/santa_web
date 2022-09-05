@@ -29,7 +29,7 @@ class PayPalController extends Controller
         $response = $provider->setExpressCheckout($data);
         $response = $provider->setExpressCheckout($data,true);
         // return redirect($response['paypal_link']);
-        return response()->json(['success'=>true,'paypal link'=>$response['paypal_link']]);
+        return response()->json(['success'=>true,'paypal_link'=>$response['paypal_link']]);
     }
     public function cancel()
 

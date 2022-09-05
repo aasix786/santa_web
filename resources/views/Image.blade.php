@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,16 +43,16 @@
                 <h1 class="text3">CHOOSE A SANTA IMAGE</h1>
                 <div class="row imgs20">
                     <div class="col-md-3 col-3">
-                        <img src="{{asset('assets/imgs/santa12.jpeg')}}" class="santa-dp2 selectSanta">
+                        <img src="{{asset('assets/imgs/santa12.png')}}" class="santa-dp2 selectSanta">
                     </div>
                     <div class="col-md-3 col-3 col-3">
-                        <img src="{{asset('assets/imgs/santa9.jpeg')}}" class="santa-dp2 selectSanta">
+                        <img src="{{asset('assets/imgs/santa9.png')}}" class="santa-dp2 selectSanta">
                     </div>
                     <div class="col-md-3 col-3">
-                        <img src="{{asset('assets/imgs/santa13.jpeg')}}" class="santa-dp2 selectSanta">
+                        <img src="{{asset('assets/imgs/santa13.png')}}" class="santa-dp2 selectSanta">
                     </div>
                     <div class="col-md-3 col-3">
-                        <img src="{{asset('assets/imgs/santa12.jpeg')}}" class="santa-dp2 selectSanta">
+                        <img src="{{asset('assets/imgs/santa12.png')}}" class="santa-dp2 selectSanta">
                     </div>
                 </div>
             </div>
@@ -65,9 +64,6 @@
                     <div class="col-md-4 col-4 left-border">
                         <h1 class="text-shade">CONTRAST</h1>
                     </div>
-                    <!-- <div class="col-md-4 col-4 left-border">
-                        <h1 class="text-shade">HUE</h1>
-                    </div> -->
                     <div class="col-md-4 col-4 left-border">
                         <h1 class="text-shade">RESET</h1>
                     </div>
@@ -79,19 +75,14 @@
                         <img src="{{asset('assets/imgs/contrast.PNG')}}" class="santa-dp3" id="contrast-pic">
                         <div id="contrast"></div>
                     </div>
-                    <!-- <div class="col-md-4 col-4">
-                        <img src="{{asset('assets/imgs/hue1.png')}}" class="santa-dp3" id="rotate-pic">
-                        <div id="rotate"></div>
-                    </div> -->
                     <div class="col-md-4 col-4">
                         <img src="{{asset('assets/imgs/reset.png')}}" class="santa-dp3" id="reset">
                     </div>
                 </div>
             </div>
             <div class="bg-santa-img showimg w-100">
-                <!-- <div id="draggable" class="ui-widget-content">
-                    <img src="{{asset('assets/imgs/santa12.jpeg')}}"  id="santaImg" class="image santa-dp4 border-class">
-                </div> -->
+                <p class="rotingtxt1">we caught santa we caught santa we caught santa we caught santa we caught santa  </p>
+
                 <div id="container">
                     <div id="canvas-border-hide">
                     <div class="right"></div>
@@ -103,17 +94,15 @@
                     <div data-clickable="true" class="topRight"></div>
                     <div data-clickable="true" class="bottomLeft"></div>
                     </div>
-                    <img src="{{asset('assets/imgs/santa12.jpeg')}}" id="santaImg"  class="image santa-dp4 border-class" alt="missing">
+                    <img src="{{asset('assets/imgs/santa12.png')}}" id="santaImg"  class="image santa-dp4 border-class" alt="missing">
                 </div>
             </div>
 
             <div class="catch radius" id="img-button-section">
-                <button type="button" class="btn text5 red bg-transparent tap-btn">TAP HERE TO SAVE IMAGE</button>
+                <button type="button" class="btn text5 red bg-transparent tap-btn">CLICK HERE TO SAVE IMAGE</button>
             </div>
 
-            <div class="save-img" id="save-img-section">
-
-            </div>
+            <div class="save-img" id="save-img-section"></div>
             <form id="formImg" method="post" action="{{route('store.image')}}">
                 @csrf
                 <input type="hidden" name="download_image" id="download_image">
@@ -145,7 +134,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/utils/Draggable.min.js"></script>
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 <script>
     var dataURL;
     $(document).ready(function(){
@@ -178,12 +166,8 @@
                 document.getElementById('save-img-section').appendChild(canvas);
 
                 $('#save-img-section').hide();
-
-
-
                 var canvas = $("canvas")[0];
                 var context = $("canvas")[0].getContext('2d');
-                // var context = canvas.getContext('2d');
 
                 context.beginPath();
                 context.moveTo(170, 80);
@@ -203,19 +187,24 @@
                 dataURL = canvas.toDataURL("image/png");
                 $('#download_image').val(dataURL);
 
-                // $("#formImg").submit();
-                window.location.href = "http://santa.onismsolution.com/paypal";
+// <<<<<<< HEAD
+//                 window.location.href = "http://santa.onismsolution.com/paypal";
+// =======
+                $("#formImg").submit();
+              //  window.location.href = "http://santa.onismsolution.com/paypal";
             //console.log(dataURL);
-
-
+// >>>>>>> 2447743195443afe04a72a883657336cee20cdd4
             });
 
         }
         $('#img-button-section').click(function(){
             $('#canvas-border-hide').hide();
+// <<<<<<< HEAD
+// =======
+            $('.rotingtxt1').hide();
           //  $('#save-img-section').show()
+// >>>>>>> 2447743195443afe04a72a883657336cee20cdd4
             download()
-
         });
 
         $('#brightness-pic').click(function(){
@@ -238,12 +227,6 @@
             $("#santaImg").attr("src",img);
         });
     });
-
-    // $( function() {
-    //     $('#draggable').resizable();
-    //     $( "#draggable" ).draggable();
-    // } );
-
 </script>
 <script>
     function blur() {

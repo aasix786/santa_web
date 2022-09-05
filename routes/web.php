@@ -17,6 +17,9 @@ use App\Http\Controllers\PayPalController;
         Route::get('/', function () {
             return view('index');
         });
+        Route::get('/download', function () {
+            return view('welcome');
+        })->name('download');
         Route::get('/drag', function () {
             return view('drag');
         });
@@ -37,7 +40,7 @@ use App\Http\Controllers\PayPalController;
             return view('Upload');
         })->name('upload-image');
 
-        Route::get('/',[Homecontroller::class,'home']);
+        Route::get('/',[Homecontroller::class,'home'])->name('home');
         Route::post('/store/image',[Homecontroller::class,'storeImage'])->name('store.image');
         Route::get('payment', [PayPalController::class,'payment'])->name('payment');
         Route::get('cancel', [PayPalController::class,'cancel'])->name('payment.cancel');

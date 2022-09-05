@@ -22,16 +22,17 @@
         <div class="main-boody">
             <header
                 class="main-header">
-                <!-- <h1 class="text1">WE CAUGHT SANTA!</h1>
-                          <h1 class="text2">Custom Pictures of Santa under YOUR TREE!</h1> -->
                 <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
             </header>
             <div class="main-area">
                 <div class="overlay-clr">
-
+                 {{--   @if (session()->has('newurl'))
+                    {{ \Illuminate\Support\Facades\Session::get('newurl'),"_blank" }}
+                    @endif--}}
                     <div class="itro-text">
                         <h1 class="text3">INTRO PARAGRAGH</h1>
                         <h3 class="text3">{{$introduction->description}}</h3>
+
                     </div>
                     <div class="main-banner">
                         <div class="fist-section">
@@ -68,16 +69,19 @@
 <form method="post" action="{{route('store.image')}}" enctype="multipart/form-data">
     @csrf
         <div class="modal-body">
-            <div class="add-img">
-                <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="w-100" alt="" />
+            <div class="add-img pt-2">
+                <button class="uploadbtn">Click here to upload </button>
                 <input class="input-type" type='file' name="image" onchange="readURL(this);" />
+                <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="py-3 w-100" alt="" />
                 </div>
-          <button type="button" class="btn cancel-btn" data-dismiss="modal">Cancel</button>
-          <button type="submit" class="btn btn-primary save-btn"> Continue</button>
+          <button type="button" class="btn cancel-btn mb-2" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary save-btn mb-2"> Continue</button>
         </div>
 </form>
       </div>
+
 </div>
+
     </div>
   </div>
                     </div>
@@ -90,15 +94,32 @@
             function readURL(input) {
              if (input.files && input.files[0]) {
                  var reader = new FileReader();
-
                  reader.onload = function (e) {
-                  //    window.location.replace("image.html");
                      $('#blah').attr('src', e.target.result);
                  };
-
                  reader.readAsDataURL(input.files[0]);
              }
          }
+
+            function removeParam(key, sourceURL) {
+                var rtn = sourceURL.split("?")[0],
+                    param,
+                    params_arr = [],
+                    queryString = (sourceURL.indexOf("?") !== -1) ? sourceURL.split("?")[1] : "";
+                if (queryString !== "") {
+                    params_arr = queryString.split("&");
+                    for (var i = params_arr.length - 1; i >= 0; i -= 1) {
+                        param = params_arr[i].split("=")[0];
+                        if (param === key) {
+                            params_arr.splice(i, 1);
+                        }
+                    }
+                    if (params_arr.length) rtn = rtn + "?" + params_arr.join("&");
+                }
+                return rtn;
+            }
+            var originalURL = "http://192.168.18.4:8080/?image=http%3A%2F%2F192.168.18.4%3A8080%2Fpublic%2FcustomerImages%2F6315f54251fab.png";
+            var alteredURL = removeParam("image", originalURL);
       </script>
     </body>
 </html>
