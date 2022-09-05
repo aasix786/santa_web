@@ -36,7 +36,7 @@
                         <img src="{{asset('assets/imgs/santa12.jpeg')}}" class="santa-dp">
                         <h1 class="text6">$5.00</h1>
                     </div>
-                    <div class="bg-santa-img">
+                    <div class="bg-santa-img1">
                         <img src="{{asset('assets/imgs/santa12.jpeg')}}"  class="santa-dp4">
                     </div>
                     <div class="paypal">
@@ -60,9 +60,11 @@
                         <div class=""></div>
                         <div class=""></div>
                            </div>
-                    <div class="catch radius">
-                        <a href="{{url('image')}}" class="red text5">OR RETURN TO EDITOR</a>
-                        </div>
+                           <div class="catch radius mbottom">          
+<button type="button" class="btn red font-text bg-transparent w-100">
+OR RETURN TO EDITOR
+  </button>
+  </div>
                   </div>
             </div>
         </div>

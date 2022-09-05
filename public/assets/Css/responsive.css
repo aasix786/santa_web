@@ -6,10 +6,13 @@
         padding: 10px;
     }
     .text5 {
-        font-size: 24px;
+        font-size: 29px!important;
     }
     .text6 {
         font-size: 60px;
+    }
+    .catch-santa{
+        padding-bottom: 10px;
     }
     .bg-santa-img {
     width: 100%;
@@ -17,6 +20,9 @@
     .paypal {
         width: 85%;
         font-size: 17px;
+    }
+    .font-text {
+        font-size: 30px!important;  
     }
 .payment-method {
     width: 85%;
@@ -45,6 +51,9 @@
     height: 180px;
     width: 180px;
 }
+.img-size {
+    height: 60px;
+}
 .main-banner {
     padding: 10px;
     margin-top: 30px;
@@ -56,11 +65,14 @@
     font-size: 55px;
 }
 .fist-section {
-    height: 285px;
+    height: 250px;
 }
 .second-section {
-    height: 300px;
+    height: 265px;
     margin-top: 20px;
+}
+.font-text {
+    font-size: 20px!important;  
 }
 .top-heading1 {
     top: -52px;
@@ -84,7 +96,7 @@
     margin-top: 10px;    
 }
 .text5 {
-    font-size: 21px;
+    font-size: 22px!important;
 }
 .text6 {
     font-size: 50px;
@@ -113,6 +125,15 @@
         height: 28px;
         width: 28px;
     }
+    .second-section {
+        height: 250px;
+    }
+    .fist-section {
+        height: 235px;
+    }
+    .font-text {
+        font-size: 16px!important;  
+    }
     .text4 {
         font-size: 45px;
     }   
@@ -129,7 +150,10 @@
         width: 95%;
     }
     .text5 {
-        font-size: 18px;
+        font-size: 18px!important;
+    }
+    .img-size {
+        height: 50px;
     }
 }
 @media only screen and (max-width: 1024px) {

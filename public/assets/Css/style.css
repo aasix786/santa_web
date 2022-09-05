@@ -17,7 +17,22 @@
     font-size: 75px;
     text-shadow: 9px 2px 3px black;
 }
-
+.font-text {
+    font-size: 42px!important;  
+}
+.mbottom {
+    margin-bottom: 20px!important;
+}
+.btn:focus {
+    outline: 0!important;
+    box-shadow: none!important;
+}
+#venmo-button{
+    color: #023088!important;
+}
+a {
+    text-decoration: none!important;
+}
 .text2 {
     color: white;
     text-align: center;

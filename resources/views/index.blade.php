@@ -31,7 +31,7 @@
 
                     <div class="itro-text">
                         <h1 class="text3">INTRO PARAGRAGH</h1>
-                        <h3>{{$introduction->description}}</h3>
+                        <h3 class="text3">{{$introduction->description}}</h3>
                     </div>
                     <div class="main-banner">
                         <div class="fist-section">
@@ -54,9 +54,10 @@
                         <h1 class="text3">3. JUST PAY $5 TO SAVE YOUR IMAGE</h1>
                         <h1 class="text3">4. SHOW THE KIDZ "WE CAUGHT SANTA!</h1>
                     </div>
+                    <div class="catch-santa">
                     <div class="catch">
                         <!-- Button trigger modal -->
-<button type="button" class="btn red text5 bg-transparent w-100" data-toggle="modal" data-target="#exampleModalCenter">
+<button type="button" class="btn red font-text bg-transparent w-100" data-toggle="modal" data-target="#exampleModalCenter">
     CATCH SANTA NOW!
   </button>
 
@@ -75,7 +76,8 @@
           <button type="submit" class="btn btn-primary save-btn"> Continue</button>
         </div>
 </form>
-      </div>c
+      </div>
+</div>
     </div>
   </div>
                     </div>
