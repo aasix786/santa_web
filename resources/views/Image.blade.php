@@ -93,7 +93,7 @@
                     <img src="{{asset('assets/imgs/santa12.jpeg')}}"  id="santaImg" class="image santa-dp4 border-class">
                 </div> -->
                 <p class="rotingtxt1">we caught santa we caught santa we caught santa we caught santa we caught santa  </p>
-                            
+
                 <div id="container">
                     <div id="canvas-border-hide">
                     <div class="right"></div>
@@ -215,6 +215,7 @@
         }
         $('#img-button-section').click(function(){
             $('#canvas-border-hide').hide();
+            $('.rotingtxt1').hide();
           //  $('#save-img-section').show()
             download()
 

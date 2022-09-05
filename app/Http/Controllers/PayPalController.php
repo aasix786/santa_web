@@ -4,13 +4,11 @@ namespace App\Http\Controllers;
 
 //use Illuminate\Support\Facades\Request;
 use App\Models\CustomerImage;
-//use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\URL;
 use Srmklive\PayPal\Services\ExpressCheckout;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
-use File;
-use Response;
 class PayPalController extends Controller
 {
     public function payment(Request $request)
@@ -35,7 +33,6 @@ class PayPalController extends Controller
         $provider = new ExpressCheckout;
         $response = $provider->setExpressCheckout($data);
         $response = $provider->setExpressCheckout($data,true);
-       // return redirect($response['paypal_link']);
         return Redirect::to($response['paypal_link']);
     }
     public function cancel()
@@ -51,13 +48,9 @@ class PayPalController extends Controller
         $response = $provider->getExpressCheckoutDetails($request->token);
         if (in_array(strtoupper($response['ACK']), ['SUCCESS', 'SUCCESSWITHWARNING'])) {
             $customer_image = CustomerImage::where('image',$request->a)->first();
-            $url=URL::to('/');
-            $filepath = public_path($customer_image->image);
-            return Response::download($filepath);
-            echo "<script>";
-            echo "alert('hello');";
-            echo "</script>";
-
+            $filepath = asset($customer_image->image);
+            //return Response::download($filepath);
+            echo "<script>window.open('".$filepath."', '_blank')</script>";
         }
         dd('Something is wrong.');
     }
