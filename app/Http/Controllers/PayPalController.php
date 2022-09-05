@@ -49,9 +49,13 @@ class PayPalController extends Controller
         if (in_array(strtoupper($response['ACK']), ['SUCCESS', 'SUCCESSWITHWARNING'])) {
             $customer_image = CustomerImage::where('image',$request->a)->first();
             $filepath = asset($customer_image->image);
-            //return Response::download($filepath);
-            echo "<script>window.open('".$filepath."', '_blank')</script>";
+          // echo "<script>window.open('".$filepath."', '_blank')</script>";
+            return redirect()->route('download',['customer_image'=>$filepath]);
+
         }
-        dd('Something is wrong.');
+
+
+        dd('ok');
+
     }
 }

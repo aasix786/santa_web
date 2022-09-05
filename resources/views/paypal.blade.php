@@ -16,8 +16,24 @@
     <script src="https://js.braintreegateway.com/web/3.57.0/js/client.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.57.0/js/venmo.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.57.0/js/data-collector.min.js"></script>
+    <style>
+        .bg-santa-img {
+            background-image: url(<?php echo request()->query("a"); ?>);
+            width: 75%;
+            border: 3px solid gray;
+            height: 400px;
+            margin-top: 20px !important;
+            margin: auto;
+            margin-top: auto;
+            background-size: cover;
+            background-color: #232020a6;
+            background-blend-mode: darken;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
 </head>
-<body>
+<body oncontextmenu="return false">
     <div class="main-boody">
         <header class="main-header">
             <!-- <h1 class="text1">WE CAUGHT SANTA!</h1>
@@ -40,9 +56,9 @@
                         <img src="{{asset('assets/imgs/santa12.jpeg')}}"  class="santa-dp4">
                     </div> -->
                     <div class="bg-santa-img">
-                        <img src="assets/imgs/santa12.jpeg"  class="santa-dp4">    
+                        {{--<img src="assets/imgs/santa12.jpeg"  class="santa-dp4">--}}
                             <p class="rotingtxt">we caught santa we caught santa we caught santa we caught santa we caught santa  </p>
-                                
+
                         </div>
                     <div class="paypal">
                         <!-- <i class="fa-brands fa-paypal"></i> -->
@@ -189,5 +205,22 @@
 
         window.location = "/Directory_name/venmo_server.php/?payerID=" + payerID + "&deviceData=" + deviceData+ "&amount=" + amount;
     }
-
+// disable right click and hide inspect element
+    document.onkeydown = function(e) {
+        if(event.keyCode == 123) {
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+            return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+            return false;
+        }
+    }
 </script>
