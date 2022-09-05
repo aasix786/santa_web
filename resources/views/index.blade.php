@@ -22,8 +22,6 @@
         <div class="main-boody">
             <header
                 class="main-header">
-                <!-- <h1 class="text1">WE CAUGHT SANTA!</h1>
-                          <h1 class="text2">Custom Pictures of Santa under YOUR TREE!</h1> -->
                 <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
             </header>
             <div class="main-area">
@@ -89,12 +87,9 @@
             function readURL(input) {
              if (input.files && input.files[0]) {
                  var reader = new FileReader();
-
                  reader.onload = function (e) {
-                  //    window.location.replace("image.html");
                      $('#blah').attr('src', e.target.result);
                  };
-
                  reader.readAsDataURL(input.files[0]);
              }
          }

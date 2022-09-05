@@ -33,14 +33,14 @@
 
                 </div>
                     <div class="santa-profile">
-                        <img src="{{asset('assets/imgs/santa12.jpeg')}}" class="santa-dp">
+                        <img src="{{asset('assets/imgs/santa12.png')}}" class="santa-dp">
                         <h1 class="text6">$5.00</h1>
                     </div>
                     <!-- <div class="bg-santa-img">
-                        <img src="{{asset('assets/imgs/santa12.jpeg')}}"  class="santa-dp4">
+                        <img src="{{asset('assets/imgs/santa12.png')}}"  class="santa-dp4">
                     </div> -->
                     <div class="bg-santa-img">
-                        <img src="assets/imgs/santa12.jpeg"  class="santa-dp4">    
+                        <img src="assets/imgs/santa12.png"  class="santa-dp4">    
                             <p class="rotingtxt">we caught santa we caught santa we caught santa we caught santa we caught santa  </p>
                                 
                         </div>
