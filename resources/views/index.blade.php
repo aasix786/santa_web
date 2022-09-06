@@ -70,7 +70,7 @@
     @csrf
         <div class="modal-body">
             <div class="add-img pt-2">
-                <button class="uploadbtn">Click here to upload </button>
+                <button type="button" class="uploadbtn">Click here to upload </button>
                 <input class="input-type" type='file' name="image" onchange="readURL(this);" />
                 <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="py-3 w-100" alt="" />
                 </div>
@@ -101,25 +101,6 @@
              }
          }
 
-            function removeParam(key, sourceURL) {
-                var rtn = sourceURL.split("?")[0],
-                    param,
-                    params_arr = [],
-                    queryString = (sourceURL.indexOf("?") !== -1) ? sourceURL.split("?")[1] : "";
-                if (queryString !== "") {
-                    params_arr = queryString.split("&");
-                    for (var i = params_arr.length - 1; i >= 0; i -= 1) {
-                        param = params_arr[i].split("=")[0];
-                        if (param === key) {
-                            params_arr.splice(i, 1);
-                        }
-                    }
-                    if (params_arr.length) rtn = rtn + "?" + params_arr.join("&");
-                }
-                return rtn;
-            }
-            var originalURL = "http://192.168.18.4:8080/?image=http%3A%2F%2F192.168.18.4%3A8080%2Fpublic%2FcustomerImages%2F6315f54251fab.png";
-            var alteredURL = removeParam("image", originalURL);
       </script>
     </body>
 </html>
