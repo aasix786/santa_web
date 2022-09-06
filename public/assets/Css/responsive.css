@@ -21,6 +21,7 @@
         width: 85%;
         font-size: 17px;
     }
+   
     .font-text {
         font-size: 30px!important;  
     }
@@ -46,6 +47,15 @@
     }
 .overlay-clr {
     padding: 0px;
+}
+.rotingtxt1 {
+    font-size: 22px;
+}
+.bg-santa-img {
+    height: 350px!important;
+}
+#container {
+    width: 150px!important;
 }
 .santa-dp4 {
     height: 180px;
@@ -130,6 +140,9 @@
     }
     .fist-section {
         height: 235px;
+    }
+    .rotingtxt1 {
+        font-size: 18px;
     }
     .font-text {
         font-size: 16px!important;  
