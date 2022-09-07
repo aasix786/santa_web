@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Homecontroller;
 use App\Http\Controllers\PayPalController;
+use Illuminate\Support\Facades\Artisan;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +14,10 @@ use App\Http\Controllers\PayPalController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/clear-cache', function() {
+ Artisan::call('cache:clear');
 
+});
         Route::get('/', function () {
             return view('index');
         });

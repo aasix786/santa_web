@@ -23,12 +23,13 @@
             width: 75%;
             border: 3px solid gray;
             height: 400px;
-            margin-top: 20px!important;
+            margin-top: 20px !important;
             margin: auto;
             background-size: cover;
             background-color: #232020a6;
             background-blend-mode: darken;
             position: relative;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
@@ -81,20 +82,22 @@
                 </div>
             </div>
             <div class="bg-santa-img showimg w-100">
-                <p class="rotingtxt1">we caught santa we caught santa we caught santa we caught santa we caught santa  </p>
+                <p class="rotingtxt1">we caught santa we caught santa we caught santa we caught santa we caught
+                    santa </p>
 
                 <div id="container">
                     <div id="canvas-border-hide">
-                    <div class="right"></div>
-                    <div class="bottom"></div>
-                    <div class="top"></div>
-                    <div class="left"></div>
-                    <div data-clickable="true" class="bottomRight"></div>
-                    <div data-clickable="true" class="topLeft"></div>
-                    <div data-clickable="true" class="topRight"></div>
-                    <div data-clickable="true" class="bottomLeft"></div>
+                        <div class="right"></div>
+                        <div class="bottom"></div>
+                        <div class="top"></div>
+                        <div class="left"></div>
+                        <div data-clickable="true" class="bottomRight"></div>
+                        <div data-clickable="true" class="topLeft"></div>
+                        <div data-clickable="true" class="topRight"></div>
+                        <div data-clickable="true" class="bottomLeft"></div>
                     </div>
-                    <img src="{{asset('assets/imgs/santa12.png')}}" id="santaImg"  class="image santa-dp4 border-class" alt="missing">
+                    <img src="{{asset('assets/imgs/santa12.png')}}" id="santaImg" class="image santa-dp4 border-class"
+                         alt="missing">
                 </div>
             </div>
 
@@ -114,7 +117,9 @@
                         <li>Taken or choosen image appears in editor as background</li>
                         <li>Santa overlay appearsin editor when santa image is choosen</li>
                         <li>Santa should swap out if another santa image is choosen after orignal</li>
-                        <li>User should be able to DRAG (move) Santa overlay, Resize by dragging corners, and use the Brightness/Contrast/Hue Sliders</li>
+                        <li>User should be able to DRAG (move) Santa overlay, Resize by dragging corners, and use the
+                            Brightness/Contrast/Hue Sliders
+                        </li>
                         <li>Watermark should be similar to above</li>
                     </ul>
                 </h1>
@@ -136,7 +141,7 @@
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 <script>
     var dataURL;
-    $(document).ready(function(){
+    $(document).ready(function () {
         init();
 
         function touchHandler(event) {
@@ -161,6 +166,7 @@
             document.addEventListener("touchend", touchHandler, true);
             document.addEventListener("touchcancel", touchHandler, true);
         }
+
         const download = () => {
             html2canvas(document.querySelector('.bg-santa-img')).then(canvas => {
                 document.getElementById('save-img-section').appendChild(canvas);
@@ -186,45 +192,37 @@
 
                 dataURL = canvas.toDataURL("image/png");
                 $('#download_image').val(dataURL);
-
-// <<<<<<< HEAD
-//                 window.location.href = "http://santa.onismsolution.com/paypal";
-// =======
                 $("#formImg").submit();
-              //  window.location.href = "http://santa.onismsolution.com/paypal";
-            //console.log(dataURL);
-// >>>>>>> 2447743195443afe04a72a883657336cee20cdd4
+
             });
 
         }
-        $('#img-button-section').click(function(){
+        $('#img-button-section').click(function () {
             $('#canvas-border-hide').hide();
-// <<<<<<< HEAD
-// =======
+
             $('.rotingtxt1').hide();
-          //  $('#save-img-section').show()
-// >>>>>>> 2447743195443afe04a72a883657336cee20cdd4
             download()
+            $('.rotingtxt1').show();
         });
 
-        $('#brightness-pic').click(function(){
+        $('#brightness-pic').click(function () {
             $('#brightness').show()
             $('#brightness-pic').hide()
         });
-        $('#contrast-pic').click(function(){
+        $('#contrast-pic').click(function () {
             $('#contrast').show()
             $('#contrast-pic').hide()
         });
-        $('#rotate-pic').click(function(){
+        $('#rotate-pic').click(function () {
             $('#rotate').show()
             $('#rotate-pic').hide()
         });
 
     });
-    $(document).ready(function() {
-        $('.selectSanta').on('click', function() {
+    $(document).ready(function () {
+        $('.selectSanta').on('click', function () {
             let img = $(this).attr("src");
-            $("#santaImg").attr("src",img);
+            $("#santaImg").attr("src", img);
         });
     });
 </script>
@@ -233,8 +231,9 @@
         var brightness = $("#brightness").slider("value");
         var contrast = $("#contrast").slider("value");
         // var rotate = $("#rotate").slider("value");
-        $(".image").css("-webkit-filter", "brightness(" + brightness + "%)"  + "contrast(" + contrast + "%)");
+        $(".image").css("-webkit-filter", "brightness(" + brightness + "%)" + "contrast(" + contrast + "%)");
     }
+
     // ***********SLIDERS*************//
     $(function () {
         $("#brightness").slider({
@@ -256,7 +255,7 @@
         });
 
     });
-    $("#reset").click(function(){
+    $("#reset").click(function () {
         $("#contrast").slider("value", 100);
         $("#brightness").slider("value", 0);
     });
