@@ -21,11 +21,11 @@
             background-image: url(<?php echo request()->query("a"); ?>);
             width: 75%;
             border: 3px solid gray;
-            height: 400px;
+            height: 365px;
             margin-top: 20px !important;
             margin: auto;
             margin-top: auto;
-            background-size: cover;
+            background-size: 100% 100%;
             background-color: #232020a6;
             background-blend-mode: darken;
             position: relative;
