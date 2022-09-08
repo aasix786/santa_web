@@ -48,7 +48,10 @@
     .catch.radius.mbottom button.paypalbtn {
         font-size: 21px!important;
         font-weight: bolder;
-    }    
+    }
+    .catch {
+        width: 89%;
+    }
 .overlay-clr {
     padding: 0px;
 }
