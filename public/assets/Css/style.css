@@ -18,7 +18,12 @@
     text-shadow: 9px 2px 3px black;
 }
 .font-text {
-    font-size: 42px!important;  
+    font-size: 49px!important;  
+}
+.itro-text h1 {
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 1px;
 }
 .mbottom {
     margin-bottom: 20px!important;
@@ -479,7 +484,9 @@ font-size: 45px!important;
                 position: absolute;
                 right: -34px;
             }
-            
+            .fontfamilybold{
+                font-family: 'Denk One', sans-serif;
+            }
             .rotingtxt1 {
                 -webkit-transform: rotate(331deg);
                 -moz-transform: rotate(331deg);

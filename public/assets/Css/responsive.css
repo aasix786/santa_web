@@ -23,7 +23,7 @@
     }
    
     .font-text {
-        font-size: 30px!important;  
+        font-size: 30px!important;
     }
 .payment-method {
     width: 85%;
@@ -45,6 +45,10 @@
     .padding {
         padding: 5px!important;
     }
+    .catch.radius.mbottom button.paypal {
+        font-size: 21px!important;
+        font-weight: bolder;
+    }    
 .overlay-clr {
     padding: 0px;
 }
@@ -68,6 +72,11 @@
     padding: 10px;
     margin-top: 30px;
 }
+.itro-text h1 {
+    font-size: 22px;
+    font-weight: bolder;
+    letter-spacing: 0px;
+}
 .bg-santa-img {
     height: 340px;
 }
@@ -82,7 +91,7 @@
     margin-top: 20px;
 }
 .font-text {
-    font-size: 20px!important;  
+    font-size: 28px!important;  
 }
 .top-heading1 {
     top: -52px;
@@ -97,16 +106,17 @@
     bottom: -55px;
 }
 .text3 {
-    font-size: 16px;
+    font-size: 25px;
 }
 .text-shade {
-    font-size: 15px;
+    font-size: 20px;
 }
 .catch {
     margin-top: 10px;    
 }
 .text5 {
-    font-size: 22px!important;
+    font-size: 28px!important;
+    font-weight: bolder!important;
 }
 .text6 {
     font-size: 50px;

@@ -19,9 +19,9 @@
     <style>
         .bg-santa-img {
             background-image: url(<?php echo request()->query("a"); ?>);
-            width: 100%;
+            width: 97%;
             border: 3px solid gray;
-            height: 365px;
+            height: 475px;
             margin-top: 20px !important;
             margin: auto;
             margin-top: auto;
@@ -84,7 +84,7 @@
                         <div class=""></div>
                            </div>
                            <div class="catch radius mbottom">
-<button type="button" class="btn red font-text bg-transparent w-100">
+<button type="button" class="btn red font-text bg-transparent w-100 paypalbtn">
 OR RETURN TO EDITOR
   </button>
   </div>
