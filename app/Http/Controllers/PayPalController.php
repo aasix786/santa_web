@@ -32,7 +32,7 @@ class PayPalController extends Controller
         $data['cancel_url'] = route('payment.cancel');
         $data['total'] = 5;
         $provider = new ExpressCheckout;
-        $response = $provider->setExpressCheckout($data);
+        //$response = $provider->setExpressCheckout($data);
         $response = $provider->setExpressCheckout($data, true);
         return Redirect::to($response['paypal_link']);
     }

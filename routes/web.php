@@ -18,6 +18,9 @@ Route::get('/clear-cache', function() {
  Artisan::call('cache:clear');
 
 });
+       Route::get('test/paypal',function (){
+           return view('test-paypal');
+       });
         Route::get('/', function () {
             return view('index');
         });

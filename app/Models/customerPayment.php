@@ -11,6 +11,6 @@ class customerPayment extends Model
 
     protected $table ='customer_payments';
     protected $fillable=
-        ['customer_id','payment_status'
+        ['customer_id','payment_status','paypal_key'
         ];
 }
