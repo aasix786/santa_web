@@ -19,9 +19,9 @@
     <style>
         .bg-santa-img {
             background-image: url(<?php echo request()->query("a"); ?>);
-            width: 75%;
+            width: 97%;
             border: 3px solid gray;
-            height: 365px;
+            height: 475px;
             margin-top: 20px !important;
             margin: auto;
             margin-top: auto;
@@ -68,7 +68,7 @@
                      Pay<span class="sky-clr">Pal</span></a>
                     </div>
                     <div class="paypal text-white venmo">
-                     <a id="venmo-button" href="">venmo</a>
+                     <a id="venmo-button" href="">Venmo</a>
                     </div>
                     <div class="paypal text-white credit">
                         <!-- <i class="fa-brands fa-paypal"></i> -->
@@ -84,7 +84,7 @@
                         <div class=""></div>
                            </div>
                            <div class="catch radius mbottom">
-<button type="button" class="btn red font-text bg-transparent w-100">
+<button type="button" class="btn red font-text bg-transparent w-100 paypalbtn">
 OR RETURN TO EDITOR
   </button>
   </div>
