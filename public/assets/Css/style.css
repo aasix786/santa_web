@@ -322,7 +322,7 @@ font-size: 45px!important;
         OVERFLOW: HIDDEN;
     }
     .showimg img{
-        cursor: pointer;
+        cursor: move;
     }
     
             #myCanvas {
@@ -386,36 +386,40 @@ font-size: 45px!important;
             .bottomRight {
                 display: block;
                 position: absolute;
-                height: 2px;
-                width: 2px;
-                background: #9be1f899;
+                height: 8px;
+                width: 8px;
+                background: #a8e0f3;
+                cursor:se-resize;
                 right: 0;
                 bottom: 0;
             }
             .bottomLeft {
                 display: block;
                 position: absolute;
-                height: 2px;
-                width: 2px;
-                background: #9be1f899;
+                height: 8px;
+                width: 8px;
+                background: #a8e0f3;
+                cursor:ne-resize;
                 left: 0;
                 bottom: 0;
             }
             .topLeft {
                 display: block;
                 position: absolute;
-                height: 2px;
-                width: 2px;
-                background: #9be1f899;
+                height: 8px;
+                width: 8px;
+                background: #a8e0f3;
+                cursor:se-resize;
                 left: 0;
                 top: 0;
             }
             .topRight {
                 display: block;
                 position: absolute;
-                height: 2px;
-                width: 2px;
-                background: #9be1f899;
+                height: 8px;
+                width: 8px;
+                background: #a8e0f3;
+                cursor:ne-resize;
                 right: 0;
                 top: 0;
             }
@@ -424,14 +428,16 @@ font-size: 45px!important;
                 position: absolute;
                 height: 2px;
                 width: 100%;
-                background: #9be1f899;
+                background: #a8e0f3;
+                cursor:pointer;
             }
             .left {
                 display: block;
                 position: absolute;
                 height: 100%;
                 width: 2px;
-                background: #9be1f899;
+                background: #a8e0f3;
+                cursor:pointer;
                 left: 0;
             }
             .right {
@@ -439,7 +445,8 @@ font-size: 45px!important;
                 position: absolute;
                 height: 100%;
                 width: 2px;
-                background: #9be1f899;
+                background: #a8e0f3;
+                cursor:pointer;
                 right: 0;
             }
             .bottom {
@@ -447,7 +454,8 @@ font-size: 45px!important;
                 position: absolute;
                 height: 2px;
                 width: 100%;
-                background: #9be1f899;
+                background: #a8e0f3;
+                cursor:pointer;
                 bottom: 0;
             }
             #container img {
