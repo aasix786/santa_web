@@ -28,9 +28,9 @@
 .payment-method {
     width: 85%;
 }
-.img-size {
+/* .img-size {
     height: 75px;
-}
+} */
 .santa-dp4 {
     left: 30px;
 }
@@ -68,9 +68,9 @@
     height: 180px;
     width: 180px;
 }
-.img-size {
+/* .img-size {
     height: 60px;
-}
+} */
 .main-banner {
     padding: 10px;
     margin-top: 30px;
@@ -178,9 +178,9 @@
     .text5 {
         font-size: 18px!important;
     }
-    .img-size {
+    /* .img-size {
         height: 50px;
-    }
+    } */
 }
 @media only screen and (max-width: 1024px) {
     .input-type {
