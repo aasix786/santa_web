@@ -14,6 +14,7 @@ class PayPalController extends Controller
     public function paymentStatus(Request $request)
 
     {
+
        $customer_payment = customerPayment::where('customer_id',$request->customer_id)->where('payment_status',1)->first();
        if($customer_payment)
        {

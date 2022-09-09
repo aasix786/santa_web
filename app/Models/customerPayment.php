@@ -13,4 +13,5 @@ class customerPayment extends Model
     protected $fillable=
         ['customer_id','payment_status','paypal_key'
         ];
+
 }
