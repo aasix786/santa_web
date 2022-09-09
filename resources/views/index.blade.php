@@ -7,12 +7,12 @@
         <title>Home</title>
         <link rel="stylesheet" href="{{asset('assets/Css/style.css')}}">
         <link rel="stylesheet" href="{{asset('assets/Css/responsive.css')}}">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{asset('assets/external/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/external/all.css')}}"/>
+        <link rel="stylesheet" href="{{asset('assets/external/jquery.fancybox.min.css')}}">
+        <script src="{{asset('assets/external/jquery-3.3.1.slim.min.js')}}"></script>
+        <script src="{{asset('assets/external/popper.min.js')}}"></script>
+        <script src="{{asset('assets/external/bootstrap.min.js')}}"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">

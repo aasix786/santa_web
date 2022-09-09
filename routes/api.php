@@ -25,4 +25,4 @@ Route::get('images',[ImagesController::class,'images']);
 Route::post('payment', [PayPalController::class,'payment'])->name('payment');
 Route::get('cancel', [PayPalController::class,'cancel'])->name('payment.cancel');
 Route::get('payment/success/{id}', [PayPalController::class,'success'])->name('payment.success');
-Route::get('customer/payments/status/',[PayPalController::class,'paymentStatus'])->name('paymentStatus');
+Route::post('customer/payments/status/',[PayPalController::class,'paymentStatus'])->name('paymentStatus');
