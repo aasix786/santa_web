@@ -22,7 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('introduction',[IntroductionController::class,'introduction']);
 Route::get('images',[ImagesController::class,'images']);
-Route::post('payment', [PayPalController::class,'payment1'])->name('payment');
+Route::post('payment', [PayPalController::class,'payment'])->name('payment');
 Route::get('cancel', [PayPalController::class,'cancel'])->name('payment.cancel');
-Route::get('payment/success', [PayPalController::class,'success'])->name('payment.success');
-Route::get('customer/payments/status/{customer_id}',[PayPalController::class,'paymentStatus'])->name('paymentStatus');
+Route::get('payment/success/{id}', [PayPalController::class,'success'])->name('payment.success');
+Route::get('customer/payments/status/',[PayPalController::class,'paymentStatus'])->name('paymentStatus');

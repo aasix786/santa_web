@@ -87,9 +87,9 @@
                         <div class=""></div>
                            </div>--}}
                            <div class="catch radius mbottom">
-<button type="button" class="btn red font-text bg-transparent w-100">
+                               <a href="{{url()->previous()}}"><button type="button" class="btn red font-text bg-transparent w-100">
 OR RETURN TO EDITOR
-  </button>
+  </button> </a>
   </div>
                   </div>
             </div>
