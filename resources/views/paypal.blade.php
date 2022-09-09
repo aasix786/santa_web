@@ -33,7 +33,7 @@
         }
     </style>
 </head>
-<body oncontextmenu="return false">
+<body oncontextmenu="return true">
     <div class="main-boody">
         <header class="main-header">
             <!-- <h1 class="text1">WE CAUGHT SANTA!</h1>
@@ -62,7 +62,7 @@
 
                         </div>
 
-                    <div class="paypal">
+                    {{--<div class="paypal">
                         <!-- <i class="fa-brands fa-paypal"></i> -->
                      <a href="{{route('payment',['a'=>request()->query("a")])}}">   <i class="fab fa-paypal"></i>
                      Pay<span class="sky-clr">Pal</span></a>
@@ -74,19 +74,24 @@
                         <!-- <i class="fa-brands fa-paypal"></i> -->
                         <i class="fab fa-paypal"></i>
                         PayPal CREDIT
-                       </div>
-                       <div class="payment-method">
+                       </div>--}}
+                        <div style="padding: 15px;" id="paypal-button-container"></div>
+
+
+                   {{-- <div class="payment-method">
                         <div class="payment-cards"><img src="{{asset('assets/imgs/card1.png')}}" class="img-size"></div>
                         <div class="payment-cards"><img src="{{asset('assets/imgs/card2.png')}}" class="img-size"></div>
                         <div class="payment-cards"><img src="{{asset('assets/imgs/card3.png')}}" class="img-size"></div>
                         <div class="payment-cards"><img src="{{asset('assets/imgs/card4.png')}}" class="img-size"></div>
                         <div class=""></div>
                         <div class=""></div>
-                           </div>
+                           </div>--}}
                            <div class="catch radius mbottom">
-<button type="button" class="btn red font-text bg-transparent w-100 paypalbtn">
+
+                               <a href="{{url()->previous()}}"><button type="button" class="btn red font-text bg-transparent w-100">
+
 OR RETURN TO EDITOR
-  </button>
+  </button> </a>
   </div>
                   </div>
             </div>
@@ -94,137 +99,58 @@ OR RETURN TO EDITOR
     </div>
 </body>
 </html>
+<script src="https://www.paypal.com/sdk/js?client-id=AULyAP0tzxBRnBZNi1VCjnRxW4HFjKVFKzzLFTwP8oSC87icTFVLMb9g9E5Z6rDqZdbteIxR0UHWA-VR&currency=USD&intent=capture&enable-funding=venmo" data-sdk-integration-source="integrationbuilder"></script>
 <script>
-    var venmoButton = document.querySelector('#venmo-button');
-    // Create a client.
-    braintree.client.create({
-        authorization: 'sandbox_ndjzxsgy_b63nj7pb5jbss2d5'
-    }, function (clientErr, clientInstance) {
-        // Stop if there was a problem creating the client.
-        // This could happen if there is a network error or if the authorization
-        // is invalid.
-        console.log("clientInstance:",clientInstance);
-        if (clientErr) {
-            console.error('Error creating client:', clientErr);
-            return;
-        }
 
-        braintree.dataCollector.create({
-            client: clientInstance,
-            paypal: true
-        }, function (dataCollectorErr, dataCollectorInstance) {
-            if (dataCollectorErr) {
-                // Handle error in creation of data collector.
-                console.log(dataCollectorErr);
-                return;
-            }
-
-            // At this point, you should access the deviceData value and provide it
-            // to your server, e.g. by injecting it into your form as a hidden input.
-            console.log('dataCollectorInstance:', dataCollectorInstance);
-            console.log('Got device data:', dataCollectorInstance.deviceData);
-
-        });
+    var image = "{{asset(request()->query("a")) }}";
+    const paypalButtonsComponent = paypal.Buttons({
+        // optional styling for buttons
+        // https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
+        style: {
+            color: "gold",
+            shape: "pill",
+            layout: "vertical"
+        },
 
 
-        function displayVenmoButton(venmoInstance) {
-            // Assumes that venmoButton is initially display: none.
-            venmoButton.style.display = 'block';
-            venmoButton.addEventListener('click', function () {
-                venmoButton.disabled = true;
-
-                venmoInstance.tokenize(function (tokenizeErr, payload) {
-                    venmoButton.removeAttribute('disabled');
-
-                    if (tokenizeErr) {
-                        handleVenmoError(tokenizeErr);
-                    } else {
-                        handleVenmoSuccess(payload);
+        // set up the transaction
+        createOrder: (data, actions) => {
+            // pass in any options from the v2 orders create call:
+            // https://developer.paypal.com/api/orders/v2/#orders-create-request-body
+            const createOrderPayload = {
+                purchase_units: [
+                    {
+                        amount: {
+                            value: "5"
+                        }
                     }
-                });
-            });
-        }
+                ]
+            };
 
-        function handleVenmoError(err) {
-            if (err.code === 'VENMO_CANCELED') {
-                console.log('App is not available or user aborted payment flow');
-            } else if (err.code === 'VENMO_APP_CANCELED') {
-                console.log('User canceled payment flow');
-            } else {
-                console.error('An error occurred:', err.message);
-            }
-        }
-        braintree.venmo.create({
-            client: clientInstance,
-            // Add allowNewBrowserTab: false if your checkout page does not support
-            // relaunching in a new tab when returning from the Venmo app. This can
-            // be omitted otherwise.
-            allowNewBrowserTab: false
-        }, function (venmoErr, venmoInstance) {
-            if (venmoErr) {
-                console.error('Error creating Venmo:', venmoErr);
-                return;
-            }
-            console.log("venmoInstance:",venmoInstance);
-            // Verify browser support before proceeding.
-            if (!venmoInstance.isBrowserSupported()) {
-                console.log('Browser does not support Venmo');
-                return;
-            }
-            displayVenmoButton(venmoInstance);
+            return actions.order.create(createOrderPayload);
+        },
 
-            // Check if tokenization results already exist. This occurs when your
-            // checkout page is relaunched in a new tab. This step can be omitted
-            // if allowNewBrowserTab is false.
-            if (venmoInstance.hasTokenizationResult()) {
-                venmoInstance.tokenize(function (tokenizeErr, payload) {
-                    if (err) {
-                        handleVenmoError(tokenizeErr);
-                    } else {
-                        handleVenmoSuccess(payload);
-                    }
-                });
-                return;
-            }
-        });
+        // finalize the transaction
+        onApprove: (data, actions) => {
+            const captureOrderHandler = (details) => {
+                const payerName = details.payer.name.given_name;
+                console.log('Transaction completed');
+                window.location.href = image;
+            };
+
+             return actions.order.capture().then(captureOrderHandler);
+
+        },
+
+        // handle unrecoverable errors
+        onError: (err) => {
+            console.error('An error prevented the buyer from checking out with PayPal');
+        }
     });
 
-
-    function handleVenmoSuccess(payload) {
-        // Send the payment method nonce to your server, e.g. by injecting
-        // it into your form as a hidden input.
-        console.log('Got a payment method nonce:', payload.nonce);
-
-        // Display the Venmo username in your checkout UI.
-        console.log('Venmo user:', payload.details.username);
-        var amount = 1;
-
-        //test nonce for venmo
-        payload_nonce = "fake-venmo-account-nonce";
-
-        //uncomment this for live integration
-        var payerID = payload_nonce;//payload.nonce;
-        var deviceDataToken = '{"correlation_id":"bc850bc0840ab2d9e1d34842d0e3ffa5"}';
-        var deviceData = encodeURI(deviceDataToken);
-
-        window.location = "/Directory_name/venmo_server.php/?payerID=" + payerID + "&deviceData=" + deviceData+ "&amount=" + amount;
-    }
-// disable right click and hide inspect element
-    document.onkeydown = function(e) {
-        if(event.keyCode == 123) {
-            return false;
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-            return false;
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-            return false;
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-            return false;
-        }
-        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-            return false;
-        }
-    }
+    paypalButtonsComponent
+        .render("#paypal-button-container")
+        .catch((err) => {
+            console.error('PayPal Buttons failed to render');
+        });
 </script>
