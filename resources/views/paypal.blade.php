@@ -33,7 +33,7 @@
         }
     </style>
 </head>
-<body oncontextmenu="return true">
+<body oncontextmenu="return false">
     <div class="main-boody">
         <header class="main-header">
             <!-- <h1 class="text1">WE CAUGHT SANTA!</h1>
