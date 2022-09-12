@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{asset('assets/external/jquery.fancybox.min.css')}}">
     <script src="{{asset('assets/external/jquery-3.3.1.slim.min.js')}}"></script>
     <script src="{{asset('assets/external/popper.min.js')}}"></script>
-    <script src="{{asset('assets/external/bootstrap.min.js')}}"></script>
+     <script src="{{asset('assets/external/bootstrap.min.js')}}"></script>
     <script src="https://js.braintreegateway.com/web/3.57.0/js/client.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.57.0/js/venmo.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.57.0/js/data-collector.min.js"></script>

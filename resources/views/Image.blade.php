@@ -33,7 +33,7 @@
     </style>
 </head>
 <body>
-<div class="main-boody">
+<div class="main-boody" oncontextmenu="return false">
     <header class="main-header">
         <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
     </header>
@@ -140,7 +140,7 @@
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 <script>
     var dataURL;
-    $(document).ready(function () {
+ //   $(document).ready(function () {
         init();
 
         function touchHandler(event) {
@@ -217,7 +217,7 @@
             $('#rotate-pic').hide()
         });
 
-    });
+    //});
     $(document).ready(function () {
         $('.selectSanta').on('click', function () {
             let img = $(this).attr("src");

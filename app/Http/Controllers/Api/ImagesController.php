@@ -14,5 +14,14 @@ class ImagesController extends Controller
        $images = Image::all();
        return response()->json(['success'=>true,'images'=>$images]);
    }
+   public function uploadImage(Request $request)
+    {
+        $file= $request->file('upload_image');
+        $filename= date('YmdHi').$file->getClientOriginalName();
+       $file->move(public_path('public/customerImages'),$filename);
+       return response()->json(['success'=>true,'image'=>'public/customerImages'.'/'.$filename],200);
+
+
+    }
 
 }
