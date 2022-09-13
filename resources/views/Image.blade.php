@@ -26,7 +26,7 @@
             margin-top: 20px!important;
             margin: auto;
             background-size: cover;
-            background-color: #232020a6;
+            background-color: transparent;
             background-blend-mode: darken;
             position: relative;
         }
@@ -239,9 +239,9 @@
     $(function () {
         $("#brightness").slider({
             orientation: "horizontal",
-            min: 100,
-            max: 200,
-            value: 0,
+            min: 50,
+            max: 140,
+            value: 95,
             slide: blur,
             change: blur
         });
@@ -249,16 +249,16 @@
         $("#contrast").slider({
             orientation: "horizontal",
             min: 0,
-            max: 1000,
-            value: 100,
+            max: 300,
+            value: 150,
             slide: blur,
             change: blur
         });
 
     });
     $("#reset").click(function(){
-        $("#contrast").slider("value", 100);
-        $("#brightness").slider("value", 0);
+        $("#brightness").slider("value", 95);
+        $("#contrast").slider("value", 150);
     });
 </script>
 
