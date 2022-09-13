@@ -71,7 +71,7 @@
         <div class="modal-body">
             <div class="add-img pt-2">
                 <button type="button" class="uploadbtn">Click here to upload </button>
-                <input class="input-type" type='file' name="image" onchange="readURL(this);" />
+                <input class="input-type" type='file' name="image" required  onchange="readURL(this);" />
                 <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="py-3 w-100" alt="" />
                 </div>
           <button type="button" class="btn cancel-btn mb-2" data-dismiss="modal">Cancel</button>

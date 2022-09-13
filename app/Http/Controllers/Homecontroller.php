@@ -19,6 +19,7 @@ class Homecontroller extends Controller
     }
     public function storeImage(Request $request)
     {
+
         $customer_image = new CustomerImage();
         if($request->download_image)
         {
@@ -35,6 +36,8 @@ class Homecontroller extends Controller
         }
         if($request->hasFile('image'))
         {
+
+
            $file= $request->file('image');
            $filename= date('YmdHi').$file->getClientOriginalName();
            $file->move(public_path('public/customerImages'),$filename);
