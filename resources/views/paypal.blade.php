@@ -153,4 +153,19 @@ OR RETURN TO EDITOR
         .catch((err) => {
             console.error('PayPal Buttons failed to render');
         });
+    $(window).on('keydown', function(event) {
+        if (event.keyCode == 123) {
+            return false; //Disable F12
+        } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+            return false; //Disable ctrl+shift+i
+        } else if (event.ctrlKey && event.keyCode == 73) {
+            return false; //Disable ctrl+shift+i
+        }
+        else if (event.ctrlKey && event.keyCode == 67|| event.keyCode == 86|| event.keyCode ==85|| event.keyCode == 117) {
+            return false; //Disable ctrl+shift+i
+        }
+    });
+    $(document).on("contextmenu", function(e) {
+        e.preventDefault();
+    });
 </script>

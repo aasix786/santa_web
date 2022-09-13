@@ -29,11 +29,12 @@
             background-blend-mode: darken;
             position: relative;
             background-repeat: no-repeat;
+            background-color: transparent;
         }
     </style>
 </head>
 <body>
-<div class="main-boody" oncontextmenu="return false">
+<div class="main-boody" oncontextmenu="return true">
     <header class="main-header">
         <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
     </header>

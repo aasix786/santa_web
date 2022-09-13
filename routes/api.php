@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\IntroductionController;
 use App\Http\Controllers\Api\ImagesController;
-use App\Http\Controllers\api\PayPalController;
+use App\Http\Controllers\Api\PayPalController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
