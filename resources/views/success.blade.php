@@ -49,18 +49,18 @@
             <h2 style='align-content: center;color: green' >Please click the above back button, Image will be downloaded automaticly</h2>
         </div> -->
         <div class="success">
-       
+
         <div class="green-gradient">
         <div class="check-box">
-    
+
             <i class="fas fa-check" id="icon-class"></i>
-   
+
     </div>
          <p class="success-font">Success</p>
     </div>
     <div class="white-gradient">
-    <p class="success-text">Congregulations, your account has been successfully created.</p>
-    <button type="button" class="btn success-btn">Continue</button> 
+    <p class="success-text">Pleasse click the above back button, Image will be downloaded automatically</p>
+    {{--<button type="button" class="btn success-btn">Continue</button> --}}
             </div>
     </div>
     </div>
