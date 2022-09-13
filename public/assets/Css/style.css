@@ -508,3 +508,45 @@ font-size: 45px!important;
                 text-align: justify;
                 vertical-align: text-top;
             }
+            .success {
+                background: linear-gradient(#8BC34A 50%, white 50%);
+                text-align: center;
+                justify-content: center;
+                border-radius: 7px;
+                margin: 0px 40px;
+            }
+            .bg-grey-class {
+                background-color: #E5E5E5!important;
+            }
+            .green-gradient {
+                padding: 35px;
+                color: white;
+            }
+            .white-gradient {
+                padding: 35px;
+            }
+            .success-btn {
+                background-color: #8BC34A;
+                color: white;
+                padding: 11px 38px;
+                border-radius: 25px;
+                font-size: 18px;
+            }
+            .success-text {
+                color: gray;
+                font-size: 19px;
+            }
+            .check-box {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                border: 4px solid;
+                margin: auto;
+            }
+            .success-font {
+                font-size: 18px;
+            }
+            #icon-class {
+                font-size: 25px;
+                margin-top: 15px;
+            }
