@@ -60,8 +60,8 @@ private function paypalPaymentCurl($id){
             'receiver' =>[$obj_rec
             ]
         ],
-        'returnUrl'=>'http://192.168.18.4:8080/payment/success/'.$id,
-        'cancelUrl'=>'http://192.168.18.4:8080/cancel/'.$id,
+        'returnUrl'=>'https://wecaughtsanta.com/payment/success/'.$id,
+        'cancelUrl'=>'https://wecaughtsanta.com/cancel/'.$id,
         'requestEnvelope'=>[
             'errorLanguage'=>'en_US',
             'detailLevel'=>'ReturnAll'
