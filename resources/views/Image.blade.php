@@ -83,9 +83,7 @@
                 </div>
             </div>
             <div class="bg-santa-img showimg w-100">
-                <p class="rotingtxt1">we caught santa we caught santa we caught santa we caught santa we caught
-                    santa </p>
-
+                <p class="rotingtxt1">{{$watermark}}</p>
                 <div id="container">
                     <div id="canvas-border-hide">
                         <div class="right"></div>

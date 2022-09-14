@@ -58,7 +58,7 @@
                     </div> -->
                     <div class="bg-santa-img">
 
-                            <p class="rotingtxt">we caught santa we caught santa we caught santa we caught santa we caught santa  </p>
+                            <p class="rotingtxt">{{$watermark}} </p>
 
                         </div>
 

@@ -33,9 +33,7 @@ Route::get('/clear-cache', function() {
         Route::get('/effects', function () {
             return view('effects');
         });
-        Route::get('/image', function () {
-            return view('Image');
-        })->name('image');
+        Route::get('/image', [Homecontroller::class,'image'])->name('image');
         Route::get('/paypal', [Homecontroller::class,'paypal'])->name('paypal');
         Route::get('/plugin', function () {
             return view('plugin');
