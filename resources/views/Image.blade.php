@@ -22,7 +22,7 @@
             background-image: url(<?php echo request()->query("a"); ?>);
             width: 75%;
             border: 3px solid gray;
-            height: 400px;
+            height: 650px;
             margin-top: 20px !important;
             margin: auto;
             background-size: cover;
@@ -60,25 +60,25 @@
             </div>
             <div class="itro-text padding margin-top">
                 <div class="row p-1 mx-0">
-                    <div class="col-md-4 col-4">
+                    <div class="col-md-4 col-5">
                         <h1 class="text-shade">BRIGHTNESS</h1>
                     </div>
-                    <div class="col-md-4 col-4 left-border">
+                    <div class="col-md-4 col-5 left-border">
                         <h1 class="text-shade">CONTRAST</h1>
                     </div>
-                    <div class="col-md-4 col-4 left-border">
+                    <div class="col-md-4 col-2 left-border px-0 pl-2 text-center">
                         <h1 class="text-shade">RESET</h1>
                     </div>
-                    <div class="col-md-4 col-4">
+                    <div class="col-md-4 col-5 px-0 ">
                         <img src="{{asset('assets/imgs/bright.png')}}" class="santa-dp3" id="brightness-pic">
                         <div id="brightness"></div>
                     </div>
-                    <div class="col-md-4 col-4">
+                    <div class="col-md-4 col-5 px-0" >
                         <img src="{{asset('assets/imgs/contrast.PNG')}}" class="santa-dp3" id="contrast-pic">
                         <div id="contrast"></div>
                     </div>
-                    <div class="col-md-4 col-4">
-                        <img src="{{asset('assets/imgs/reset.png')}}" class="santa-dp3" id="reset">
+                    <div class="col-md-4 col-2">
+                        <img src="{{asset('assets/imgs/reset.png')}}" class="santa-dp3_" id="reset">
                     </div>
                 </div>
             </div>
@@ -262,134 +262,134 @@
 
 
 <script>
-    var $container = document.getElementById("container");
+            var $container = document.getElementById("container");
 
-    // Proxies
-    var $right = document.createElement("div");
-    var $bottom = document.createElement("div");
-    var $top = document.createElement("div");
-    var $left = document.createElement("div");
+            // Proxies
+            var $right = document.createElement("div");
+            var $bottom = document.createElement("div");
+            var $top = document.createElement("div");
+            var $left = document.createElement("div");
 
-    var mainDraggable = new Draggable($container);
+            var mainDraggable = new Draggable($container);
 
-    var rightLastX = 0;
-    var rightDraggable = new Draggable($right, {
-        trigger: ".right",
-        cursor: "e-resize",
-        onDrag: updateRight,
-        onPress: function () {
-            rightLastX = this.x;
-            mainDraggable.disable();
-        },
-        onRelease: function () {
-            mainDraggable.enable();
-        }
-    });
+            var rightLastX = 0;
+            var rightDraggable = new Draggable($right, {
+                trigger: ".right",
+                cursor: "e-resize",
+                onDrag: updateRight,
+                onPress: function () {
+                    rightLastX = this.x;
+                    mainDraggable.disable();
+                },
+                onRelease: function () {
+                    mainDraggable.enable();
+                }
+            });
 
-    function updateRight() {
-        var diffX = this.x - rightLastX;
-        TweenMax.set($container, {
-            width: "+=" + diffX
-        });
-        rightLastX = this.x;
-    }
+            function updateRight() {
+                var diffX = this.x - rightLastX;
+                TweenMax.set($container, {
+                    width: "+=" + diffX
+                });
+                rightLastX = this.x;
+            }
 
-    var bottomLastY = 0;
-    var bottomDraggable = new Draggable($bottom, {
-        trigger: ".bottom",
-        cursor: "s-resize",
-        onDrag: updateBottom,
-        onPress: function () {
-            bottomLastY = this.y;
-            mainDraggable.disable();
-        },
-        onRelease: function () {
-            mainDraggable.enable();
-        }
-    });
+            var bottomLastY = 0;
+            var bottomDraggable = new Draggable($bottom, {
+                trigger: ".bottom",
+                cursor: "s-resize",
+                onDrag: updateBottom,
+                onPress: function () {
+                    bottomLastY = this.y;
+                    mainDraggable.disable();
+                },
+                onRelease: function () {
+                    mainDraggable.enable();
+                }
+            });
 
-    function updateBottom() {
-        var diffY = this.y - bottomLastY;
-        TweenMax.set($container, {
-            height: "+=" + diffY
-        });
-        bottomLastY = this.y;
-    }
+            function updateBottom() {
+                var diffY = this.y - bottomLastY;
+                TweenMax.set($container, {
+                    height: "+=" + diffY
+                });
+                bottomLastY = this.y;
+            }
 
-    var topLastY = 0;
-    var topDraggable = new Draggable($top, {
-        trigger: ".top",
-        cursor: "n-resize",
-        onDrag: updateTop,
-        onPress: function () {
-            topLastY = this.y;
-            mainDraggable.disable();
-        },
-        onRelease: function () {
-            mainDraggable.enable();
-        }
-    });
+            var topLastY = 0;
+            var topDraggable = new Draggable($top, {
+                trigger: ".top",
+                cursor: "n-resize",
+                onDrag: updateTop,
+                onPress: function () {
+                    topLastY = this.y;
+                    mainDraggable.disable();
+                },
+                onRelease: function () {
+                    mainDraggable.enable();
+                }
+            });
 
-    function updateTop() {
-        var diffY = this.y - topLastY;
-        TweenMax.set($container, {
-            height: "-=" + diffY,
-            y: "+=" + diffY
-        });
-        topLastY = this.y;
-    }
+            function updateTop() {
+                var diffY = this.y - topLastY;
+                TweenMax.set($container, {
+                    height: "-=" + diffY,
+                    y: "+=" + diffY
+                });
+                topLastY = this.y;
+            }
 
-    var leftLastX = 0;
-    var leftDraggable = new Draggable($left, {
-        trigger: ".left",
-        cursor: "w-resize",
-        onDrag: updateLeft,
-        onPress: function () {
-            leftLastX = this.x;
-            mainDraggable.disable();
-        },
-        onRelease: function () {
-            mainDraggable.enable();
-        }
-    });
+            var leftLastX = 0;
+            var leftDraggable = new Draggable($left, {
+                trigger: ".left",
+                cursor: "w-resize",
+                onDrag: updateLeft,
+                onPress: function () {
+                    leftLastX = this.x;
+                    mainDraggable.disable();
+                },
+                onRelease: function () {
+                    mainDraggable.enable();
+                }
+            });
 
-    function updateLeft() {
-        var diffX = this.x - leftLastX;
-        TweenMax.set($container, {
-            width: "-=" + diffX,
-            x: "+=" + diffX
-        });
-        leftLastX = this.x;
-    }
+            function updateLeft() {
+                var diffX = this.x - leftLastX;
+                TweenMax.set($container, {
+                    width: "-=" + diffX,
+                    x: "+=" + diffX
+                });
+                leftLastX = this.x;
+            }
 
-    // Corner triggers
-    $(".bottomRight").on("mousedown touchstart", function (e) {
-        mainDraggable.disable();
-        rightDraggable.startDrag(e);
-        bottomDraggable.startDrag(e);
-    });
+            // Corner triggers
+            $(".bottomRight").on("mousedown touchstart", function (e) {
+                mainDraggable.disable();
+                rightDraggable.startDrag(e);
+                bottomDraggable.startDrag(e);
+            });
 
-    $(".bottomLeft").on("mousedown touchstart", function (e) {
-        mainDraggable.disable();
-        leftDraggable.startDrag(e);
-        bottomDraggable.startDrag(e);
-    });
+            $(".bottomLeft").on("mousedown touchstart", function (e) {
+                mainDraggable.disable();
+                leftDraggable.startDrag(e);
+                bottomDraggable.startDrag(e);
+            });
 
-    $(".topLeft").on("mousedown touchstart", function (e) {
-        mainDraggable.disable();
-        topDraggable.startDrag(e);
-        leftDraggable.startDrag(e);
-    });
+            $(".topLeft").on("mousedown touchstart", function (e) {
+                mainDraggable.disable();
+                topDraggable.startDrag(e);
+                leftDraggable.startDrag(e);
+            });
 
-    $(".topRight").on("mousedown touchstart", function (e) {
-        mainDraggable.disable();
-        topDraggable.startDrag(e);
-        rightDraggable.startDrag(e);
-    });
+            $(".topRight").on("mousedown touchstart", function (e) {
+                mainDraggable.disable();
+                topDraggable.startDrag(e);
+                rightDraggable.startDrag(e);
+            });
 
-    $(".topRight, .topLeft, .bottomLeft, .bottomRight").on("mouseup touchend", function (e) {
-        mainDraggable.enable();
-    });
-</script>
+            $(".topRight, .topLeft, .bottomLeft, .bottomRight").on("mouseup touchend", function (e) {
+                mainDraggable.enable();
+            });
+        </script>
 </body>
 </html>
