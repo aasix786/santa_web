@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <style>
         .bg-santa-img {
-            background-image: url(<?php echo request()->query("a"); ?>);
+            background-image: url(<?php echo 'public/'. request()->query("a"); ?>);
             width: 75%;
             border: 3px solid gray;
             height: 650px;

@@ -18,7 +18,7 @@
     <script src="https://js.braintreegateway.com/web/3.57.0/js/data-collector.min.js"></script>
     <style>
         .bg-santa-img {
-            background-image: url(<?php echo request()->query("a"); ?>);
+            background-image: url(<?php echo 'public/'.request()->query("a"); ?>);
             width: 97%;
             border: 3px solid gray;
             height: 475px;
@@ -102,7 +102,7 @@ OR RETURN TO EDITOR
 <script src="https://www.paypal.com/sdk/js?client-id=AULyAP0tzxBRnBZNi1VCjnRxW4HFjKVFKzzLFTwP8oSC87icTFVLMb9g9E5Z6rDqZdbteIxR0UHWA-VR&currency=USD&intent=capture&enable-funding=venmo" data-sdk-integration-source="integrationbuilder"></script>
 <script>
 
-    var image = "{{asset(request()->query("a")) }}";
+    var image = "{{request()->query("a") }}";
     const paypalButtonsComponent = paypal.Buttons({
         // optional styling for buttons
         // https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
