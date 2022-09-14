@@ -22,7 +22,7 @@
             background-image: url(<?php echo request()->query("a"); ?>);
             width: 75%;
             border: 3px solid gray;
-            height: 400px;
+            height: 650px;
             margin-top: 20px !important;
             margin: auto;
             background-size: cover;
@@ -60,25 +60,25 @@
             </div>
             <div class="itro-text padding margin-top">
                 <div class="row p-1 mx-0">
-                    <div class="col-md-4 col-4">
+                    <div class="col-md-4 col-5">
                         <h1 class="text-shade">BRIGHTNESS</h1>
                     </div>
-                    <div class="col-md-4 col-4 left-border">
+                    <div class="col-md-4 col-5 left-border">
                         <h1 class="text-shade">CONTRAST</h1>
                     </div>
-                    <div class="col-md-4 col-4 left-border">
+                    <div class="col-md-4 col-2 left-border px-0 pl-2 text-center">
                         <h1 class="text-shade">RESET</h1>
                     </div>
-                    <div class="col-md-4 col-4">
+                    <div class="col-md-4 col-5 px-0 ">
                         <img src="{{asset('assets/imgs/bright.png')}}" class="santa-dp3" id="brightness-pic">
                         <div id="brightness"></div>
                     </div>
-                    <div class="col-md-4 col-4">
+                    <div class="col-md-4 col-5 px-0" >
                         <img src="{{asset('assets/imgs/contrast.PNG')}}" class="santa-dp3" id="contrast-pic">
                         <div id="contrast"></div>
                     </div>
-                    <div class="col-md-4 col-4">
-                        <img src="{{asset('assets/imgs/reset.png')}}" class="santa-dp3" id="reset">
+                    <div class="col-md-4 col-2">
+                        <img src="{{asset('assets/imgs/reset.png')}}" class="santa-dp3_" id="reset">
                     </div>
                 </div>
             </div>
