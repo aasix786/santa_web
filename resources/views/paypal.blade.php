@@ -16,6 +16,7 @@
     <script src="https://js.braintreegateway.com/web/3.57.0/js/client.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.57.0/js/venmo.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.57.0/js/data-collector.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .bg-santa-img {
             background-image: url(<?php echo request()->query("a"); ?>);
@@ -62,9 +63,10 @@
 
                         </div>
 
-                    {{--<div class="paypal">
-                        <!-- <i class="fa-brands fa-paypal"></i> -->
-                     <a href="{{route('payment',['a'=>request()->query("a")])}}">   <i class="fab fa-paypal"></i>
+                    <div class="paypal">
+                        <a href="{{route('payment',['a'=>request()->query("a")])}}">  
+                         <!-- <i class="fa-brands fa-paypal"></i> -->
+                         <i class="fab fa-paypal"></i>
                      Pay<span class="sky-clr">Pal</span></a>
                     </div>
                     <div class="paypal text-white venmo">
@@ -74,25 +76,21 @@
                         <!-- <i class="fa-brands fa-paypal"></i> -->
                         <i class="fab fa-paypal"></i>
                         PayPal CREDIT
-                       </div>--}}
-                        <div style="padding: 15px;" id="paypal-button-container"></div>
+                       </div>
+                        <!-- <div style="padding: 15px;" id="paypal-button-container"></div> -->
 
 
-                   {{-- <div class="payment-method">
+                    <div class="payment-method">
                         <div class="payment-cards"><img src="{{asset('assets/imgs/card1.png')}}" class="img-size"></div>
                         <div class="payment-cards"><img src="{{asset('assets/imgs/card2.png')}}" class="img-size"></div>
                         <div class="payment-cards"><img src="{{asset('assets/imgs/card3.png')}}" class="img-size"></div>
                         <div class="payment-cards"><img src="{{asset('assets/imgs/card4.png')}}" class="img-size"></div>
                         <div class=""></div>
                         <div class=""></div>
-                           </div>--}}
+                           </div>
                            <div class="catch radius mbottom">
-
-                               <a href="{{url()->previous()}}"><button type="button" class="btn red font-text bg-transparent w-100">
-
-OR RETURN TO EDITOR
-  </button> </a>
-  </div>
+                               <a href="{{url()->previous()}}"><button type="button" class="btn red font-text bg-transparent w-100">OR RETURN TO EDITOR </button> </a>
+                            </div>
                   </div>
             </div>
         </div>
