@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{asset('assets/external/jquery.fancybox.min.css')}}">
     <script src="{{asset('assets/external/jquery-3.3.1.slim.min.js')}}"></script>
     <script src="{{asset('assets/external/popper.min.js')}}"></script>
-     <script src="{{asset('assets/external/bootstrap.min.js')}}"></script>
+    <script src="{{asset('assets/external/bootstrap.min.js')}}"></script>
     <script src="https://js.braintreegateway.com/web/3.57.0/js/client.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.57.0/js/venmo.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.57.0/js/data-collector.min.js"></script>
@@ -34,69 +34,69 @@
     </style>
 </head>
 <body oncontextmenu="return false">
-    <div class="main-boody">
-        <header class="main-header">
-            <!-- <h1 class="text1">WE CAUGHT SANTA!</h1>
-            <h1 class="text2">Custom Pictures of Santa under YOUR TREE!</h1> -->
-            <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
-            </header>
+<div class="main-boody">
+    <header class="main-header">
+        <!-- <h1 class="text1">WE CAUGHT SANTA!</h1>
+        <h1 class="text2">Custom Pictures of Santa under YOUR TREE!</h1> -->
+        <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
+    </header>
 
-        <div class="main-area">
-            <div class="overlay-clr">
-                <div class="itro-text padding">
-                    <div class="pt-1">
+    <div class="main-area">
+        <div class="overlay-clr">
+            <div class="itro-text padding">
+                <div class="pt-1">
                     <h1 class="text5">{{$custom_text->custom_text}}</h1>
 
                 </div>
-                    <div class="santa-profile">
-                        <img src="{{asset('assets/imgs/santa12.png')}}" class="santa-dp">
-                        <h1 class="text6">$5.00</h1>
-                    </div>
+                <div class="santa-profile">
+                    <img src="{{asset('assets/imgs/santa12.png')}}" class="santa-dp">
+                    <h1 class="text6">$5.00</h1>
+                </div>
 
-                    <!-- <div class="bg-santa-img">
-                        <img src="{{asset('assets/imgs/santa12.png')}}"  class="santa-dp4">
-                    </div> -->
-                    <div class="bg-santa-img">
+                <!-- <div class="bg-santa-img">
+                    <img src="{{asset('assets/imgs/santa12.png')}}"  class="santa-dp4">
+                </div> -->
+                <div class="bg-santa-img">
 
-                            <p class="rotingtxt">{{$watermark}} </p>
+                    <p class="rotingtxt">{{$watermark}} </p>
 
-                        </div>
+                </div>
 
-                    {{--<div class="paypal">
-                        <!-- <i class="fa-brands fa-paypal"></i> -->
-                     <a href="{{route('payment',['a'=>request()->query("a")])}}">   <i class="fab fa-paypal"></i>
-                     Pay<span class="sky-clr">Pal</span></a>
-                    </div>
-                    <div class="paypal text-white venmo">
-                     <a id="venmo-button" href="">Venmo</a>
-                    </div>
-                    <div class="paypal text-white credit">
-                        <!-- <i class="fa-brands fa-paypal"></i> -->
-                        <i class="fab fa-paypal"></i>
-                        PayPal CREDIT
-                       </div>--}}
-                        <div style="padding: 15px;" id="paypal-button-container"></div>
+                {{--<div class="paypal">
+                    <!-- <i class="fa-brands fa-paypal"></i> -->
+                    <a href="{{route('payment',['a'=>request()->query("a")])}}">   <i class="fab fa-paypal"></i>
+                    Pay<span class="sky-clr">Pal</span></a>
+                </div>
+                <div class="paypal text-white venmo">
+                    <a id="venmo-button" href="">Venmo</a>
+                </div>
+                <div class="paypal text-white credit">
+                    <!-- <i class="fa-brands fa-paypal"></i> -->
+                    <i class="fab fa-paypal"></i>
+                    PayPal CREDIT
+                </div>--}}
+                <div style="padding: 15px;" id="paypal-button-container"></div>
 
 
-                   {{-- <div class="payment-method">
-                        <div class="payment-cards"><img src="{{asset('assets/imgs/card1.png')}}" class="img-size"></div>
-                        <div class="payment-cards"><img src="{{asset('assets/imgs/card2.png')}}" class="img-size"></div>
-                        <div class="payment-cards"><img src="{{asset('assets/imgs/card3.png')}}" class="img-size"></div>
-                        <div class="payment-cards"><img src="{{asset('assets/imgs/card4.png')}}" class="img-size"></div>
-                        <div class=""></div>
-                        <div class=""></div>
-                           </div>--}}
-                           <div class="catch radius mbottom">
+                {{-- <div class="payment-method">
+                    <div class="payment-cards"><img src="{{asset('assets/imgs/card1.png')}}" class="img-size"></div>
+                    <div class="payment-cards"><img src="{{asset('assets/imgs/card2.png')}}" class="img-size"></div>
+                    <div class="payment-cards"><img src="{{asset('assets/imgs/card3.png')}}" class="img-size"></div>
+                    <div class="payment-cards"><img src="{{asset('assets/imgs/card4.png')}}" class="img-size"></div>
+                    <div class=""></div>
+                    <div class=""></div>
+                </div>--}}
+                <div class="catch radius mbottom">
 
-                               <a href="{{url()->previous()}}"><button type="button" class="btn red font-text bg-transparent w-100">
+                    <a href="{{url()->previous()}}"><button type="button" class="btn red font-text bg-transparent w-100">
 
-OR RETURN TO EDITOR
-  </button> </a>
-  </div>
-                  </div>
+                            OR RETURN TO EDITOR
+                        </button> </a>
+                </div>
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
 <script src="https://www.paypal.com/sdk/js?client-id=AULyAP0tzxBRnBZNi1VCjnRxW4HFjKVFKzzLFTwP8oSC87icTFVLMb9g9E5Z6rDqZdbteIxR0UHWA-VR&currency=USD&intent=capture&enable-funding=venmo" data-sdk-integration-source="integrationbuilder"></script>
@@ -138,7 +138,7 @@ OR RETURN TO EDITOR
                 window.location.href = image;
             };
 
-             return actions.order.capture().then(captureOrderHandler);
+            return actions.order.capture().then(captureOrderHandler);
 
         },
 

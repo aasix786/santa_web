@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <style>
         .bg-santa-img {
-            background-image: url(<?php echo 'public/'. request()->query("a"); ?>);
+            background-image: url(<?php echo  request()->query("a"); ?>);
             width: 75%;
             border: 3px solid gray;
             height: 650px;
@@ -78,7 +78,7 @@
                         <div id="contrast"></div>
                     </div>
                     <div class="col-md-4 col-2">
-                        <img src="{{asset('assets/imgs/reset.png')}}" class="santa-dp3_" id="reset">
+                        <img src="{{asset('assets/imgs/reset.png')}}" class="santa-dp3" id="reset">
                     </div>
                 </div>
             </div>
