@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\CustomerImage;
 use App\Models\Introduction;
+use App\Models\Watermark;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
@@ -50,6 +51,13 @@ class Homecontroller extends Controller
     public function paypal()
     {
         $introduction = Introduction::select('custom_text')->first();
-        return view('paypal',['custom_text'=>$introduction]);
+$water_mark = Watermark::select('watermark')->first();
+        return view('paypal',['custom_text'=>$introduction,'watermark'=>$water_mark->watermark]);
+    }
+
+    public function image()
+    {
+        $water_mark = Watermark::select('watermark')->first();
+        return view('Image',['watermark'=>$water_mark->watermark]);
     }
 }
