@@ -63,9 +63,14 @@
 
                         </div>
 
+
                    {{-- <div class="paypal">
                         <a href="{{route('payment',['a'=>request()->query("a")])}}">
                          <!-- <i class="fa-brands fa-paypal"></i> -->
+                    <!-- <div class="paypal">
+                        <a href="{{route('payment',['a'=>request()->query("a")])}}">
+                         <i class="fa-brands fa-paypal"></i>
+
                          <i class="fab fa-paypal"></i>
                      Pay<span class="sky-clr">Pal</span></a>
                     </div>
@@ -73,14 +78,17 @@
                      <a id="venmo-button" href="">Venmo</a>
                     </div>
                     <div class="paypal text-white credit">
-                        <!-- <i class="fa-brands fa-paypal"></i> -->
+                        <i class="fa-brands fa-paypal"></i>
                         <i class="fab fa-paypal"></i>
                         PayPal CREDIT
+
                        </div>--}}
-                   <div style="padding: 15px;" id="paypal-button-container"></div>
+
+                        <div style="padding: 15px 15px 0 15px;" id="paypal-button-container"></div>
 
 
-                    <div class="payment-method">
+
+                    <div class="payment-method mt-0">
                         <div class="payment-cards"><img src="{{asset('assets/imgs/card1.png')}}" class="img-size"></div>
                         <div class="payment-cards"><img src="{{asset('assets/imgs/card2.png')}}" class="img-size"></div>
                         <div class="payment-cards"><img src="{{asset('assets/imgs/card3.png')}}" class="img-size"></div>
