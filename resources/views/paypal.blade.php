@@ -77,10 +77,10 @@
                         <i class="fab fa-paypal"></i>
                         PayPal CREDIT
                        </div> -->
-                        <div style="padding: 15px;" id="paypal-button-container"></div>
+                        <div style="padding: 15px 15px 0 15px;" id="paypal-button-container"></div>
 
 
-                    <div class="payment-method">
+                    <div class="payment-method mt-0">
                         <div class="payment-cards"><img src="{{asset('assets/imgs/card1.png')}}" class="img-size"></div>
                         <div class="payment-cards"><img src="{{asset('assets/imgs/card2.png')}}" class="img-size"></div>
                         <div class="payment-cards"><img src="{{asset('assets/imgs/card3.png')}}" class="img-size"></div>
