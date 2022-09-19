@@ -73,7 +73,7 @@
                         <div id="brightness"></div>
                     </div>
                     <div class="col-md-4 col-5 px-0" >
-                        <img src="{{asset('assets/imgs/contrast.PNG')}}" class="santa-dp3" id="contrast-pic">
+                        <img src="{{asset('assets/imgs/contrast.png')}}" class="santa-dp3" id="contrast-pic">
                         <div id="contrast"></div>
                     </div>
                     <div class="col-md-4 col-2">
@@ -169,7 +169,7 @@
             html2canvas(document.querySelector('.bg-santa-img')).then(canvas => {
                 document.getElementById('save-img-section').appendChild(canvas);
 
-                $('#save-img-section').show();
+                $('#save-img-section').hide();
                 var canvas = $("canvas")[0];
                 var context = $("canvas")[0].getContext('2d');
 
