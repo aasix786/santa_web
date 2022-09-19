@@ -170,7 +170,7 @@
             html2canvas(document.querySelector('.bg-santa-img')).then(canvas => {
                 document.getElementById('save-img-section').appendChild(canvas);
 
-                $('#save-img-section').hide();
+                $('#save-img-section').show();
                 var canvas = $("canvas")[0];
                 var context = $("canvas")[0].getContext('2d');
 
