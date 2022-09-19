@@ -240,6 +240,14 @@ font-size: 45px!important;
         width: 28px;
         padding: 2px;
     }
+    .downloadImage img{
+        height: 550px;
+    }
+    .downloadImage {
+        border: 40px solid #000000e0;
+        padding: 3px;
+        background: #eaeaea;
+    }    
     .bg-santa-img {
         background-image: url(../imgs/santa5.jpeg);
         width: 75%;

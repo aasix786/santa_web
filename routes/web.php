@@ -30,6 +30,10 @@ Route::get('/clear-cache', function() {
         Route::get('/drag', function () {
             return view('drag');
         });
+        
+        Route::get('/download', function () {
+            return view('download');
+        });
         Route::get('/effects', function () {
             return view('effects');
         });

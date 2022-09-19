@@ -80,7 +80,9 @@
     .padding {
         padding: 5px !important;
     }
-    
+    .downloadImage img {
+        height: 250px;
+    }
 .font-text {
     font-size: 20px!important;
 }
