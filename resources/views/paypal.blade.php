@@ -22,7 +22,7 @@
             background-image: url(<?php echo request()->query("a"); ?>);
             width: 97%;
             border: 3px solid gray;
-            height: 475px;
+            height: <?php echo request()->query("h"); ?>px;
             margin-top: 20px !important;
             margin: auto;
             margin-top: auto;

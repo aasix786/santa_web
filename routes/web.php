@@ -46,7 +46,7 @@ Route::get('/clear-cache', function() {
         })->name('upload-image');
 
         Route::get('/',[Homecontroller::class,'home'])->name('home');
-        Route::post('store-image',[Homecontroller::class,'storeImage'])->name('store.image');
+        Route::post('store-image/{width?}/{height?}',[Homecontroller::class,'storeImage'])->name('store.image');
         Route::get('payment', [PayPalController::class,'payment'])->name('payment');
         Route::get('cancel/{id}', [PayPalController::class,'cancel'])->name('payment.cancel');
         Route::get('payment/success/{id}', [PayPalController::class,'success'])->name('payment.success');

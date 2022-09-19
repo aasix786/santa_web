@@ -29,22 +29,27 @@ class Homecontroller extends Controller
             $img = str_replace('data:image/png;base64,', '', $img);
             $img = str_replace(' ', '+', $img);
             $data = base64_decode($img);
+
             $file =  'public/customerImages/' . uniqid() . '.png';
             $success = file_put_contents($file, $data);
             $customer_image->image = $file;
+            $customer_image->image_width = $request->width;
+            $customer_image->image_height = $request->height;
             $customer_image->save();
-            return redirect()->route('paypal',['a'=>$customer_image->image]);
+            return redirect()->route('paypal',['a'=>$customer_image->image,'w'=>$request->width,'h'=>$request->height]);
         }
         if($request->hasFile('image'))
         {
-
-
            $file= $request->file('image');
+            $width = getimagesize($file)[0]; // getting the image width
+            $height = getimagesize($file)[1]; // getting the image height
+            $customer_image->image_width= $width;
+            $customer_image->image_height= $height;
            $filename= date('YmdHi').$file->getClientOriginalName();
            $file->move(public_path('public/customerImages'),$filename);
             $customer_image->image = 'public/customerImages'.'/'.$filename;
             $customer_image->save();
-            return redirect()->route('image',['a'=>$customer_image->image]);
+            return redirect()->route('image',['a'=>$customer_image->image,'w'=>$width,'h'=>$height]);
         }
 
     }

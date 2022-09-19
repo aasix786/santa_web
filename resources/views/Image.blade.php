@@ -22,10 +22,9 @@
             background-image: url(<?php echo  request()->query("a"); ?>);
             width: 75%;
             border: 3px solid gray;
-            height: 650px;
+            height: <?php echo  request()->query("h"); ?>px;
             margin-top: 20px !important;
             margin: auto;
-            background-size: cover;
             background-color: transparent;
             background-blend-mode: darken;
             position: relative;
@@ -105,7 +104,7 @@
             </div>
 
             <div class="save-img" id="save-img-section"></div>
-            <form id="formImg" method="post" action="{{route('store.image')}}">
+            <form id="formImg" method="post" action="{{route('store.image',['height'=>request()->query("h"),'width'=>request()->query("w")])}}">
                 @csrf
                 <input type="hidden" name="download_image" id="download_image">
             </form>
