@@ -18,6 +18,16 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
+        <style>
+            .downloadImage img{
+                height: {{$custom_image->image_height}}px;
+            }
+            .downloadImage {
+                border: 40px solid #000000e0;
+                padding: 3px;
+                background: #eaeaea;
+            }
+        </style>
     </head>
     <body>
         <div class="main-boody">
@@ -27,15 +37,15 @@
             </header>
             <div class="main">
                 <div class="downloadImage w-100">
-                    <img src="http://127.0.0.1:8000/assets/imgs/santa5.jpeg" class="w-100" alt="">
-                    <button type="button" class="btn red font-text bg-transparent w-100" data-toggle="modal" data-target="#exampleModalCenter">
+                    <img src="{{asset($custom_image->image)}}" class="w-100" alt="">
+                    <a href="{{asset($custom_image->image)}}"download><button type="button" class="btn red font-text bg-transparent w-100" data-toggle="modal" data-target="#exampleModalCenter">
                      DOWNLOAD
-                    </button>
+                    </button></a>
                 </div>
             </div>
         </div>
 
 
-       
+
     </body>
 </html>

@@ -24,16 +24,11 @@ Route::get('/clear-cache', function() {
         Route::get('/', function () {
             return view('index');
         });
-        Route::get('/download', function () {
-            return view('welcome');
-        })->name('download');
         Route::get('/drag', function () {
             return view('drag');
         });
-        
-        Route::get('/download', function () {
-            return view('download');
-        });
+
+        Route::get('/download', [Homecontroller::class,'download'])->name('download');
         Route::get('/effects', function () {
             return view('effects');
         });

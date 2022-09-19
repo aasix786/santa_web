@@ -65,4 +65,11 @@ $water_mark = Watermark::select('watermark')->first();
         $water_mark = Watermark::select('watermark')->first();
         return view('Image',['watermark'=>$water_mark->watermark]);
     }
+    public function download(Request $request)
+    {
+       $customer_image = CustomerImage::where('image',$request->a)->first();
+        return view('download',['custom_image'=>$customer_image
+        ]);
+
+    }
 }

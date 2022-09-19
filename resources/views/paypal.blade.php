@@ -109,7 +109,7 @@
 <script src="https://www.paypal.com/sdk/js?client-id=AULyAP0tzxBRnBZNi1VCjnRxW4HFjKVFKzzLFTwP8oSC87icTFVLMb9g9E5Z6rDqZdbteIxR0UHWA-VR&currency=USD&intent=capture&disable-funding=credit" data-sdk-integration-source="integrationbuilder"></script>
 <script>
 
-    var image = "{{request()->query("a") }}";
+    var image = "{{route('download',['a'=>request()->query("a")]) }}";
     const paypalButtonsComponent = paypal.Buttons({
         // optional styling for buttons
         // https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
