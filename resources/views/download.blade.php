@@ -21,6 +21,7 @@
         <style>
             .downloadImage img{
                 height: {{$custom_image->image_height}}px;
+                object-fit: contain;
             }
             .downloadImage {
                 border: 40px solid #000000e0;
@@ -37,8 +38,8 @@
             </header>
             <div class="main">
                 <div class="downloadImage w-100">
-                    <img src="{{asset($custom_image->image)}}" class="w-100" alt="">
-                    <a href="{{asset($custom_image->image)}}"download><button type="button" class="btn red font-text bg-transparent w-100" data-toggle="modal" data-target="#exampleModalCenter">
+                    <img src="{{$custom_image->image}}" class="w-100" alt="">
+                    <a href="{{$custom_image->image }}"download><button type="button" class="btn red font-text bg-transparent w-100" data-toggle="modal" data-target="#exampleModalCenter">
                      DOWNLOAD
                     </button></a>
                 </div>

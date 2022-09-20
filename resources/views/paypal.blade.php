@@ -105,7 +105,7 @@
     </div>
 </body>
 </html>
-//&enable-funding=venmo
+{{--&enable-funding=venmo--}}
 <script src="https://www.paypal.com/sdk/js?client-id=AULyAP0tzxBRnBZNi1VCjnRxW4HFjKVFKzzLFTwP8oSC87icTFVLMb9g9E5Z6rDqZdbteIxR0UHWA-VR&currency=USD&intent=capture&disable-funding=credit" data-sdk-integration-source="integrationbuilder"></script>
 <script>
 

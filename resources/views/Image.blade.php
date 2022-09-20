@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <style>
         .bg-santa-img {
-            background-image: url(<?php echo  request()->query("a"); ?>);
+            background-image: url(<?php echo request()->query("a"); ?>);
             width: 75%;
             border: 3px solid gray;
             height: <?php echo  request()->query("h"); ?>px;
@@ -138,83 +138,92 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/utils/Draggable.min.js"></script>
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 <script>
+
+
+
     var dataURL;
- //   $(document).ready(function () {
-        init();
+    //   $(document).ready(function () {
+    init();
 
-        function touchHandler(event) {
-            var touch = event.changedTouches[0];
+    function touchHandler(event) {
+        var touch = event.changedTouches[0];
 
-            var simulatedEvent = document.createEvent("MouseEvent");
-            simulatedEvent.initMouseEvent({
-                    touchstart: "mousedown",
-                    touchmove: "mousemove",
-                    touchend: "mouseup"
-                }[event.type], true, true, window, 1,
-                touch.screenX, touch.screenY,
-                touch.clientX, touch.clientY, false,
-                false, false, false, 0, null);
+        var simulatedEvent = document.createEvent("MouseEvent");
+        simulatedEvent.initMouseEvent({
+                touchstart: "mousedown",
+                touchmove: "mousemove",
+                touchend: "mouseup"
+            }[event.type], true, true, window, 1,
+            touch.screenX, touch.screenY,
+            touch.clientX, touch.clientY, false,
+            false, false, false, 0, null);
 
-            touch.target.dispatchEvent(simulatedEvent);
-        }
+        touch.target.dispatchEvent(simulatedEvent);
+    }
 
-        function init() {
-            document.addEventListener("touchstart", touchHandler, true);
-            document.addEventListener("touchmove", touchHandler, true);
-            document.addEventListener("touchend", touchHandler, true);
-            document.addEventListener("touchcancel", touchHandler, true);
-        }
+    function init() {
+        document.addEventListener("touchstart", touchHandler, true);
+        document.addEventListener("touchmove", touchHandler, true);
+        document.addEventListener("touchend", touchHandler, true);
+        document.addEventListener("touchcancel", touchHandler, true);
+    }
 
-        const download = () => {
-            html2canvas(document.querySelector('.bg-santa-img')).then(canvas => {
-                document.getElementById('save-img-section').appendChild(canvas);
+    const download = () => {
+        html2canvas(document.querySelector('.bg-santa-img'),{letterRendering: 1, allowTaint: true, useCORS: true, logging: true,
+            scale: 2,removeContainer: true,
+            backgroundColor: null,
+        }).then(canvas => {
+            document.getElementById('save-img-section').appendChild(canvas);
 
-                $('#save-img-section').hide();
-                var canvas = $("canvas")[0];
-                var context = $("canvas")[0].getContext('2d');
+            $('#save-img-section').hide();
+            var canvas = $("canvas")[0];
+            var context = $("canvas")[0].getContext('2d');
 
-                context.beginPath();
-                context.moveTo(170, 80);
-                context.bezierCurveTo(130, 100, 130, 150, 230, 150);
-                context.bezierCurveTo(250, 180, 320, 180, 340, 150);
-                context.bezierCurveTo(420, 150, 420, 120, 390, 100);
-                context.bezierCurveTo(430, 40, 370, 30, 340, 50);
-                context.bezierCurveTo(320, 5, 250, 20, 250, 50);
-                context.bezierCurveTo(200, 5, 150, 20, 170, 80);
-                context.closePath();
-                context.lineWidth = 5;
-                context.fillStyle = '#8ED6FF';
-                context.fill();
-                context.strokeStyle = '#0000ff';
-                context.stroke();
+            context.beginPath();
+            context.moveTo(170, 80);
+            context.bezierCurveTo(130, 100, 130, 150, 230, 150);
+            context.bezierCurveTo(250, 180, 320, 180, 340, 150);
+            context.bezierCurveTo(420, 150, 420, 120, 390, 100);
+            context.bezierCurveTo(430, 40, 370, 30, 340, 50);
+            context.bezierCurveTo(320, 5, 250, 20, 250, 50);
+            context.bezierCurveTo(200, 5, 150, 20, 170, 80);
+            context.closePath();
+            context.lineWidth = 5;
+            context.fillStyle = '#8ED6FF';
+            context.fill();
+            context.strokeStyle = '#0000ff';
+            context.stroke();
+            canvas.crossOrigin = "Anonymous";
+            dataURL = canvas.toDataURL("image/png");
+            console.log(dataURL)
+            $('#download_image').val(dataURL);
+            $("#formImg").submit();
 
-                dataURL = canvas.toDataURL("image/png");
-                $('#download_image').val(dataURL);
-                $("#formImg").submit();
-
-            });
-
-        }
-        $('#img-button-section').click(function () {
-            $('#canvas-border-hide').hide();
-
-            $('.rotingtxt1').hide();
-            download()
-            $('.rotingtxt1').show();
         });
 
-        $('#brightness-pic').click(function () {
-            $('#brightness').show()
-            $('#brightness-pic').hide()
-        });
-        $('#contrast-pic').click(function () {
-            $('#contrast').show()
-            $('#contrast-pic').hide()
-        });
-        $('#rotate-pic').click(function () {
-            $('#rotate').show()
-            $('#rotate-pic').hide()
-        });
+
+
+    }
+    $('#img-button-section').click(function () {
+        $('#canvas-border-hide').hide();
+
+        $('.rotingtxt1').hide();
+        download()
+        $('.rotingtxt1').show();
+    });
+
+    $('#brightness-pic').click(function () {
+        $('#brightness').show()
+        $('#brightness-pic').hide()
+    });
+    $('#contrast-pic').click(function () {
+        $('#contrast').show()
+        $('#contrast-pic').hide()
+    });
+    $('#rotate-pic').click(function () {
+        $('#rotate').show()
+        $('#rotate-pic').hide()
+    });
 
     //});
     $(document).ready(function () {
@@ -253,7 +262,7 @@
         });
 
     });
-  $("#reset").click(function(){
+    $("#reset").click(function(){
         $("#brightness").slider("value", 95);
         $("#contrast").slider("value", 150);
     });
@@ -261,134 +270,134 @@
 
 
 <script>
-            var $container = document.getElementById("container");
+    var $container = document.getElementById("container");
 
-            // Proxies
-            var $right = document.createElement("div");
-            var $bottom = document.createElement("div");
-            var $top = document.createElement("div");
-            var $left = document.createElement("div");
+    // Proxies
+    var $right = document.createElement("div");
+    var $bottom = document.createElement("div");
+    var $top = document.createElement("div");
+    var $left = document.createElement("div");
 
-            var mainDraggable = new Draggable($container);
+    var mainDraggable = new Draggable($container);
 
-            var rightLastX = 0;
-            var rightDraggable = new Draggable($right, {
-                trigger: ".right",
-                cursor: "e-resize",
-                onDrag: updateRight,
-                onPress: function () {
-                    rightLastX = this.x;
-                    mainDraggable.disable();
-                },
-                onRelease: function () {
-                    mainDraggable.enable();
-                }
-            });
+    var rightLastX = 0;
+    var rightDraggable = new Draggable($right, {
+        trigger: ".right",
+        cursor: "e-resize",
+        onDrag: updateRight,
+        onPress: function () {
+            rightLastX = this.x;
+            mainDraggable.disable();
+        },
+        onRelease: function () {
+            mainDraggable.enable();
+        }
+    });
 
-            function updateRight() {
-                var diffX = this.x - rightLastX;
-                TweenMax.set($container, {
-                    width: "+=" + diffX
-                });
-                rightLastX = this.x;
-            }
+    function updateRight() {
+        var diffX = this.x - rightLastX;
+        TweenMax.set($container, {
+            width: "+=" + diffX
+        });
+        rightLastX = this.x;
+    }
 
-            var bottomLastY = 0;
-            var bottomDraggable = new Draggable($bottom, {
-                trigger: ".bottom",
-                cursor: "s-resize",
-                onDrag: updateBottom,
-                onPress: function () {
-                    bottomLastY = this.y;
-                    mainDraggable.disable();
-                },
-                onRelease: function () {
-                    mainDraggable.enable();
-                }
-            });
+    var bottomLastY = 0;
+    var bottomDraggable = new Draggable($bottom, {
+        trigger: ".bottom",
+        cursor: "s-resize",
+        onDrag: updateBottom,
+        onPress: function () {
+            bottomLastY = this.y;
+            mainDraggable.disable();
+        },
+        onRelease: function () {
+            mainDraggable.enable();
+        }
+    });
 
-            function updateBottom() {
-                var diffY = this.y - bottomLastY;
-                TweenMax.set($container, {
-                    height: "+=" + diffY
-                });
-                bottomLastY = this.y;
-            }
+    function updateBottom() {
+        var diffY = this.y - bottomLastY;
+        TweenMax.set($container, {
+            height: "+=" + diffY
+        });
+        bottomLastY = this.y;
+    }
 
-            var topLastY = 0;
-            var topDraggable = new Draggable($top, {
-                trigger: ".top",
-                cursor: "n-resize",
-                onDrag: updateTop,
-                onPress: function () {
-                    topLastY = this.y;
-                    mainDraggable.disable();
-                },
-                onRelease: function () {
-                    mainDraggable.enable();
-                }
-            });
+    var topLastY = 0;
+    var topDraggable = new Draggable($top, {
+        trigger: ".top",
+        cursor: "n-resize",
+        onDrag: updateTop,
+        onPress: function () {
+            topLastY = this.y;
+            mainDraggable.disable();
+        },
+        onRelease: function () {
+            mainDraggable.enable();
+        }
+    });
 
-            function updateTop() {
-                var diffY = this.y - topLastY;
-                TweenMax.set($container, {
-                    height: "-=" + diffY,
-                    y: "+=" + diffY
-                });
-                topLastY = this.y;
-            }
+    function updateTop() {
+        var diffY = this.y - topLastY;
+        TweenMax.set($container, {
+            height: "-=" + diffY,
+            y: "+=" + diffY
+        });
+        topLastY = this.y;
+    }
 
-            var leftLastX = 0;
-            var leftDraggable = new Draggable($left, {
-                trigger: ".left",
-                cursor: "w-resize",
-                onDrag: updateLeft,
-                onPress: function () {
-                    leftLastX = this.x;
-                    mainDraggable.disable();
-                },
-                onRelease: function () {
-                    mainDraggable.enable();
-                }
-            });
+    var leftLastX = 0;
+    var leftDraggable = new Draggable($left, {
+        trigger: ".left",
+        cursor: "w-resize",
+        onDrag: updateLeft,
+        onPress: function () {
+            leftLastX = this.x;
+            mainDraggable.disable();
+        },
+        onRelease: function () {
+            mainDraggable.enable();
+        }
+    });
 
-            function updateLeft() {
-                var diffX = this.x - leftLastX;
-                TweenMax.set($container, {
-                    width: "-=" + diffX,
-                    x: "+=" + diffX
-                });
-                leftLastX = this.x;
-            }
+    function updateLeft() {
+        var diffX = this.x - leftLastX;
+        TweenMax.set($container, {
+            width: "-=" + diffX,
+            x: "+=" + diffX
+        });
+        leftLastX = this.x;
+    }
 
-            // Corner triggers
-            $(".bottomRight").on("mousedown touchstart", function (e) {
-                mainDraggable.disable();
-                rightDraggable.startDrag(e);
-                bottomDraggable.startDrag(e);
-            });
+    // Corner triggers
+    $(".bottomRight").on("mousedown touchstart", function (e) {
+        mainDraggable.disable();
+        rightDraggable.startDrag(e);
+        bottomDraggable.startDrag(e);
+    });
 
-            $(".bottomLeft").on("mousedown touchstart", function (e) {
-                mainDraggable.disable();
-                leftDraggable.startDrag(e);
-                bottomDraggable.startDrag(e);
-            });
+    $(".bottomLeft").on("mousedown touchstart", function (e) {
+        mainDraggable.disable();
+        leftDraggable.startDrag(e);
+        bottomDraggable.startDrag(e);
+    });
 
-            $(".topLeft").on("mousedown touchstart", function (e) {
-                mainDraggable.disable();
-                topDraggable.startDrag(e);
-                leftDraggable.startDrag(e);
-            });
+    $(".topLeft").on("mousedown touchstart", function (e) {
+        mainDraggable.disable();
+        topDraggable.startDrag(e);
+        leftDraggable.startDrag(e);
+    });
 
-            $(".topRight").on("mousedown touchstart", function (e) {
-                mainDraggable.disable();
-                topDraggable.startDrag(e);
-                rightDraggable.startDrag(e);
-            });
+    $(".topRight").on("mousedown touchstart", function (e) {
+        mainDraggable.disable();
+        topDraggable.startDrag(e);
+        rightDraggable.startDrag(e);
+    });
 
-            $(".topRight, .topLeft, .bottomLeft, .bottomRight").on("mouseup touchend", function (e) {
-                mainDraggable.enable();
-            });
-        </script>
+    $(".topRight, .topLeft, .bottomLeft, .bottomRight").on("mouseup touchend", function (e) {
+        mainDraggable.enable();
+    });
+</script>
 </body>
 </html>
