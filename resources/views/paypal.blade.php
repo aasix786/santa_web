@@ -18,20 +18,143 @@
     <script src="https://js.braintreegateway.com/web/3.57.0/js/data-collector.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .bg-santa-img {
-            background-image: url(<?php echo request()->query("a"); ?>);
-            width: 97%;
-            border: 3px solid gray;
-            height: <?php echo request()->query("h"); ?>px;
-            margin-top: 20px !important;
-            margin: auto;
-            margin-top: auto;
-            background-size: 100% 100%;
-            background-color: #232020a6;
-            background-blend-mode: darken;
-            position: relative;
-            overflow: hidden;
+        @media only screen and (min-width: 320px) {
+            .bg-santa-img {
+                background-image: url(<?php echo request()->query("a"); ?>);
+                border: 3px solid gray;
+                margin-top: 20px !important;
+                margin: auto;
+                width: 85%;
+                <?php
+
+                if (request()->query("h") > request()->query("w"))
+                {
+                    $height = "500";
+                }else
+                    {
+                      $height ='250';
+                    }
+
+                ?>
+height:<?php echo $height;?>px;
+                background-color: transparent;
+                background-blend-mode: darken;
+                position: relative;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: cover;
+            }
+
         }
+        @media only screen and (min-width: 425px) {
+            .bg-santa-img {
+                background-image: url(<?php echo request()->query("a"); ?>);
+                border: 3px solid gray;
+                margin-top: 20px !important;
+                margin: auto;
+                width: 85%;
+                <?php
+
+                if (request()->query("h") > request()->query("w"))
+                {
+                    $height = "525";
+                }else
+                    {
+                      $height ='300';
+                    }
+
+                ?>
+height:<?php echo $height;?>px;
+                background-color: transparent;
+                background-blend-mode: darken;
+                position: relative;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: cover;
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            .bg-santa-img {
+                background-image: url(<?php echo request()->query("a"); ?>);
+                border: 3px solid gray;
+                margin-top: 20px !important;
+                margin: auto;
+                width: 85%;
+                <?php
+
+                if (request()->query("h") > request()->query("w"))
+                {
+                    $height = "700";
+                }else
+                    {
+                      $height ='350';
+                    }
+
+                ?>
+height:<?php echo $height;?>px;
+                background-color: transparent;
+                background-blend-mode: darken;
+                position: relative;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: cover;
+            }
+        }
+        @media only screen and (min-width: 1024px) {
+            .bg-santa-img {
+                background-image: url(<?php echo request()->query("a"); ?>);
+                border: 3px solid gray;
+                margin-top: 20px !important;
+                margin: auto;
+                width: 85%;
+                <?php
+
+                if (request()->query("h") > request()->query("w"))
+                {
+                    $height = "1000";
+                }else
+                    {
+                      $height ='500';
+                    }
+
+                ?>
+height:<?php echo $height;?>px;
+                background-color: transparent;
+                background-blend-mode: darken;
+                position: relative;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: 100% 100%;
+            }
+        }
+        @media only screen and (min-width: 1900px) {
+            .bg-santa-img {
+                background-image: url(<?php echo request()->query("a"); ?>);
+                border: 3px solid gray;
+                margin-top: 20px !important;
+                margin: auto;
+                width: 85%;
+                <?php
+
+                if (request()->query("h") > request()->query("w"))
+                {
+                    $height = "1000";
+                }else
+                    {
+                      $height ='500';
+                    }
+
+                ?>
+height:<?php echo $height;?>px;
+                background-color: transparent;
+                background-blend-mode: darken;
+                position: relative;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: cover;
+            }
+        }
+
     </style>
 </head>
 <body oncontextmenu="return false">

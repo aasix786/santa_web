@@ -19,15 +19,143 @@
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
         <style>
-            .downloadImage img{
-                height: {{$custom_image->image_height}}px;
-                object-fit: contain;
+            @media only screen and (min-width: 320px) {
+                .downloadImage {
+                    background-image: url(<?php echo request()->query("a"); ?>);
+                    border: 3px solid gray;
+                    margin-top: 20px !important;
+                    margin: auto;
+                    width: 85%;
+                    <?php
+
+                    if (request()->query("h") > request()->query("w"))
+                    {
+                        $height = "500";
+                    }else
+                        {
+                          $height ='250';
+                        }
+
+                    ?>
+height:<?php echo $height;?>px;
+                    background-color: transparent;
+                    background-blend-mode: darken;
+                    position: relative;
+                    background-repeat: no-repeat;
+                    background-color: transparent;
+                    background-size: cover;
+                }
+
             }
-            .downloadImage {
-                border: 40px solid #000000e0;
-                padding: 3px;
-                background: #eaeaea;
+            @media only screen and (min-width: 425px) {
+                .downloadImage {
+                    background-image: url(<?php echo request()->query("a"); ?>);
+                    border: 3px solid gray;
+                    margin-top: 20px !important;
+                    margin: auto;
+                    width: 85%;
+                    <?php
+
+                    if (request()->query("h") > request()->query("w"))
+                    {
+                        $height = "525";
+                    }else
+                        {
+                          $height ='300';
+                        }
+
+                    ?>
+height:<?php echo $height;?>px;
+                    background-color: transparent;
+                    background-blend-mode: darken;
+                    position: relative;
+                    background-repeat: no-repeat;
+                    background-color: transparent;
+                    background-size: cover;
+                }
             }
+            @media only screen and (min-width: 768px) {
+                .downloadImage {
+                    background-image: url(<?php echo request()->query("a"); ?>);
+                    border: 3px solid gray;
+                    margin-top: 20px !important;
+                    margin: auto;
+                    width: 85%;
+                    <?php
+
+                    if (request()->query("h") > request()->query("w"))
+                    {
+                        $height = "700";
+                    }else
+                        {
+                          $height ='350';
+                        }
+
+                    ?>
+height:<?php echo $height;?>px;
+                    background-color: transparent;
+                    background-blend-mode: darken;
+                    position: relative;
+                    background-repeat: no-repeat;
+                    background-color: transparent;
+                    background-size: cover;
+                }
+            }
+            @media only screen and (min-width: 1024px) {
+                .downloadImage {
+                    background-image: url(<?php echo request()->query("a"); ?>);
+                    border: 3px solid gray;
+                    margin-top: 20px !important;
+                    margin: auto;
+                    width: 85%;
+                    <?php
+
+                    if (request()->query("h") > request()->query("w"))
+                    {
+                        $height = "1000";
+                    }else
+                        {
+                          $height ='500';
+                        }
+
+                    ?>
+height:<?php echo $height;?>px;
+                    background-color: transparent;
+                    background-blend-mode: darken;
+                    position: relative;
+                    background-repeat: no-repeat;
+                    background-color: transparent;
+                    background-size: 100% 100%;
+                }
+            }
+            @media only screen and (min-width: 1900px) {
+                .downloadImage {
+                    background-image: url(<?php echo request()->query("a"); ?>);
+                    border: 3px solid gray;
+                    margin-top: 20px !important;
+                    margin: auto;
+                    width: 85%;
+                    <?php
+
+                    if (request()->query("h") > request()->query("w"))
+                    {
+                        $height = "1000";
+                    }else
+                        {
+                          $height ='500';
+                        }
+
+                    ?>
+height:<?php echo $height;?>px;
+                    background-color: transparent;
+                    background-blend-mode: darken;
+                    position: relative;
+                    background-repeat: no-repeat;
+                    background-color: transparent;
+                    background-size: cover;
+                }
+            }
+
         </style>
     </head>
     <body>
