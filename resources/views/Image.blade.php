@@ -30,7 +30,7 @@
             position: relative;
             background-repeat: no-repeat;
             background-color: transparent;
-            background-size: 100%;
+            background-size: 100% 100%;
         }
     </style>
 </head>
