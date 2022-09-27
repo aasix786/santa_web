@@ -30,7 +30,7 @@
 
                     if (request()->query("h") > request()->query("w"))
                     {
-                        $height = "500";
+                        $height = "620";
                     }else
                         {
                           $height ='250';
@@ -58,7 +58,7 @@ height:<?php echo $height;?>px;
 
                     if (request()->query("h") > request()->query("w"))
                     {
-                        $height = "525";
+                        $height = "700";
                     }else
                         {
                           $height ='300';
@@ -85,7 +85,7 @@ height:<?php echo $height;?>px;
 
                     if (request()->query("h") > request()->query("w"))
                     {
-                        $height = "700";
+                        $height = "800";
                     }else
                         {
                           $height ='350';
@@ -112,10 +112,10 @@ height:<?php echo $height;?>px;
 
                     if (request()->query("h") > request()->query("w"))
                     {
-                        $height = "1000";
+                        $height = "1300";
                     }else
                         {
-                          $height ='500';
+                          $height ='700';
                         }
 
                     ?>
@@ -139,10 +139,10 @@ height:<?php echo $height;?>px;
 
                     if (request()->query("h") > request()->query("w"))
                     {
-                        $height = "1000";
+                        $height = "2700";
                     }else
                         {
-                          $height ='500';
+                          $height ='850';
                         }
 
                     ?>
