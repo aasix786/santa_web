@@ -58,7 +58,7 @@ height:<?php echo $height;?>px;
 
                     if (request()->query("h") > request()->query("w"))
                     {
-                        $height = "700";
+                        $height = "525";
                     }else
                         {
                           $height ='300';
