@@ -71,9 +71,10 @@
         <div class="modal-body">
             <div class="add-img pt-2">
                 <button type="button" class="uploadbtn">Click here to upload </button>
-                <input class="input-type" type='file' name="image" required  onchange="readURL(this);" />
+                <input class="input-type" type='file' name="image" required id="test" onchange="readURL(this);" />
                 <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="py-3 w-100" alt="" />
-                </div>
+                <input type="hidden" name="image_position" id="image_position">
+            </div>
           <button type="button" class="btn cancel-btn mb-2" data-dismiss="modal">Cancel</button>
           <button type="submit" class="btn btn-primary save-btn mb-2"> Continue</button>
         </div>
@@ -93,12 +94,30 @@
         <script>
             function readURL(input) {
              if (input.files && input.files[0]) {
+
                  var reader = new FileReader();
                  reader.onload = function (e) {
                      $('#blah').attr('src', e.target.result);
+                     var image = new Image();
+                     image.src = e.target.result;
+                     image.onload = function () {
+                         var height = this.height;
+                         var width = this.width;
+                         if(height>width)
+                         {
+
+                             $('#image_position').val('vertical')
+                         }
+                         else{
+                             $('#image_position').val('horizantal')
+                         }
+                     };
+
+
                  };
                  reader.readAsDataURL(input.files[0]);
              }
+
          }
 
       </script>

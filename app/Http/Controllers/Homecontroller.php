@@ -8,6 +8,7 @@ use App\Models\Watermark;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use Jenssegers\Agent\Agent;
 
 class Homecontroller extends Controller
 {
@@ -43,13 +44,34 @@ class Homecontroller extends Controller
            $file= $request->file('image');
             $width = getimagesize($file)[0]; // getting the image width
             $height = getimagesize($file)[1]; // getting the image height
-            $customer_image->image_width= $width;
-            $customer_image->image_height= $height;
+
+            $agent = new Agent();
+            $mobileResult = $agent->isMobile();
+            if ($mobileResult) {
+
+                if($request->image_position=='vertical')
+                {
+                    $customer_image->image_width= $height;
+                    $customer_image->image_height= $width;
+
+                }else{
+
+                    $customer_image->image_width= $width;
+                    $customer_image->image_height= $height;
+
+                }
+
+            }else{
+
+                $customer_image->image_width= $width;
+                $customer_image->image_height= $height;
+            }
+
            $filename= date('YmdHi').$file->getClientOriginalName();
            $file->move(public_path('public/customerImages'),$filename);
             $customer_image->image = 'public/customerImages'.'/'.$filename;
             $customer_image->save();
-            return redirect()->route('image',['a'=>$customer_image->image,'w'=>$width,'h'=>$height]);
+            return redirect()->route('image',['a'=>$customer_image->image,'w'=>$customer_image->image_width,'h'=>$customer_image->image_height]);
         }
 
     }
