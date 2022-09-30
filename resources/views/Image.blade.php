@@ -36,7 +36,7 @@
                     }
 
                 ?>
-height:<?php echo $height;?>px;
+ height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -46,6 +46,7 @@ height:<?php echo $height;?>px;
             }
 
         }
+
         @media only screen and (min-width: 425px) {
             .bg-santa-img {
                 background-image: url(<?php echo request()->query("a"); ?>);
@@ -64,7 +65,7 @@ height:<?php echo $height;?>px;
                     }
 
                 ?>
-height:<?php echo $height;?>px;
+ height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -73,6 +74,7 @@ height:<?php echo $height;?>px;
                 background-size: cover;
             }
         }
+
         @media only screen and (min-width: 768px) {
             .bg-santa-img {
                 background-image: url(<?php echo request()->query("a"); ?>);
@@ -91,7 +93,7 @@ height:<?php echo $height;?>px;
                     }
 
                 ?>
-height:<?php echo $height;?>px;
+ height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -100,6 +102,7 @@ height:<?php echo $height;?>px;
                 background-size: cover;
             }
         }
+
         @media only screen and (min-width: 1024px) {
             .bg-santa-img {
                 background-image: url(<?php echo request()->query("a"); ?>);
@@ -118,7 +121,7 @@ height:<?php echo $height;?>px;
                     }
 
                 ?>
-height:<?php echo $height;?>px;
+ height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -127,6 +130,7 @@ height:<?php echo $height;?>px;
                 background-size: 100% 100%;
             }
         }
+
         @media only screen and (min-width: 1900px) {
             .bg-santa-img {
                 background-image: url(<?php echo request()->query("a"); ?>);
@@ -145,7 +149,7 @@ height:<?php echo $height;?>px;
                     }
 
                 ?>
-height:<?php echo $height;?>px;
+ height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -196,7 +200,7 @@ height:<?php echo $height;?>px;
                         <img src="{{asset('assets/imgs/bright.png')}}" class="santa-dp3" id="brightness-pic">
                         <div id="brightness"></div>
                     </div>
-                    <div class="col-md-4 col-5 px-0" >
+                    <div class="col-md-4 col-5 px-0">
                         <img src="{{asset('assets/imgs/contrast.png')}}" class="santa-dp3" id="contrast-pic">
                         <div id="contrast"></div>
                     </div>
@@ -228,7 +232,8 @@ height:<?php echo $height;?>px;
             </div>
 
             <div class="save-img" id="save-img-section"></div>
-            <form id="formImg" method="post" action="{{route('store.image',['height'=>request()->query("h"),'width'=>request()->query("w")])}}">
+            <form id="formImg" method="post"
+                  action="{{route('store.image',['height'=>request()->query("h"),'width'=>request()->query("w")])}}">
                 @csrf
                 <input type="hidden" name="download_image" id="download_image">
             </form>
@@ -264,7 +269,6 @@ height:<?php echo $height;?>px;
 <script>
 
 
-
     var dataURL;
     //   $(document).ready(function () {
     init();
@@ -291,15 +295,14 @@ height:<?php echo $height;?>px;
         document.addEventListener("touchend", touchHandler, true);
         document.addEventListener("touchcancel", touchHandler, true);
     }
-
     const download = () => {
-        html2canvas(document.querySelector('.bg-santa-img'),{letterRendering: 1, allowTaint: true, useCORS: true, logging: true,
-            scale: 2,removeContainer: true,
+        html2canvas(document.querySelector('.bg-santa-img'), {
+            letterRendering: 1, allowTaint: true, useCORS: true, logging: true,
+            scale: 2, removeContainer: true,
             backgroundColor: null,
         }).then(canvas => {
             document.getElementById('save-img-section').appendChild(canvas);
-
-            $('#save-img-section').hide();
+            $('#save-img-section').show();
             var canvas = $("canvas")[0];
             var context = $("canvas")[0].getContext('2d');
 
@@ -319,12 +322,10 @@ height:<?php echo $height;?>px;
             context.stroke();
             canvas.crossOrigin = "Anonymous";
             dataURL = canvas.toDataURL("image/png");
-            console.log(dataURL)
             $('#download_image').val(dataURL);
-            $("#formImg").submit();
+            //$("#formImg").submit();
 
         });
-
 
 
     }
@@ -358,7 +359,7 @@ height:<?php echo $height;?>px;
     });
 </script>
 <script>
-    function blur() {
+  function blur() {
         var brightness = $("#brightness").slider("value");
         var contrast = $("#contrast").slider("value");
         // var rotate = $("#rotate").slider("value");
@@ -386,7 +387,7 @@ height:<?php echo $height;?>px;
         });
 
     });
-    $("#reset").click(function(){
+    $("#reset").click(function () {
         $("#brightness").slider("value", 95);
         $("#contrast").slider("value", 150);
     });
