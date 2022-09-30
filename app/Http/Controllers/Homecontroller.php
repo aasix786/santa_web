@@ -22,7 +22,6 @@ class Homecontroller extends Controller
 
     public function storeImage(Request $request)
     {
-
         $customer_image = new CustomerImage();
         if ($request->download_image) {
             $image_64 = $request->download_image; //your base64 encoded data
@@ -84,7 +83,7 @@ class Homecontroller extends Controller
     public function image()
     {
         $water_mark = Watermark::select('watermark')->first();
-        return view('Image', ['watermark' => $water_mark->watermark]);
+        return view('image-test', ['watermark' => $water_mark->watermark]);
     }
 
     public function download(Request $request)
