@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image</title>
-    <link rel="stylesheet" href="assets/Css/style.css">
+    <link rel="stylesheet" href="{{asset('assets/Css/style.css')}}">
     <link rel="stylesheet" href="assets/Css/responsive.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
@@ -264,15 +264,14 @@
         $('#rotingtxt1').hide();
         domtoimage.toBlob(document.getElementById('my-node'))
             .then(function(blob) {
-                console.log(blob);
+              //  console.log(blob);
                 const blobUrl = URL.createObjectURL(blob)
                 var reader = new FileReader();
                 reader.readAsDataURL(blob);
                 reader.onloadend = function() {
                     var base64data = reader.result;
-                  console.log(base64data);
                     $('#download_image').val(base64data);
-                    window.saveAs(blob, 'my-node.png')
+                    //window.saveAs(blob, 'my-node.png')
                    /* $("#formImg").submit();*/
                 }
                 //document.getElementById('image1').src=blobUrl
