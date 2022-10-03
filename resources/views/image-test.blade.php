@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image</title>
     <link rel="stylesheet" href="{{asset('assets/Css/style.css')}}">
-    <link rel="stylesheet" href="assets/Css/responsive.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="{{asset('assets/Css/responsive.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/external/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/external/all.css')}}"/>
+    <link rel="stylesheet" href="{{asset('assets/external/jquery.fancybox.min.css')}}">
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="{{asset('assets/external/popper.min.js')}}"></script>
+    <script src="{{asset('assets/external/bootstrap.min.js')}}"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -173,16 +173,16 @@
                 <h1 class="text3">CHOOSE A SANTA IMAGE</h1>
                 <div class="row imgs20">
                     <div class="col-md-3 col-3">
-                        <img src={{asset("assets/imgs/santa12.png")}} class="santa-dp2 selectSanta">
+                        <img src="{{asset("assets/imgs/santa12.png")}}" class="santa-dp2 selectSanta">
                     </div>
                     <div class="col-md-3 col-3 col-3">
-                        <img src={{asset("assets/imgs/santa9.png")}} class="santa-dp2 selectSanta">
+                        <img src="{{asset("assets/imgs/santa9.png")}}" class="santa-dp2 selectSanta">
                     </div>
                     <div class="col-md-3 col-3">
-                        <img src={{asset("assets/imgs/santa13.png")}} class="santa-dp2 selectSanta">
+                        <img src="{{asset("assets/imgs/santa13.png")}}" class="santa-dp2 selectSanta">
                     </div>
                     <div class="col-md-3 col-3">
-                        <img src={{asset("assets/imgs/santa12.png")}} class="santa-dp2 selectSanta">
+                        <img src="{{asset("assets/imgs/santa12.png")}}" class="santa-dp2 selectSanta">
                     </div>
                 </div>
             </div>
@@ -211,6 +211,7 @@
                 </div>
             </div>
             <div class="bg-santa-img showimg w-100" id="my-node">
+                <p class="rotingtxt1">{{$watermark}}</p>
 
                 <!-- <div id="draggable" class="ui-widget-content">
                     <img src="assets/imgs/santa12.jpeg"  id="santaImg" class="image santa-dp4 border-class">
@@ -227,8 +228,8 @@
                     <img src={{asset('assets/imgs/santa12.png')}} id="santaImg"  class="image santa-dp4 border-class" alt="missing">
                 </div>
             </div>
-            <div class="catch radius">
-                <a  class="text5 red" id="btn">CLICK HERE TO SAVE IMAGE</a>
+           <div class="catch radius">
+                <button class="btn text5 red bg-transparent tap-btn" id="btn">CLICK HERE TO SAVE IMAGE</button>
             </div>
             <form id="formImg" method="post"
                   action="{{route('store.image',['height'=>request()->query("h"),'width'=>request()->query("w")])}}">
@@ -261,24 +262,20 @@
     var btn = document.getElementById('btn');
     btn.onclick = function() {
         $("#my-node #container>div").hide();
-        $('#rotingtxt1').hide();
-        domtoimage.toBlob(document.getElementById('my-node'))
+        $('#btn').text('Please wait Image is being processed ...');
+        $('.rotingtxt1').hide();
+      domtoimage.toBlob(document.getElementById('my-node'))
             .then(function(blob) {
-              //  console.log(blob);
                 const blobUrl = URL.createObjectURL(blob)
+                $('.rotingtxt1').show()
                 var reader = new FileReader();
                 reader.readAsDataURL(blob);
                 reader.onloadend = function() {
                     var base64data = reader.result;
                     $('#download_image').val(base64data);
-                    //window.saveAs(blob, 'my-node.png')
-                   /* $("#formImg").submit();*/
+                   window.saveAs(blob, 'my-node.png')
+                    //$("#formImg").submit();
                 }
-                //document.getElementById('image1').src=blobUrl
-               //
-
-               /* $("#my-node #container>div").show();*/
-                 //window.saveAs(blob, 'my-node.png');
             });
     }
 </script>
