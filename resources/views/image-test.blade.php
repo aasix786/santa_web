@@ -159,6 +159,44 @@
                 background-size: cover;
             }
         }
+        .name {
+            border: 3px solid gray;
+    margin-top: 20px !important;
+    margin: auto;
+    padding: 50px;
+    display: none;
+        }
+        .container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 120px;
+  height: 120px;
+  border-top: 4px solid rgb(237, 44, 73);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.text-overlay {
+    color: #F71D2D;
+    font-size: 32px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 50px;
+}
+       
 
     </style>
 </head>
@@ -210,6 +248,13 @@
                     </div>
                 </div>
             </div>
+            <div class="name" id="overlay-section">
+            <div class="container1">
+  <div class="loader">
+  </div>
+  </div>
+  <h1 class="text-overlay">Please wait Image is being processed ...</h1>
+    </div>
             <div class="bg-santa-img showimg w-100" id="my-node">
                 <p class="rotingtxt1">{{$watermark}}</p>
 
@@ -258,6 +303,7 @@
 <script src="https://cdn.bootcss.com/dom-to-image/2.6.0/dom-to-image.min.js"></script>
 <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
 <script>
+  
     var node = document.getElementById('my-node');
     var btn = document.getElementById('btn');
     btn.onclick = function() {
@@ -311,6 +357,10 @@
             document.addEventListener("touchend", touchHandler, true);
             document.addEventListener("touchcancel", touchHandler, true);
         }
+        $('.tap-btn').click(function(){
+        $('.name').show()
+         $('.bg-santa-img').hide()
+  });
         $('#brightness-pic').click(function(){
             $('#brightness').show()
             $('#brightness-pic').hide()
