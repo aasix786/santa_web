@@ -21,7 +21,7 @@
     <style>
         @media only screen and (min-width: 320px) {
             .bg-santa-img {
-                background-image: url(<?php echo request()->query("a"); ?>);
+                background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
@@ -50,7 +50,7 @@
 
         @media only screen and (min-width: 425px) {
             .bg-santa-img {
-                background-image: url(<?php echo request()->query("a"); ?>);
+                background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
@@ -78,7 +78,7 @@
 
         @media only screen and (min-width: 768px) {
             .bg-santa-img {
-                background-image: url(<?php echo request()->query("a"); ?>);
+                background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
@@ -106,7 +106,7 @@
 
         @media only screen and (min-width: 1024px) {
             .bg-santa-img {
-                background-image: url(<?php echo request()->query("a"); ?>);
+                background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
@@ -134,7 +134,7 @@
 
         @media only screen and (min-width: 1900px) {
             .bg-santa-img {
-                background-image: url(<?php echo request()->query("a"); ?>);
+                background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
@@ -196,7 +196,7 @@
     text-align: center;
     padding-top: 50px;
 }
-       
+
 
     </style>
 </head>
@@ -303,7 +303,7 @@
 <script src="https://cdn.bootcss.com/dom-to-image/2.6.0/dom-to-image.min.js"></script>
 <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
 <script>
-  
+
     var node = document.getElementById('my-node');
     var btn = document.getElementById('btn');
     btn.onclick = function() {
@@ -319,8 +319,8 @@
                 reader.onloadend = function() {
                     var base64data = reader.result;
                     $('#download_image').val(base64data);
-                   window.saveAs(blob, 'my-node.png')
-                    //$("#formImg").submit();
+                   //window.saveAs(blob, 'my-node.png')
+                 $("#formImg").submit();
                 }
             });
     }
@@ -358,8 +358,8 @@
             document.addEventListener("touchcancel", touchHandler, true);
         }
         $('.tap-btn').click(function(){
-        $('.name').show()
-         $('.bg-santa-img').hide()
+       // $('.name').show()
+         //$('.bg-santa-img').hide()
   });
         $('#brightness-pic').click(function(){
             $('#brightness').show()

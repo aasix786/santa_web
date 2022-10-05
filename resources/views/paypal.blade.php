@@ -229,7 +229,7 @@ height:<?php echo $height;?>px;
 </body>
 </html>
 {{--&enable-funding=venmo--}}
-<script src="https://www.paypal.com/sdk/js?client-id=AULyAP0tzxBRnBZNi1VCjnRxW4HFjKVFKzzLFTwP8oSC87icTFVLMb9g9E5Z6rDqZdbteIxR0UHWA-VR&currency=USD&intent=capture&disable-funding=credit" data-sdk-integration-source="integrationbuilder"></script>
+<script src="https://www.paypal.com/sdk/js?client-id={{ env('PAYPAL_CLIENT_ID') }}&currency=USD&intent=capture&disable-funding=credit&enable-funding=venmo" data-sdk-integration-source="integrationbuilder"></script>
 <script>
 
     var image = "{{route('download',['a'=>request()->query("a")]) }}";
@@ -283,19 +283,18 @@ height:<?php echo $height;?>px;
         .catch((err) => {
             console.error('PayPal Buttons failed to render');
         });
-    $(window).on('keydown', function(event) {
+    $(window).on('keydown', function (event) {
         if (event.keyCode == 123) {
             return false; //Disable F12
         } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
             return false; //Disable ctrl+shift+i
         } else if (event.ctrlKey && event.keyCode == 73) {
             return false; //Disable ctrl+shift+i
-        }
-        else if (event.ctrlKey && event.keyCode == 67|| event.keyCode == 86|| event.keyCode ==85|| event.keyCode == 117) {
+        } else if (event.ctrlKey && event.keyCode == 67 || event.keyCode == 86 || event.keyCode == 85 || event.keyCode == 117) {
             return false; //Disable ctrl+shift+i
         }
     });
-    $(document).on("contextmenu", function(e) {
+    $(document).on("contextmenu", function (e) {
         e.preventDefault();
     });
 </script>

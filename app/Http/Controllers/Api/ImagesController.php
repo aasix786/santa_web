@@ -11,12 +11,13 @@ use Jenssegers\Agent\Agent;
 
 class ImagesController extends Controller
 {
-   public function images(Request $request)
-   {
-       $images = Image::all();
-       return response()->json(['success'=>true,'images'=>$images]);
-   }
-   public function uploadImage(Request $request)
+    public function images(Request $request)
+    {
+        $images = Image::all();
+        return response()->json(['success' => true, 'images' => $images]);
+    }
+
+    public function uploadImage(Request $request)
     {
         $customer_image = new CustomerImage();
         if ($request->hasFile('upload_image')) {
@@ -50,7 +51,7 @@ class ImagesController extends Controller
             $customer_image->image = 'public/customerImages' . '/' . $filename;
             $customer_image->save();
             $url = route('image', ['a' => $customer_image->image, 'w' => $customer_image->image_width, 'h' => $customer_image->image_height]);
-            return response()->json(['success'=>true,'url'=>$url]);
+            return response()->json(['success' => true, 'url' => $url]);
         }
 
         /*$file = $request->file('image');
