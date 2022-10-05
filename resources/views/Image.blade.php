@@ -118,7 +118,7 @@ height:<?php echo $height;?>px;
                     }
 
                 ?>
-height:<?php echo $height;?>px;
+                height:<?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
