@@ -171,7 +171,7 @@
         <div class="overlay-clr">
             <div class="itro-text padding">
                 <h1 class="text3 mb-0">CHOOSE A SANTA IMAGE</h1>
-                <div class="mx-0 row imgs20">
+                <div class=" row imgs20 mx-0">
                     <div class="col-md-3 col-3">
                         <img src="{{asset('assets/imgs/santa12.png')}}" class="santa-dp2 selectSanta">
                     </div>
