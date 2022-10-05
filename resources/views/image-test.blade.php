@@ -240,7 +240,7 @@
                         <div id="brightness"></div>
                     </div>
                     <div class="col-md-4 col-4">
-                        <img src={{asset("assets/imgs/contrast.PNG")}} class="santa-dp3" id="contrast-pic">
+                        <img src={{asset("assets/imgs/contrast.png")}} class="santa-dp3" id="contrast-pic">
                         <div id="contrast"></div>
                     </div>
                     <div class="col-md-4 col-4">
