@@ -21,7 +21,7 @@
         <style>
             @media only screen and (min-width: 320px) {
                 .downloadImage {
-                    background-image: url(<?php echo request()->query("a"); ?>);
+                    background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                     border: 3px solid gray;
                     margin-top: 20px !important;
                     margin: auto;
@@ -49,7 +49,7 @@ height:<?php echo $height;?>px;
             }
             @media only screen and (min-width: 425px) {
                 .downloadImage {
-                    background-image: url(<?php echo request()->query("a"); ?>);
+                    background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                     border: 3px solid gray;
                     margin-top: 20px !important;
                     margin: auto;
@@ -76,7 +76,7 @@ height:<?php echo $height;?>px;
             }
             @media only screen and (min-width: 768px) {
                 .downloadImage {
-                    background-image: url(<?php echo request()->query("a"); ?>);
+                    background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                     border: 3px solid gray;
                     margin-top: 20px !important;
                     margin: auto;
@@ -103,7 +103,7 @@ height:<?php echo $height;?>px;
             }
             @media only screen and (min-width: 1024px) {
                 .downloadImage {
-                    background-image: url(<?php echo request()->query("a"); ?>);
+                    background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                     border: 3px solid gray;
                     margin-top: 20px !important;
                     margin: auto;
@@ -130,7 +130,7 @@ height:<?php echo $height;?>px;
             }
             @media only screen and (min-width: 1900px) {
                 .downloadImage {
-                    background-image: url(<?php echo request()->query("a"); ?>);
+                    background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                     border: 3px solid gray;
                     margin-top: 20px !important;
                     margin: auto;

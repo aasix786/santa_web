@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Homecontroller;
 use App\Http\Controllers\PayPalController;
 use Illuminate\Support\Facades\Artisan;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,41 +15,46 @@ use Illuminate\Support\Facades\Artisan;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/clear-cache', function() {
- Artisan::call('cache:clear');
+Route::get('/clear-cache', function () {
+    Artisan::call('cache:clear');
 
 });
-       Route::get('test/paypal',function (){
-           return view('test-paypal');
-       });
-        Route::get('/', function () {
-            return view('index');
-        });
-        Route::get('/drag', function () {
-            return view('drag');
-        });
+Route::get('test/paypal', function () {
+    return view('test-paypal');
+});
+Route::get('/', function () {
+    return view('index');
+});
+Route::get('/drag', function () {
+    return view('drag');
+});
 
-        Route::get('/download', [Homecontroller::class,'download'])->name('download');
-        Route::get('/effects', function () {
-            return view('effects');
-        });
-        Route::get('/image', [Homecontroller::class,'image'])->name('image');
-        Route::get('/paypal', [Homecontroller::class,'paypal'])->name('paypal');
-        Route::get('/plugin', function () {
-            return view('plugin');
-        });
-        Route::get('/resize', function () {
-            return view('resize');
-        });
-        Route::get('/upload', function () {
-            return view('Upload');
-        })->name('upload-image');
+Route::get('/download', [Homecontroller::class, 'download'])->name('download');
+Route::get('/effects', function () {
+    return view('effects');
+});
+//
+Route::get('/image', [Homecontroller::class, 'image'])->name('image');
+Route::get('/paypal', [Homecontroller::class, 'paypal'])->name('paypal');
+Route::get('/plugin', function () {
+    return view('plugin');
+});
+Route::get('/resize', function () {
+    return view('resize');
+});
+Route::get('/upload', function () {
+    return view('Upload');
+})->name('upload-image');
 
-        Route::get('/',[Homecontroller::class,'home'])->name('home');
-        Route::post('store-image/{width?}/{height?}',[Homecontroller::class,'storeImage'])->name('store.image');
-        Route::get('payment', [PayPalController::class,'payment'])->name('payment');
-        Route::get('cancel/{id}', [PayPalController::class,'cancel'])->name('payment.cancel');
-        Route::get('payment/success/{id}', [PayPalController::class,'success'])->name('payment.success');
-        Route::get('/success',function (){
-            return view('success');
-        })->name('success');
+Route::get('/', [Homecontroller::class, 'home'])->name('home');
+Route::post('store-image/{width?}/{height?}', [Homecontroller::class, 'storeImage'])->name('store.image');
+Route::get('payment', [PayPalController::class, 'payment'])->name('payment');
+Route::get('cancel/{id}', [PayPalController::class, 'cancel'])->name('payment.cancel');
+Route::get('payment/success/{id}', [PayPalController::class, 'success'])->name('payment.success');
+Route::get('/success', function () {
+    return view('success');
+})->name('success');
+
+/*Route::get('/test-image',function (){
+    return view('image-test');
+});*/

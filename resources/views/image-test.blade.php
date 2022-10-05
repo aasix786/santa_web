@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{asset('assets/external/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/external/all.css')}}"/>
     <link rel="stylesheet" href="{{asset('assets/external/jquery.fancybox.min.css')}}">
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
     <script src="{{asset('assets/external/popper.min.js')}}"></script>
     <script src="{{asset('assets/external/bootstrap.min.js')}}"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +21,7 @@
     <style>
         @media only screen and (min-width: 320px) {
             .bg-santa-img {
-                background-image: url(<?php echo request()->query("a"); ?>);
+                background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
@@ -36,7 +37,7 @@
                     }
 
                 ?>
- height: <?php echo $height;?>px;
+  height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -49,7 +50,7 @@
 
         @media only screen and (min-width: 425px) {
             .bg-santa-img {
-                background-image: url(<?php echo request()->query("a"); ?>);
+                background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
@@ -65,7 +66,7 @@
                     }
 
                 ?>
- height: <?php echo $height;?>px;
+  height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -77,7 +78,7 @@
 
         @media only screen and (min-width: 768px) {
             .bg-santa-img {
-                background-image: url(<?php echo request()->query("a"); ?>);
+                background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
@@ -93,7 +94,7 @@
                     }
 
                 ?>
- height: <?php echo $height;?>px;
+  height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -105,7 +106,7 @@
 
         @media only screen and (min-width: 1024px) {
             .bg-santa-img {
-                background-image: url(<?php echo request()->query("a"); ?>);
+                background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
@@ -121,7 +122,7 @@
                     }
 
                 ?>
- height: <?php echo $height;?>px;
+  height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -133,7 +134,7 @@
 
         @media only screen and (min-width: 1900px) {
             .bg-santa-img {
-                background-image: url(<?php echo request()->query("a"); ?>);
+                background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
@@ -149,7 +150,7 @@
                     }
 
                 ?>
- height: <?php echo $height;?>px;
+  height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -158,88 +159,134 @@
                 background-size: cover;
             }
         }
-        
+
+        .name {
+            border: 3px solid gray;
+            margin-top: 20px !important;
+            margin: auto;
+            padding: 50px;
+            display: none;
+        }
+
+        .container1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader {
+            width: 120px;
+            height: 120px;
+            border-top: 4px solid rgb(237, 44, 73);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .text-overlay {
+            color: #F71D2D;
+            font-size: 32px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            text-align: center;
+            padding-top: 50px;
+        }
+
 
     </style>
 </head>
 <body>
-<div class="main-boody" oncontextmenu="return true">
+<div class="main-boody">
     <header class="main-header">
-        <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
+        <img src="assets/imgs/header.jpeg" class="w-100" alt="">
     </header>
     <div class="main-area">
         <div class="overlay-clr">
             <div class="itro-text padding">
-                <h1 class="text3 mb-0">CHOOSE A SANTA IMAGE</h1>
-                <div class="mx-0 row imgs20">
+                <h1 class="text3">CHOOSE A SANTA IMAGE</h1>
+                <div class="row imgs20">
                     <div class="col-md-3 col-3">
-                        <img src="{{asset('assets/imgs/santa12.png')}}" class="santa-dp2 selectSanta">
+                        <img src="{{asset("assets/imgs/santa12.png")}}" class="santa-dp2 selectSanta">
                     </div>
                     <div class="col-md-3 col-3 col-3">
-                        <img src="{{asset('assets/imgs/santa9.png')}}" class="santa-dp2 selectSanta">
+                        <img src="{{asset("assets/imgs/santa9.png")}}" class="santa-dp2 selectSanta">
                     </div>
                     <div class="col-md-3 col-3">
-                        <img src="{{asset('assets/imgs/santa13.png')}}" class="santa-dp2 selectSanta">
+                        <img src="{{asset("assets/imgs/santa13.png")}}" class="santa-dp2 selectSanta">
                     </div>
                     <div class="col-md-3 col-3">
-                        <img src="{{asset('assets/imgs/santa12.png')}}" class="santa-dp2 selectSanta">
+                        <img src="{{asset("assets/imgs/santa12.png")}}" class="santa-dp2 selectSanta">
                     </div>
                 </div>
             </div>
             <div class="itro-text padding margin-top">
-                <div class="row p-1 mx-0">
-                    <div class="col-md-4 col-5">
+                <div class="row p-1">
+                    <div class="col-md-4 col-4">
                         <h1 class="text-shade">BRIGHTNESS</h1>
                     </div>
-                    <div class="col-md-4 col-5 left-border">
+                    <div class="col-md-4 col-4 left-border">
                         <h1 class="text-shade">CONTRAST</h1>
                     </div>
-                    <div class="col-md-4 col-2 left-border px-0 pl-2 text-center">
+                    <div class="col-md-4 col-4 left-border">
                         <h1 class="text-shade">RESET</h1>
                     </div>
-                    <div class="col-md-4 col-5 px-0 ">
-                        <img src="{{asset('assets/imgs/bright.png')}}" class="santa-dp3" id="brightness-pic">
+                    <div class="col-md-4 col-4">
+                        <img src={{asset("assets/imgs/bright.png")}} class="santa-dp3" id="brightness-pic">
                         <div id="brightness"></div>
                     </div>
-                    <div class="col-md-4 col-5 px-0">
-                        <img src="{{asset('assets/imgs/contrast.png')}}" class="santa-dp3" id="contrast-pic">
+                    <div class="col-md-4 col-4">
+                        <img src={{asset("assets/imgs/contrast.png")}} class="santa-dp3" id="contrast-pic">
                         <div id="contrast"></div>
                     </div>
-                    <div class="col-md-4 col-2">
-                        <img src="{{asset('assets/imgs/reset.png')}}" class="santa-dp3" id="reset">
+                    <div class="col-md-4 col-4">
+                        <img src={{asset("assets/imgs/reset.png")}} class="santa-dp3" id="reset">
                     </div>
                 </div>
             </div>
-          
-            <div class="bg-santa-img showimg w-100">
-                <p class="rotingtxt1">{{$watermark}}</p>
-                <div id="container">
-                    <div id="canvas-border-hide">
-                        <div class="right"></div>
-                        <div class="bottom"></div>
-                        <div class="top"></div>
-                        <div class="left"></div>
-                        <div data-clickable="true" class="bottomRight"></div>
-                        <div data-clickable="true" class="topLeft"></div>
-                        <div data-clickable="true" class="topRight"></div>
-                        <div data-clickable="true" class="bottomLeft"></div>
+
+
+            <div class="name" id="overlay-section">
+                <div class="container1">
+                    <div class="loader">
                     </div>
-                    <img src="{{asset('assets/imgs/santa12.png')}}" id="santaImg" class="image santa-dp4 border-class"
+                </div>
+                <h1 class="text-overlay">Please wait Image is being processed ...</h1>
+            </div>
+            <div class="bg-santa-img showimg w-100" id="my-node">
+                <p class="rotingtxt1">{{$watermark}}</p>
+
+                <!-- <div id="draggable" class="ui-widget-content">
+                    <img src="assets/imgs/santa12.jpeg"  id="santaImg" class="image santa-dp4 border-class">
+                </div> -->
+                <div id="container">
+                    <div class="right"></div>
+                    <div class="bottom"></div>
+                    <div class="top"></div>
+                    <div class="left"></div>
+                    <div data-clickable="true" class="bottomRight"></div>
+                    <div data-clickable="true" class="topLeft"></div>
+                    <div data-clickable="true" class="topRight"></div>
+                    <div data-clickable="true" class="bottomLeft"></div>
+                    <img src={{asset('assets/imgs/santa12.png')}} id="santaImg" class="image santa-dp4 border-class"
                          alt="missing">
                 </div>
-            </div>`
-
-            <div class="catch radius" id="img-button-section">
-                <button type="button" class="btn text5 red bg-transparent tap-btn">CLICK HERE TO SAVE IMAGE</button>
             </div>
-
-            <div class="save-img" id="save-img-section"></div>
+            <div class="catch radius">
+                <button class="btn text5 red bg-transparent tap-btn" id="btn">CLICK HERE TO SAVE IMAGE</button>
+            </div>
             <form id="formImg" method="post"
                   action="{{route('store.image',['height'=>request()->query("h"),'width'=>request()->query("w")])}}">
                 @csrf
                 <input type="hidden" name="download_image" id="download_image">
             </form>
-
             <div class="notes">
                 <h1 class="text3">NOTES:
                     <ul>
@@ -254,27 +301,35 @@
                 </h1>
             </div>
         </div>
-        <div>
-            <button id="btn">Preview</button>
-            <img src="" id="image1" alt="">
-        </div>
+
     </div>
 </div>
+{{--<div>
+    <button id="btn">Preview</button>
+    <img src="" id="image1" alt="">
+</div>--}}
 <script src="https://cdn.bootcss.com/dom-to-image/2.6.0/dom-to-image.min.js"></script>
 <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
 <script>
-    var node = $('.bg-santa-img');
+
+    var node = document.getElementById('my-node');
     var btn = document.getElementById('btn');
-    btn.onclick = function() {
-        //  $(".bg-santa-img #container>div").hide();
-        domtoimage.toBlob($('.bg-santa-img'))
-            .then(function(blob) {
-                console.log(blob);
+    btn.onclick = function () {
+        $("#my-node #container>div").hide();
+        $('#btn').text('Please wait Image is being processed ...');
+        $('.rotingtxt1').hide();
+        domtoimage.toBlob(document.getElementById('my-node'))
+            .then(function (blob) {
                 const blobUrl = URL.createObjectURL(blob)
-                console.log(blobUrl)
-                document.getElementById('image1').src=blobUrl
-                //   $(".bg-santa-img #container>div").show();
-                window.saveAs(blob, 'my-node.png');
+                $('.rotingtxt1').show()
+                var reader = new FileReader();
+                reader.readAsDataURL(blob);
+                reader.onloadend = function () {
+                    var base64data = reader.result;
+                    $('#download_image').val(base64data);
+                    //window.saveAs(blob, 'my-node.png')
+                    $("#formImg").submit();
+                }
             });
     }
 </script>
@@ -287,103 +342,62 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/utils/Draggable.min.js"></script>
-
-
-
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 <script>
+    $(document).ready(function () {
+        init();
 
+        function touchHandler(event) {
+            var touch = event.changedTouches[0];
+            var simulatedEvent = document.createEvent("MouseEvent");
+            simulatedEvent.initMouseEvent({
+                    touchstart: "mousedown",
+                    touchmove: "mousemove",
+                    touchend: "mouseup"
+                }[event.type], true, true, window, 1,
+                touch.screenX, touch.screenY,
+                touch.clientX, touch.clientY, false,
+                false, false, false, 0, null);
+            touch.target.dispatchEvent(simulatedEvent);
+        }
 
-    var dataURL;
-    //   $(document).ready(function () {
-    init();
+        function init() {
+            document.addEventListener("touchstart", touchHandler, true);
+            document.addEventListener("touchmove", touchHandler, true);
+            document.addEventListener("touchend", touchHandler, true);
+            document.addEventListener("touchcancel", touchHandler, true);
+        }
 
-    function touchHandler(event) {
-        var touch = event.changedTouches[0];
-
-        var simulatedEvent = document.createEvent("MouseEvent");
-        simulatedEvent.initMouseEvent({
-                touchstart: "mousedown",
-                touchmove: "mousemove",
-                touchend: "mouseup"
-            }[event.type], true, true, window, 1,
-            touch.screenX, touch.screenY,
-            touch.clientX, touch.clientY, false,
-            false, false, false, 0, null);
-
-        touch.target.dispatchEvent(simulatedEvent);
-    }
-
-    function init() {
-        document.addEventListener("touchstart", touchHandler, true);
-        document.addEventListener("touchmove", touchHandler, true);
-        document.addEventListener("touchend", touchHandler, true);
-        document.addEventListener("touchcancel", touchHandler, true);
-    }
-    /*const download = () => {
-        html2canvas(document.querySelector('.bg-santa-img'), {
-            letterRendering: 1, allowTaint: true, useCORS: true, logging: true,
-            scale: 2, removeContainer: true,
-            backgroundColor: null,
-        }).then(canvas => {
-            document.getElementById('save-img-section').appendChild(canvas);
-            $('#save-img-section').show();
-            var canvas = $("canvas")[0];
-            var context = $("canvas")[0].getContext('2d');
-
-            context.beginPath();
-            context.moveTo(170, 80);
-            context.bezierCurveTo(130, 100, 130, 150, 230, 150);
-            context.bezierCurveTo(250, 180, 320, 180, 340, 150);
-            context.bezierCurveTo(420, 150, 420, 120, 390, 100);
-            context.bezierCurveTo(430, 40, 370, 30, 340, 50);
-            context.bezierCurveTo(320, 5, 250, 20, 250, 50);
-            context.bezierCurveTo(200, 5, 150, 20, 170, 80);
-            context.closePath();
-            context.lineWidth = 5;
-            context.fillStyle = '#8ED6FF';
-            context.fill();
-            context.strokeStyle = '#0000ff';
-            context.stroke();
-            canvas.crossOrigin = "Anonymous";
-            dataURL = canvas.toDataURL("image/png");
-            $('#download_image').val(dataURL);
-            //$("#formImg").submit();
-
+        $('.tap-btn').click(function () {
+            // $('.name').show()
+            //$('.bg-santa-img').hide()
         });
-
-
-    }*/
-    $('#img-button-section').click(function () {
-        $('#canvas-border-hide').hide();
-
-        $('.rotingtxt1').hide();
-        //download()
-        $('.rotingtxt1').show();
+        $('#brightness-pic').click(function () {
+            $('#brightness').show()
+            $('#brightness-pic').hide()
+        });
+        $('#contrast-pic').click(function () {
+            $('#contrast').show()
+            $('#contrast-pic').hide()
+        });
+        $('#rotate-pic').click(function () {
+            $('#rotate').show()
+            $('#rotate-pic').hide()
+        });
     });
-
-    $('#brightness-pic').click(function () {
-        $('#brightness').show()
-        $('#brightness-pic').hide()
-    });
-    $('#contrast-pic').click(function () {
-        $('#contrast').show()
-        $('#contrast-pic').hide()
-    });
-    $('#rotate-pic').click(function () {
-        $('#rotate').show()
-        $('#rotate-pic').hide()
-    });
-
-    //});
     $(document).ready(function () {
         $('.selectSanta').on('click', function () {
             let img = $(this).attr("src");
             $("#santaImg").attr("src", img);
         });
     });
+    // $( function() {
+    //     $('#draggable').resizable();
+    //     $( "#draggable" ).draggable();
+    // } );
 </script>
 <script>
-  function blur() {
+    function blur() {
         var brightness = $("#brightness").slider("value");
         var contrast = $("#contrast").slider("value");
         // var rotate = $("#rotate").slider("value");
@@ -412,23 +426,20 @@
 
     });
     $("#reset").click(function () {
-        $("#brightness").slider("value", 95);
-        $("#contrast").slider("value", 150);
+        $("#contrast").slider("value", 100);
+        $("#brightness").slider("value", 0);
     });
 </script>
 
 
 <script>
     var $container = document.getElementById("container");
-
     // Proxies
     var $right = document.createElement("div");
     var $bottom = document.createElement("div");
     var $top = document.createElement("div");
     var $left = document.createElement("div");
-
     var mainDraggable = new Draggable($container);
-
     var rightLastX = 0;
     var rightDraggable = new Draggable($right, {
         trigger: ".right",
@@ -525,25 +536,21 @@
         rightDraggable.startDrag(e);
         bottomDraggable.startDrag(e);
     });
-
     $(".bottomLeft").on("mousedown touchstart", function (e) {
         mainDraggable.disable();
         leftDraggable.startDrag(e);
         bottomDraggable.startDrag(e);
     });
-
     $(".topLeft").on("mousedown touchstart", function (e) {
         mainDraggable.disable();
         topDraggable.startDrag(e);
         leftDraggable.startDrag(e);
     });
-
     $(".topRight").on("mousedown touchstart", function (e) {
         mainDraggable.disable();
         topDraggable.startDrag(e);
         rightDraggable.startDrag(e);
     });
-
     $(".topRight, .topLeft, .bottomLeft, .bottomRight").on("mouseup touchend", function (e) {
         mainDraggable.enable();
     });

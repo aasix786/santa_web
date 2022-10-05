@@ -77,6 +77,15 @@
 }
 
 @media only screen and (max-width: 425px) {
+    .rotingtxt1 {
+        font-size: 25px;
+    }
+    .rotingtxt {
+        font-size: 21px;
+    }
+    .font-text {
+        font-size: 20px!important;
+    }
     .padding {
         padding: 5px !important;
     }
@@ -259,14 +268,63 @@
     .input-type {
         right: 40%;
     }
+    .rotingtxt {
+        font-size: 60px;
+    }
+    .rotingtxt1 {
+        font-size: 70px;
+    }
+    .font-text {
+        font-size: 40px!important;
+    }
+}
+@media only screen and (max-width: 990px) {
+    .rotingtxt1 {
+        font-size: 54px;
+    }
+    .rotingtxt {
+        font-size: 44px;
+    }
+    .font-text {
+        font-size: 32px!important;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .input-type {
         right: 36%;
     }
+    .rotingtxt1 {
+        font-size: 40px;
+    }
+    .rotingtxt {
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .rotingtxt1 {
+        font-size: 30px;
+    } 
+    .font-text {
+        font-size: 23px!important;
+    }
+    .rotingtxt {
+        font-size: 23px;
+    }  
 }
 
+
+@media only screen and (max-width: 375px) {
+    .rotingtxt1 {
+        font-size: 24px;
+    } 
+    .rotingtxt {
+        font-size: 18px;
+    }
+    .font-text {
+        font-size: 17px!important;
+    }
+}
 @media only screen and (max-width: 320px) {
     .input-type {
         right: 32%;
