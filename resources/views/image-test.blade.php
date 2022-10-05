@@ -37,7 +37,7 @@
                     }
 
                 ?>
- height: <?php echo $height;?>px;
+  height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -66,7 +66,7 @@
                     }
 
                 ?>
- height: <?php echo $height;?>px;
+  height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -94,7 +94,7 @@
                     }
 
                 ?>
- height: <?php echo $height;?>px;
+  height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -122,7 +122,7 @@
                     }
 
                 ?>
- height: <?php echo $height;?>px;
+  height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -150,7 +150,7 @@
                     }
 
                 ?>
- height: <?php echo $height;?>px;
+  height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -159,43 +159,46 @@
                 background-size: cover;
             }
         }
+
         .name {
             border: 3px solid gray;
-    margin-top: 20px !important;
-    margin: auto;
-    padding: 50px;
-    display: none;
+            margin-top: 20px !important;
+            margin: auto;
+            padding: 50px;
+            display: none;
         }
+
         .container1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.loader {
-  width: 120px;
-  height: 120px;
-  border-top: 4px solid rgb(237, 44, 73);
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-}
+        .loader {
+            width: 120px;
+            height: 120px;
+            border-top: 4px solid rgb(237, 44, 73);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.text-overlay {
-    color: #F71D2D;
-    font-size: 32px;
-    font-weight: bolder;
-    letter-spacing: 1px;
-    text-align: center;
-    padding-top: 50px;
-}
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .text-overlay {
+            color: #F71D2D;
+            font-size: 32px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            text-align: center;
+            padding-top: 50px;
+        }
 
 
     </style>
@@ -248,13 +251,15 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="name" id="overlay-section">
-            <div class="container1">
-  <div class="loader">
-  </div>
-  </div>
-  <h1 class="text-overlay">Please wait Image is being processed ...</h1>
-    </div>
+                <div class="container1">
+                    <div class="loader">
+                    </div>
+                </div>
+                <h1 class="text-overlay">Please wait Image is being processed ...</h1>
+            </div>
             <div class="bg-santa-img showimg w-100" id="my-node">
                 <p class="rotingtxt1">{{$watermark}}</p>
 
@@ -270,10 +275,11 @@
                     <div data-clickable="true" class="topLeft"></div>
                     <div data-clickable="true" class="topRight"></div>
                     <div data-clickable="true" class="bottomLeft"></div>
-                    <img src={{asset('assets/imgs/santa12.png')}} id="santaImg"  class="image santa-dp4 border-class" alt="missing">
+                    <img src={{asset('assets/imgs/santa12.png')}} id="santaImg" class="image santa-dp4 border-class"
+                         alt="missing">
                 </div>
             </div>
-           <div class="catch radius">
+            <div class="catch radius">
                 <button class="btn text5 red bg-transparent tap-btn" id="btn">CLICK HERE TO SAVE IMAGE</button>
             </div>
             <form id="formImg" method="post"
@@ -287,7 +293,9 @@
                         <li>Taken or choosen image appears in editor as background</li>
                         <li>Santa overlay appearsin editor when santa image is choosen</li>
                         <li>Santa should swap out if another santa image is choosen after orignal</li>
-                        <li>User should be able to DRAG (move) Santa overlay, Resize by dragging corners, and use the Brightness/Contrast/Hue Sliders</li>
+                        <li>User should be able to DRAG (move) Santa overlay, Resize by dragging corners, and use the
+                            Brightness/Contrast/Hue Sliders
+                        </li>
                         <li>Watermark should be similar to above</li>
                     </ul>
                 </h1>
@@ -306,21 +314,21 @@
 
     var node = document.getElementById('my-node');
     var btn = document.getElementById('btn');
-    btn.onclick = function() {
+    btn.onclick = function () {
         $("#my-node #container>div").hide();
         $('#btn').text('Please wait Image is being processed ...');
         $('.rotingtxt1').hide();
-      domtoimage.toBlob(document.getElementById('my-node'))
-            .then(function(blob) {
+        domtoimage.toBlob(document.getElementById('my-node'))
+            .then(function (blob) {
                 const blobUrl = URL.createObjectURL(blob)
                 $('.rotingtxt1').show()
                 var reader = new FileReader();
                 reader.readAsDataURL(blob);
-                reader.onloadend = function() {
+                reader.onloadend = function () {
                     var base64data = reader.result;
                     $('#download_image').val(base64data);
-                   //window.saveAs(blob, 'my-node.png')
-                 $("#formImg").submit();
+                    //window.saveAs(blob, 'my-node.png')
+                    $("#formImg").submit();
                 }
             });
     }
@@ -336,8 +344,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/utils/Draggable.min.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         init();
+
         function touchHandler(event) {
             var touch = event.changedTouches[0];
             var simulatedEvent = document.createEvent("MouseEvent");
@@ -351,33 +360,35 @@
                 false, false, false, 0, null);
             touch.target.dispatchEvent(simulatedEvent);
         }
+
         function init() {
             document.addEventListener("touchstart", touchHandler, true);
             document.addEventListener("touchmove", touchHandler, true);
             document.addEventListener("touchend", touchHandler, true);
             document.addEventListener("touchcancel", touchHandler, true);
         }
-        $('.tap-btn').click(function(){
-       // $('.name').show()
-         //$('.bg-santa-img').hide()
-  });
-        $('#brightness-pic').click(function(){
+
+        $('.tap-btn').click(function () {
+            // $('.name').show()
+            //$('.bg-santa-img').hide()
+        });
+        $('#brightness-pic').click(function () {
             $('#brightness').show()
             $('#brightness-pic').hide()
         });
-        $('#contrast-pic').click(function(){
+        $('#contrast-pic').click(function () {
             $('#contrast').show()
             $('#contrast-pic').hide()
         });
-        $('#rotate-pic').click(function(){
+        $('#rotate-pic').click(function () {
             $('#rotate').show()
             $('#rotate-pic').hide()
         });
     });
-    $(document).ready(function() {
-        $('.selectSanta').on('click', function() {
+    $(document).ready(function () {
+        $('.selectSanta').on('click', function () {
             let img = $(this).attr("src");
-            $("#santaImg").attr("src",img);
+            $("#santaImg").attr("src", img);
         });
     });
     // $( function() {
@@ -390,8 +401,9 @@
         var brightness = $("#brightness").slider("value");
         var contrast = $("#contrast").slider("value");
         // var rotate = $("#rotate").slider("value");
-        $(".image").css("-webkit-filter", "brightness(" + brightness + "%)"  + "contrast(" + contrast + "%)");
+        $(".image").css("-webkit-filter", "brightness(" + brightness + "%)" + "contrast(" + contrast + "%)");
     }
+
     // ***********SLIDERS*************//
     $(function () {
         $("#brightness").slider({
@@ -413,7 +425,7 @@
         });
 
     });
-    $("#reset").click(function(){
+    $("#reset").click(function () {
         $("#contrast").slider("value", 100);
         $("#brightness").slider("value", 0);
     });
@@ -441,6 +453,7 @@
             mainDraggable.enable();
         }
     });
+
     function updateRight() {
         var diffX = this.x - rightLastX;
         TweenMax.set($container, {
@@ -448,6 +461,7 @@
         });
         rightLastX = this.x;
     }
+
     var bottomLastY = 0;
     var bottomDraggable = new Draggable($bottom, {
         trigger: ".bottom",
@@ -461,6 +475,7 @@
             mainDraggable.enable();
         }
     });
+
     function updateBottom() {
         var diffY = this.y - bottomLastY;
         TweenMax.set($container, {
@@ -468,6 +483,7 @@
         });
         bottomLastY = this.y;
     }
+
     var topLastY = 0;
     var topDraggable = new Draggable($top, {
         trigger: ".top",
@@ -481,6 +497,7 @@
             mainDraggable.enable();
         }
     });
+
     function updateTop() {
         var diffY = this.y - topLastY;
         TweenMax.set($container, {
@@ -489,6 +506,7 @@
         });
         topLastY = this.y;
     }
+
     var leftLastX = 0;
     var leftDraggable = new Draggable($left, {
         trigger: ".left",
@@ -502,6 +520,7 @@
             mainDraggable.enable();
         }
     });
+
     function updateLeft() {
         var diffX = this.x - leftLastX;
         TweenMax.set($container, {
@@ -510,6 +529,7 @@
         });
         leftLastX = this.x;
     }
+
     // Corner triggers
     $(".bottomRight").on("mousedown touchstart", function (e) {
         mainDraggable.disable();
