@@ -22,6 +22,7 @@ class Homecontroller extends Controller
 
     public function storeImage(Request $request)
     {
+
         $customer_image = new CustomerImage();
         if ($request->download_image) {
             $image_64 = $request->download_image; //your base64 encoded data
