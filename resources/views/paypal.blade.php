@@ -251,7 +251,7 @@ height:<?php echo $height;?>px;
                 purchase_units: [
                     {
                         amount: {
-                            value: "5"
+                            value: "0.05"
                         }
                     }
                 ]
