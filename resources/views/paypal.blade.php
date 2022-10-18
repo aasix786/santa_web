@@ -20,7 +20,7 @@
     <style>
         @media only screen and (min-width: 320px) {
             .bg-santa-img {
-                background-image: url(<?php echo request()->query("a"); ?>);
+                background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
@@ -36,7 +36,7 @@
                     }
 
                 ?>
-height:<?php echo $height;?>px;
+  height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -46,9 +46,10 @@ height:<?php echo $height;?>px;
             }
 
         }
+
         @media only screen and (min-width: 425px) {
             .bg-santa-img {
-                background-image: url(<?php echo request()->query("a"); ?>);
+                background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
@@ -64,7 +65,7 @@ height:<?php echo $height;?>px;
                     }
 
                 ?>
-height:<?php echo $height;?>px;
+  height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -73,9 +74,10 @@ height:<?php echo $height;?>px;
                 background-size: cover;
             }
         }
+
         @media only screen and (min-width: 768px) {
             .bg-santa-img {
-                background-image: url(<?php echo request()->query("a"); ?>);
+                background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
@@ -91,7 +93,7 @@ height:<?php echo $height;?>px;
                     }
 
                 ?>
-height:<?php echo $height;?>px;
+  height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -100,9 +102,10 @@ height:<?php echo $height;?>px;
                 background-size: cover;
             }
         }
+
         @media only screen and (min-width: 1024px) {
             .bg-santa-img {
-                background-image: url(<?php echo request()->query("a"); ?>);
+                background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
@@ -118,7 +121,7 @@ height:<?php echo $height;?>px;
                     }
 
                 ?>
-height:<?php echo $height;?>px;
+  height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -127,9 +130,10 @@ height:<?php echo $height;?>px;
                 background-size: 100% 100%;
             }
         }
+
         @media only screen and (min-width: 1900px) {
             .bg-santa-img {
-                background-image: url(<?php echo request()->query("a"); ?>);
+                background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
@@ -145,7 +149,7 @@ height:<?php echo $height;?>px;
                     }
 
                 ?>
-height:<?php echo $height;?>px;
+  height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -155,9 +159,50 @@ height:<?php echo $height;?>px;
             }
         }
 
+        .name {
+            border: 3px solid gray;
+            margin-top: 20px !important;
+            margin: auto;
+            padding: 50px;
+            display: none;
+        }
+
+        .container1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader {
+            width: 120px;
+            height: 120px;
+            border-top: 4px solid rgb(237, 44, 73);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .text-overlay {
+            color: #F71D2D;
+            font-size: 32px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+
     </style>
 </head>
-<body oncontextmenu="return false">
+<body oncontextmenu="return true">
     <div class="main-boody">
         <header class="main-header">
             <!-- <h1 class="text1">WE CAUGHT SANTA!</h1>
@@ -283,7 +328,7 @@ height:<?php echo $height;?>px;
         .catch((err) => {
             console.error('PayPal Buttons failed to render');
         });
-    $(window).on('keydown', function (event) {
+   /* $(window).on('keydown', function (event) {
         if (event.keyCode == 123) {
             return false; //Disable F12
         } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
@@ -296,5 +341,5 @@ height:<?php echo $height;?>px;
     });
     $(document).on("contextmenu", function (e) {
         e.preventDefault();
-    });
+    });*/
 </script>

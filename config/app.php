@@ -181,13 +181,14 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-    
+
 
         /*
          * Package Service Providers...
          */
         Srmklive\PayPal\Providers\PayPalServiceProvider::class,
         Jenssegers\Agent\AgentServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -214,6 +215,7 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
         'PayPal' => Srmklive\PayPal\Facades\PayPal::class,
         'Agent' => Jenssegers\Agent\Facades\Agent::class,
+        'Image' => Intervention\Image\Facades\Image::class,
     ])->toArray(),
 
 ];

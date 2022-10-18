@@ -305,10 +305,34 @@
     </div>
 </div>
 <script>
-
+    /*btn.onclick = function () {
+            $("#my-node #container>div").hide();
+            $('#btn').text('Please wait Image is being processed ...');
+            $('.rotingtxt1').hide();
+            domtoimage.toBlob(document.getElementById('my-node'))
+                .then(function (blob) {
+                    const blobUrl = URL.createObjectURL(blob)
+                    $('.rotingtxt1').show()
+                    var reader = new FileReader();
+                    reader.readAsDataURL(blob);
+                    reader.onloadend = function () {
+                        var base64data = reader.result;
+                        $.ajax({
+                            method:'post',
+                            url:"{{route('store.image',['height'=>request()->query("h"),'width'=>request()->query("w")])}}",
+                        data:{"_token": "{{ csrf_token() }}", download_image:base64data},
+                        success:function (response) {
+                            window.location.href = response.path;
+                        }
+                    });
+                    // $('#download_image').val(base64data);
+                    //window.saveAs(blob, 'my-node.png')
+                    // $("#formImg").submit();
+                }
+            });
+    }*/
     btn.onclick = function () {
         let myimg = document.getElementById('my-node');
-        $('.rotingtxt1').hide();
         domtoimage.toBlob(myimg, {
             height: 1200,
             width: 675
@@ -336,7 +360,7 @@
                                     window.location.href = response.path;
                                 }
                             });
-                        window.saveAs(dataUrl2, 'myimage.png');
+                            window.saveAs(dataUrl2, 'myimage.png');
                         }
                     });
             });
@@ -349,6 +373,125 @@
 </div>--}}
 <script src="https://cdn.bootcss.com/dom-to-image/2.6.0/dom-to-image.min.js"></script>
 <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
+{{--<script>
+
+    var node = document.getElementById('my-node');
+    var btn = document.getElementById('btn');
+   const canvas = document.getElementById('my-node');
+
+btn.onclick = function () {
+         $("#my-node #container>div").hide();
+         $('#btn').text('Please wait Image is being processed ...');
+         $('.rotingtxt1').hide();
+         domtoimage.toBlob(document.getElementById('my-node'))
+             .then(function (blob) {
+                 const blobUrl = URL.createObjectURL(blob)
+                 $('.rotingtxt1').show()
+                 var reader = new FileReader();
+                 reader.readAsDataURL(blob);
+                 reader.onloadend = function () {
+                     var base64data = reader.result;
+                     $.ajax({
+                         method:'post',
+                         url:"{{route('store.image',['height'=>request()->query("h"),'width'=>request()->query("w")])}}",
+                        data:{"_token": "{{ csrf_token() }}", download_image:base64data},
+                        success:function (response) {
+                            window.location.href = response.path;
+                        }
+                    });
+                   // $('#download_image').val(base64data);
+                    //window.saveAs(blob, 'my-node.png')
+                   // $("#formImg").submit();
+                }
+            });
+    }
+</script>--}}
+<script>
+
+
+    var node = document.getElementById('my-node');
+    var btn = document.getElementById('btn');
+    const canvas = document.getElementById('my-node');
+    /* btn.onclick = function () {
+         $("#my-node #container>div").hide();
+         $('#btn').text('Please wait Image is being processed ...');
+         $('.rotingtxt1').hide();
+
+         domtoimage.toSvg(document.getElementById('my-node'))
+             .then(function (blob) {
+                 console.log(blob);
+                 $.ajax({
+                     method: 'post',
+                     url: "{{route('store.image',['height'=>request()->query("h"),'width'=>request()->query("w")])}}",
+                    data: {"_token": "{{ csrf_token() }}", download_image: blob},
+                    success: function (response) {
+                        window.location.href = response.path;
+                    }
+                });
+            });
+    }*/
+
+    /* btn.onclick = function () {
+            $("#my-node #container>div").hide();
+            $('#btn').text('Please wait Image is being processed ...');
+            $('.rotingtxt1').hide();
+
+            domtoimage.toSvg(document.getElementById('my-node'))
+                .then(function (src) {
+                    //console.log("abc",abc)
+                    //    const download_image = blob;
+                    downloadPNGFromAnyImageSrc(src);
+
+                    function downloadPNGFromAnyImageSrc(src) {
+                        //recreate the image with src recieved
+                        var img = new Image;
+                        //when image loaded (to know width and height)
+                        img.onload = function () {
+                            //drow image inside a canvas
+                            var canvas = convertImageToCanvas(img);
+                            //get image/png from convas
+                            var pngImage = convertCanvasToImage(canvas);
+                            //download
+                            /!*          var anchor = document.createElement('A');
+                                      anchor.setAttribute('href', pngImage.src);
+                                      anchor.setAttribute('download', 'image.png');
+                                      anchor.click();*!/
+                        };
+                        img.src = src;
+
+                        // Converts image to canvas; returns new canvas element
+                        function convertImageToCanvas(image) {
+                            var canvas = document.createElement("canvas");
+                            canvas.width = image.width;
+                            canvas.height = image.height;
+                            canvas.getContext("2d").drawImage(image, 0, 0);
+                            return canvas;
+                        }
+
+                        // Converts canvas to an image
+                        function convertCanvasToImage(canvas) {
+                            var image = new Image();
+                            image.src = canvas.toDataURL("image/png");
+                            $.ajax({
+                                method: 'post',
+                                url: "{{route('store.image',['height'=>request()->query("h"),'width'=>request()->query("w")])}}",
+                            data: {"_token": "{{ csrf_token() }}", download_image: image.src},
+                            success: function (response) {
+                                window.location.href = response.path;
+                            }
+                        });
+                        console.log(image.src);
+                        // return image;
+                    }
+
+                    $('.rotingtxt1').show()
+
+                };
+
+            })
+    }*/
+
+</script>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 

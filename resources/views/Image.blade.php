@@ -158,7 +158,7 @@
                 background-size: cover;
             }
         }
-        
+
 
     </style>
 </head>
@@ -210,7 +210,7 @@
                     </div>
                 </div>
             </div>
-          
+
             <div class="bg-santa-img showimg w-100">
                 <p class="rotingtxt1">{{$watermark}}</p>
                 <div id="container">
@@ -262,7 +262,7 @@
 </div>
 <script src="https://cdn.bootcss.com/dom-to-image/2.6.0/dom-to-image.min.js"></script>
 <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
-<script>
+{{--<script>
     var node = $('.bg-santa-img');
     var btn = document.getElementById('btn');
     btn.onclick = function() {
@@ -277,7 +277,7 @@
                 window.saveAs(blob, 'my-node.png');
             });
     }
-</script>
+</script>--}}
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
@@ -287,11 +287,16 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/utils/Draggable.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 <script>
-
+    function blur() {
+        var brightness = $("#brightness").slider("value");
+        var contrast = $("#contrast").slider("value");
+        // var rotate = $("#rotate").slider("value");
+        $(".image").css("-webkit-filter", "brightness(" + brightness + "%)" + "contrast(" + contrast + "%)");
+    }
 
     var dataURL;
     //   $(document).ready(function () {
@@ -319,7 +324,7 @@
         document.addEventListener("touchend", touchHandler, true);
         document.addEventListener("touchcancel", touchHandler, true);
     }
-    /*const download = () => {
+    const download = () => {
         html2canvas(document.querySelector('.bg-santa-img'), {
             letterRendering: 1, allowTaint: true, useCORS: true, logging: true,
             scale: 2, removeContainer: true,
@@ -347,17 +352,17 @@
             canvas.crossOrigin = "Anonymous";
             dataURL = canvas.toDataURL("image/png");
             $('#download_image').val(dataURL);
-            //$("#formImg").submit();
+           // $("#formImg").submit();
 
         });
 
 
-    }*/
+    }
     $('#img-button-section').click(function () {
         $('#canvas-border-hide').hide();
 
         $('.rotingtxt1').hide();
-        //download()
+        download()
         $('.rotingtxt1').show();
     });
 
@@ -383,12 +388,6 @@
     });
 </script>
 <script>
-  function blur() {
-        var brightness = $("#brightness").slider("value");
-        var contrast = $("#contrast").slider("value");
-        // var rotate = $("#rotate").slider("value");
-        $(".image").css("-webkit-filter", "brightness(" + brightness + "%)" + "contrast(" + contrast + "%)");
-    }
 
     // ***********SLIDERS*************//
     $(function () {
