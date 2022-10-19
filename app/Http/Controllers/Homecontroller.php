@@ -75,7 +75,6 @@ class Homecontroller extends Controller
 
                     $customer_image->image_width = $width;
                     $customer_image->image_height = $height;
-
                 }
 
             } else {

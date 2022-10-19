@@ -247,7 +247,7 @@ font-size: 45px!important;
     .bg-santa-img {
         background-image: url(../imgs/santa5.jpeg);
         width: 75%;
-        border: 3px solid gray;
+        /*border: 3px solid gray;*/
         height: 365px;
         margin-top: 20px!important;
         margin: auto;

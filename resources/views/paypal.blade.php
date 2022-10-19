@@ -24,7 +24,7 @@
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
-                width: 85%;
+                width: 100%;
                 <?php
 
                 if (request()->query("h") > request()->query("w"))
@@ -53,7 +53,7 @@
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
-                width: 85%;
+                width: 100%;
                 <?php
 
                 if (request()->query("h") > request()->query("w"))
@@ -81,7 +81,7 @@
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
-                width: 85%;
+                width: 100%;
                 <?php
 
                 if (request()->query("h") > request()->query("w"))
@@ -109,7 +109,7 @@
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
-                width: 85%;
+                width: 100%;
                 <?php
 
                 if (request()->query("h") > request()->query("w"))
@@ -137,7 +137,7 @@
                 border: 3px solid gray;
                 margin-top: 20px !important;
                 margin: auto;
-                width: 85%;
+                width: 100%;
                 <?php
 
                 if (request()->query("h") > request()->query("w"))

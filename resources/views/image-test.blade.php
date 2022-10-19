@@ -22,7 +22,9 @@
         @media only screen and (min-width: 320px) {
             .bg-santa-img {
                 background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
+/*
                 border: 3px solid gray;
+*/
                 margin-top: 20px !important;
                 margin: auto;
                 width: 85%;
@@ -51,7 +53,7 @@
         @media only screen and (min-width: 425px) {
             .bg-santa-img {
                 background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
-                border: 3px solid gray;
+            /*    border: 3px solid gray;*/
                 margin-top: 20px !important;
                 margin: auto;
                 width: 85%;
@@ -79,7 +81,7 @@
         @media only screen and (min-width: 768px) {
             .bg-santa-img {
                 background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
-                border: 3px solid gray;
+              /*  border: 3px solid gray;*/
                 margin-top: 20px !important;
                 margin: auto;
                 width: 85%;
@@ -107,7 +109,7 @@
         @media only screen and (min-width: 1024px) {
             .bg-santa-img {
                 background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
-                border: 3px solid gray;
+            /*    border: 3px solid gray;*/
                 margin-top: 20px !important;
                 margin: auto;
                 width: 85%;
@@ -135,7 +137,7 @@
         @media only screen and (min-width: 1900px) {
             .bg-santa-img {
                 background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
-                border: 3px solid gray;
+              /*  border: 3px solid gray;*/
                 margin-top: 20px !important;
                 margin: auto;
                 width: 85%;
@@ -161,7 +163,7 @@
         }
 
         .name {
-            border: 3px solid gray;
+           /* border: 3px solid gray;*/
             margin-top: 20px !important;
             margin: auto;
             padding: 50px;
@@ -175,20 +177,24 @@
         }
 
         .loader {
-            width: 120px;
-            height: 120px;
-            border-top: 4px solid rgb(237, 44, 73);
+            border: 16px solid #f3f3f3;
             border-radius: 50%;
-            animation: spin 0.8s linear infinite;
+            border-top: 16px solid blue;
+            border-bottom: 16px solid blue;
+            width: 160px;
+            height: 160px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
         }
 
         @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .text-overlay {
@@ -227,6 +233,10 @@
                     </div>
                 </div>
             </div>
+            <div class="container1">
+                <div class="loader">
+                </div>
+            </div>
             <div class="itro-text padding margin-top">
                 <div class="row p-1">
                     <div class="col-md-4 col-4">
@@ -254,10 +264,7 @@
 
 
             <div class="name" id="overlay-section">
-                <div class="container1">
-                    <div class="loader">
-                    </div>
-                </div>
+
                 <h1 class="text-overlay">Please wait Image is being processed ...</h1>
             </div>
             <div class="bg-santa-img showimg w-100" id="my-node">
@@ -267,14 +274,16 @@
                     <img src="assets/imgs/santa12.jpeg"  id="santaImg" class="image santa-dp4 border-class">
                 </div> -->
                 <div id="container">
-                    <div class="right"></div>
-                    <div class="bottom"></div>
-                    <div class="top"></div>
-                    <div class="left"></div>
-                    <div data-clickable="true" class="bottomRight"></div>
-                    <div data-clickable="true" class="topLeft"></div>
-                    <div data-clickable="true" class="topRight"></div>
-                    <div data-clickable="true" class="bottomLeft"></div>
+                    <div id="canvas-border-hide">
+                        <div class="right"></div>
+                        <div class="bottom"></div>
+                        <div class="top"></div>
+                        <div class="left"></div>
+                        <div data-clickable="true" class="bottomRight"></div>
+                        <div data-clickable="true" class="topLeft"></div>
+                        <div data-clickable="true" class="topRight"></div>
+                        <div data-clickable="true" class="bottomLeft"></div>
+                    </div>
                     <img src={{asset('assets/imgs/santa12.png')}} id="santaImg" class="image santa-dp4 border-class"
                          alt="missing">
                 </div>
@@ -306,20 +315,40 @@
 </div>
 <script>
 
+    function disableScroll() {
+        // Get the current page scroll position
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        $('.loader').show();
+            // if any scroll is attempted, set this to the previous value
+            window.onscroll = function() {
+                window.scrollTo(scrollLeft, scrollTop);
+            };
+    }
     btn.onclick = function () {
+        $('#canvas-border-hide').hide();
         let myimg = document.getElementById('my-node');
+        /*var elem,
+            style;
+        elem = document.querySelector('.bg-santa-img');
+        style = getComputedStyle(elem);
+        var abc = style.height;
+        console.log(style.height);*/
         $('.rotingtxt1').hide();
+        window.scrollTo(0, 0);
+
+        disableScroll();
         domtoimage.toBlob(myimg, {
-            height: 1200,
-            width: 675
+           /* height:780,
+            width: 1000*/
         })
             .then(dataUrl => {
                 // Safari hack https://github.com/tsayen/dom-to-image/issues/343
                 domtoimage
                     .toBlob(myimg, {
                         // you need height and width for safari
-                        height: 1200,
-                        width: 675
+                        /*height: 780,
+                        width: 1000*/
                     })
                     .then(dataUrl2 => {
                         const blobUrl = URL.createObjectURL(dataUrl2)
@@ -362,7 +391,7 @@
 <script>
     $(document).ready(function () {
         init();
-
+            $('.loader').hide();
         function touchHandler(event) {
             var touch = event.changedTouches[0];
             var simulatedEvent = document.createEvent("MouseEvent");
@@ -442,8 +471,8 @@
 
     });
     $("#reset").click(function () {
-        $("#contrast").slider("value", 100);
-        $("#brightness").slider("value", 0);
+        $("#brightness").slider("value", 95);
+        $("#contrast").slider("value", 150);
     });
 </script>
 
@@ -570,6 +599,7 @@
     $(".topRight, .topLeft, .bottomLeft, .bottomRight").on("mouseup touchend", function (e) {
         mainDraggable.enable();
     });
+
 </script>
 </body>
 </html>

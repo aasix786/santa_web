@@ -81,7 +81,8 @@
                                         </div>
                                         <button type="button" class="btn cancel-btn mb-2" data-dismiss="modal">Cancel
                                         </button>
-                                        <button type="submit" class="btn btn-primary save-btn mb-2"> Continue</button>
+                                        <button type="submit" class="btn btn-primary save-btn mb-2 loader"> Continue
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -97,7 +98,13 @@
 
 
 <script>
+    $(document).on('click','.save-btn',function(){
+
+        $('.save-btn').text('Loading ...');
+
+    });
     function readURL(input) {
+
         if (input.files && input.files[0]) {
 
             var reader = new FileReader();
@@ -108,6 +115,7 @@
                 image.onload = function () {
                     var height = this.height;
                     var width = this.width;
+
                     if (height > width) {
 
                         $('#image_position').val('vertical')
@@ -120,9 +128,7 @@
             };
             reader.readAsDataURL(input.files[0]);
         }
-
     }
-
 </script>
 </body>
 </html>
