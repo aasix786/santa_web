@@ -78,6 +78,8 @@
                                             <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="py-3 w-100"
                                                  alt=""/>
                                             <input type="hidden" name="image_position" id="image_position">
+                                            <input type="hidden" name="image_width" id="image_width">
+                                            <input type="hidden" name="image_height" id="image_height">
                                         </div>
                                         <button type="button" class="btn cancel-btn mb-2" data-dismiss="modal">Cancel
                                         </button>
@@ -115,7 +117,8 @@
                 image.onload = function () {
                     var height = this.height;
                     var width = this.width;
-
+                    $('#image_width').val(width);
+                    $('#image_height').val(height);
                     if (height > width) {
 
                         $('#image_position').val('vertical')

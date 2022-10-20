@@ -21,6 +21,7 @@ class ImagesController extends Controller
     {
         $customer_image = new CustomerImage();
         if ($request->hasFile('upload_image')) {
+
             $file = $request->file('upload_image');
             $width = getimagesize($file)[0]; // getting the image width
             $height = getimagesize($file)[1]; // getting the image height
