@@ -257,6 +257,9 @@ font-size: 45px!important;
         position: relative;
         overflow: hidden;
     }
+    .pinch-zoom{
+        display: block;
+    }
     .santa-dp2 {
         height: 160px;
         width: 100%;

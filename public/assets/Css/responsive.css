@@ -80,6 +80,9 @@
     .rotingtxt1 {
         font-size: 25px;
     }
+    .pinch-zoom{
+        display: block;
+    }
     .rotingtxt {
         font-size: 21px;
     }

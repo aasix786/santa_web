@@ -224,8 +224,10 @@
                         <div data-clickable="true" class="topRight"></div>
                         <div data-clickable="true" class="bottomLeft"></div>
                     </div>
-                    <img src="{{asset('assets/imgs/santa12.png')}}" id="santaImg" class="image santa-dp4 border-class"
+                    <div class="page pinch-zoom-parent">
+                        <img src="{{asset('assets/imgs/santa12.png')}}" id="santaImg" class=" pinch-zoom image santa-dp4 border-class"
                          alt="missing">
+                    </div>
                 </div>
             </div>`
 
@@ -262,6 +264,11 @@
 </div>
 <script src="https://cdn.bootcss.com/dom-to-image/2.6.0/dom-to-image.min.js"></script>
 <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
+<script src="https://manuelstofer.github.io/pinchzoom/dist/pinch-zoom.umd.js"></script>
+    <script>
+        var el = document.querySelector('.pinch-zoom');
+        new PinchZoom.default(el, {});
+    </script>
 {{--<script>
     var node = $('.bg-santa-img');
     var btn = document.getElementById('btn');
@@ -278,6 +285,7 @@
             });
     }
 </script>--}}
+
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
