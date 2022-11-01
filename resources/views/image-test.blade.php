@@ -430,16 +430,16 @@
             $('#rotate-pic').hide()
         });
     });
-    /*  $(document).ready(function () {
+    $(document).ready(function () {
           $('.selectSanta').on('click', function () {
               let img = $(this).attr("src");
               $("#santaImg").attr("src", img);
           });
-      });*/
-    // $( function() {
-    //     $('#draggable').resizable();
-    //     $( "#draggable" ).draggable();
-    // } );
+      });
+    $( function() {
+        $('#draggable').resizable();
+        $( "#draggable" ).draggable();
+    } );
 </script>
 <script>
     function blur() {
