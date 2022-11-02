@@ -269,10 +269,6 @@
             </div>
             <div class="bg-santa-img showimg w-100" id="my-node">
                 <p class="rotingtxt1">{{$watermark}}</p>
-
-                <!-- <div id="draggable" class="ui-widget-content">
-                    <img src="assets/imgs/santa12.jpeg"  id="santaImg" class="image santa-dp4 border-class">
-                </div> -->
                 <div id="container">
                     <div id="canvas-border-hide">
                         <div class="right"></div>
@@ -285,16 +281,16 @@
                         <div data-clickable="true" class="bottomLeft"></div>
                     </div>
                     
-                    <div class="page pinch-zoom-parent">
+                    <!-- <div class="page pinch-zoom-parent"> -->
                         <!-- <div class="pinch-zoom">
 
                             <img src={{asset('assets/imgs/santa12.png')}} id="santaImg" class=" image santa-dp4 border-class"
                             alt="missing">
                         </div> -->
                         <div class="pinch-zoom-container">
-                            <img class=" pinch-zoom-image-id pinch-zoom-image image santa-dp4 border-class"  id="santaImg" onload="onLoad()" src={{asset('assets/imgs/santa12.png')}} alt="missing"/>
+                            <img class=" santaImg pinch-zoom-image image santa-dp4 border-class"  id="demo" onload="onLoad()" src={{asset('assets/imgs/santa12.png')}} alt="missing"/>
                         </div>
-                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
             <div class="catch radius">
@@ -446,7 +442,7 @@
     $(document).ready(function () {
           $('.selectSanta').on('click', function () {
               let img = $(this).attr("src");
-              $("#santaImg").attr("src", img);
+              $(".santaImg").attr("src", img);
           });
       });
     $( function() {
@@ -757,7 +753,7 @@
         };
         var onLoad = function () {
   
-          img = document.getElementsByClassName('pinch-zoom-image-id');
+          img = document.getElementById('demo');
           container = img.parentElement;
   
           disableImgEventHandlers();
