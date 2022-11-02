@@ -80,6 +80,12 @@
     .rotingtxt1 {
         font-size: 25px;
     }
+    img#pinch-zoom-image-id {
+        border: 2px solid #a8e0f3;
+    }
+    div#canvas-border-hide {
+        display: none;
+    }        
     .pinch-zoom{
         display: block;
     }
