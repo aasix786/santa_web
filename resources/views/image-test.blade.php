@@ -284,8 +284,11 @@
                         <div data-clickable="true" class="topRight"></div>
                         <div data-clickable="true" class="bottomLeft"></div>
                     </div>
-                    <img src={{asset('assets/imgs/santa12.png')}} id="santaImg" class="image santa-dp4 border-class"
-                         alt="missing">
+                    
+                    <div class="page pinch-zoom-parent">
+                        <img src={{asset('assets/imgs/santa12.png')}} id="santaImg" class="pinch-zoom image santa-dp4 border-class"
+                            alt="missing">
+                    </div>
                 </div>
             </div>
             <div class="catch radius">
@@ -313,6 +316,11 @@
 
     </div>
 </div>
+<script src="https://manuelstofer.github.io/pinchzoom/dist/pinch-zoom.umd.js"></script>
+    <script>
+        var el = document.querySelector('.pinch-zoom');
+        new PinchZoom.default(el, {});
+    </script>
 <script>
 
     function disableScroll() {
@@ -388,6 +396,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/utils/Draggable.min.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+
+
 <script>
     $(document).ready(function () {
         init();
