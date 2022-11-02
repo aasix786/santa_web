@@ -288,7 +288,7 @@
                             alt="missing">
                         </div> -->
                         <div class="pinch-zoom-container">
-                            <img class=" santaImg pinch-zoom-image image santa-dp4 border-class"  id="demo" onload="onLoad()" src={{asset('assets/imgs/santa12.png')}} alt="missing"/>
+                            <img class=" santaImg pinch-zoom-image image santa-dp4 border-class"  id="pinch-zoom-image-id" onload="onLoad()" src={{asset('assets/imgs/santa12.png')}} alt="missing"/>
                         </div>
                     <!-- </div> -->
                 </div>
@@ -753,7 +753,7 @@
         };
         var onLoad = function () {
   
-          img = document.getElementById('demo');
+          img = document.getElementById('pinch-zoom-image-id');
           container = img.parentElement;
   
           disableImgEventHandlers();
