@@ -365,7 +365,7 @@
                                     window.location.href = response.path;
                                 }
                             });
-                        window.saveAs(dataUrl2, 'myimage.png');
+                        //window.saveAs(dataUrl2, 'myimage.png');
                         }
                     });
             });
