@@ -503,9 +503,8 @@ font-size: 45px!important;
                 font-family: 'Denk One', sans-serif;
             }
 #stickytypeheader{
-    /* position: fixed; */
     z-index: 99999;
-    /* height: 121px; */
+    position: sticky;
     background-color: #e3dfdc;
     top: 0;
 }

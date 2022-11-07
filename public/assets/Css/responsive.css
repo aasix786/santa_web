@@ -26,7 +26,12 @@
     .text5 {
         font-size: 29px !important;
     }
-
+    .bottomLeft,.topRight,.bottomRight,.topLeft, .left,.bottom,.right,.top{
+        background: transparent ;
+    }   
+    img#scale-element {
+        border: 2px solid #a8e0f3;
+    }   
     .text6 {
         font-size: 60px;
     }
@@ -83,9 +88,7 @@
     img#pinch-zoom-image-id {
         border: 2px solid #a8e0f3;
     }
-    div#canvas-border-hide {
-        display: none;
-    }        
+     
     .pinch-zoom{
         display: block;
     }
@@ -318,7 +321,10 @@
         font-size: 23px!important;
     }
     .rotingtxt {
-        font-size: 23px;
+        font-size: 41px;
+        line-height: 2.8;
+        right: -60%;
+        top: -30%;
     }  
 }
 
@@ -326,9 +332,15 @@
 @media only screen and (max-width: 375px) {
     .rotingtxt1 {
         font-size: 24px;
+        
     } 
     .rotingtxt {
-        font-size: 18px;
+        font-size: 29px;  
+          line-height: 2.8;
+        right: -65%;
+        top: -9%;
+        left: -7px;
+    }
     }
     .font-text {
         font-size: 17px!important;
