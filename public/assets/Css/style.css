@@ -502,7 +502,13 @@ font-size: 45px!important;
             .fontfamilybold{
                 font-family: 'Denk One', sans-serif;
             }
-
+#stickytypeheader{
+    /* position: fixed; */
+    z-index: 99999;
+    /* height: 121px; */
+    background-color: #e3dfdc;
+    top: 0;
+}
             .rotingtxt1 {
                 -webkit-transform: rotate(331deg);
                 -moz-transform: rotate(331deg);

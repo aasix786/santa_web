@@ -237,7 +237,7 @@
                 <div class="loader">
                 </div>
             </div>
-            <div class="itro-text padding margin-top">
+            <div class="itro-text padding margin-top " id="stickytypeheader">
                 <div class="row p-1">
                     <div class="col-md-4 col-4">
                         <h1 class="text-shade">BRIGHTNESS</h1>
@@ -318,6 +318,9 @@
 
     </div>
 </div>
+
+
+</script>
 <script>
 
     function disableScroll() {
@@ -377,10 +380,6 @@
     }
 
 </script>
-{{--<div>
-    <button id="btn">Preview</button>
-    <img src="" id="image1" alt="">
-</div>--}}
 
 <script src="https://hammerjs.github.io/dist/hammer.js"></script>
 <script src="https://cdn.bootcss.com/dom-to-image/2.6.0/dom-to-image.min.js"></script>
@@ -395,8 +394,39 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/utils/Draggable.min.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<script>
+//     $(document).ready(function(){
+//         var fixmeTop = $('.fixme').offset().top;       // get initial position of the element
+//         $(window).scroll(function() {                  // assign scroll event listener
 
-
+//         var currentScroll = $(window).scrollTop(); // get current position
+//         if (currentScroll >= fixmeTop) {           // apply position: fixed if you
+//             $('.fixme').css({                      // scroll to that element or below it
+//                 position: 'fixed',
+//                 top: '0',
+//                 left: '0'
+//             });
+//         } else {                                   // apply position: static
+//             $('.fixme').css({                      // if you scroll above it
+//                 position: 'static'
+//             });
+//         }   
+//     });
+// })
+$(function(){
+        var stickyHeaderTop = $('#stickytypeheader').offset().top;
+ 
+        $(window).scroll(function(){
+                if( $(window).scrollTop() > stickyHeaderTop ) {
+                        $('#stickytypeheader').css({position: 'sticky', top: '0px' ,  width: '100%' });
+                        
+                } else {
+                        $('#stickytypeheader').css({position: 'static', top: '0' ,  width: '100%' });
+                      
+                }
+        });
+  });
+  </script>
 <script>
     $(document).ready(function () {
         init();
