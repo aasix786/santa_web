@@ -288,7 +288,7 @@
                             alt="missing">
                         </div> -->
                         <div class="pinch-zoom-container">
-                            <img class=" santaImg pinch-zoom-image image santa-dp4 border-class"  id="pinch-zoom-image-id" onload="onLoad()" src={{asset('assets/imgs/santa12.png')}} alt="missing"/>
+                            <img class=" pinch-zoom-image image santa-dp4 border-class"  id="pinch-zoom-image-id" onload="onLoad()" src={{asset('assets/imgs/santa12.png')}} alt="missing"/>
                         </div>
                     <!-- </div> -->
                 </div>

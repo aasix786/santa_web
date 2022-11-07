@@ -508,7 +508,7 @@ font-size: 45px!important;
                 -moz-transform: rotate(331deg);
                 -o-transform: rotate(331deg);
                 transform: rotate(345deg);
-                font-size: 85px;
+                font-size: 120px;
                 color: #d6d6d680;;
                 font-family: 'Denk One', sans-serif;
                 text-transform: uppercase;
@@ -516,7 +516,7 @@ font-size: 45px!important;
                 top: -43px;
                 line-height: 169px;
                 position: absolute;
-                right: -25px;
+                right: -144px;
                 text-align: justify;
                 vertical-align: text-top;
             }
