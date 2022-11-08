@@ -18,16 +18,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    
+
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
     <style>
         @media only screen and (min-width: 320px) {
             .bg-santa-img {
                 background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
-/*
-                border: 3px solid gray;
-*/
+                /*
+                                border: 3px solid gray;
+                */
                 margin-top: 20px !important;
                 margin: auto;
                 width: 85%;
@@ -42,7 +42,7 @@
                     }
 
                 ?>
-   height: <?php echo $height;?>px;
+    height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -56,7 +56,7 @@
         @media only screen and (min-width: 425px) {
             .bg-santa-img {
                 background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
-            /*    border: 3px solid gray;*/
+                /*    border: 3px solid gray;*/
                 margin-top: 20px !important;
                 margin: auto;
                 width: 85%;
@@ -71,7 +71,7 @@
                     }
 
                 ?>
-   height: <?php echo $height;?>px;
+    height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -84,7 +84,7 @@
         @media only screen and (min-width: 768px) {
             .bg-santa-img {
                 background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
-              /*  border: 3px solid gray;*/
+                /*  border: 3px solid gray;*/
                 margin-top: 20px !important;
                 margin: auto;
                 width: 85%;
@@ -99,7 +99,7 @@
                     }
 
                 ?>
-   height: <?php echo $height;?>px;
+    height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -112,7 +112,7 @@
         @media only screen and (min-width: 1024px) {
             .bg-santa-img {
                 background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
-            /*    border: 3px solid gray;*/
+                /*    border: 3px solid gray;*/
                 margin-top: 20px !important;
                 margin: auto;
                 width: 85%;
@@ -127,7 +127,7 @@
                     }
 
                 ?>
-   height: <?php echo $height;?>px;
+    height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -140,7 +140,7 @@
         @media only screen and (min-width: 1900px) {
             .bg-santa-img {
                 background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
-              /*  border: 3px solid gray;*/
+                /*  border: 3px solid gray;*/
                 margin-top: 20px !important;
                 margin: auto;
                 width: 85%;
@@ -155,7 +155,7 @@
                     }
 
                 ?>
-   height: <?php echo $height;?>px;
+    height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -166,7 +166,7 @@
         }
 
         .name {
-           /* border: 3px solid gray;*/
+            /* border: 3px solid gray;*/
             margin-top: 20px !important;
             margin: auto;
             padding: 50px;
@@ -191,13 +191,21 @@
         }
 
         @-webkit-keyframes spin {
-            0% { -webkit-transform: rotate(0deg); }
-            100% { -webkit-transform: rotate(360deg); }
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .text-overlay {
@@ -252,15 +260,15 @@
                         <h1 class="text-shade">RESET</h1>
                     </div>
                     <div class="col-md-4 col-4">
-                        <img src={{asset("assets/imgs/bright.png")}} class="santa-dp3" id="brightness-pic">
+                        <img src="{{asset("assets/imgs/bright.png")}}" class="santa-dp3" id="brightness-pic">
                         <div id="brightness"></div>
                     </div>
                     <div class="col-md-4 col-4">
-                        <img src={{asset("assets/imgs/contrast.png")}} class="santa-dp3" id="contrast-pic">
+                        <img src="{{asset("assets/imgs/contrast.png")}}" class="santa-dp3" id="contrast-pic">
                         <div id="contrast"></div>
                     </div>
                     <div class="col-md-4 col-4">
-                        <img src={{asset("assets/imgs/reset.png")}} class="santa-dp3" id="reset">
+                        <img src="{{asset("assets/imgs/reset.png")}}" class="santa-dp3" id="reset">
                     </div>
                 </div>
             </div>
@@ -274,17 +282,18 @@
                 <p class="rotingtxt1">{{$watermark}}</p>
                 <div id="container">
                     <div id="gesture-area">
-                    <div id="canvas-border-hide">
-                        <div class="right"></div>
-                        <div class="bottom"></div>
-                        <div class="top"></div>
-                        <div class="left"></div>
-                        <div data-clickable="true" class="bottomRight"></div>
-                        <div data-clickable="true" class="topLeft"></div>
-                        <div data-clickable="true" class="topRight"></div>
-                        <div data-clickable="true" class="bottomLeft"></div>
-                        
-                            <img src={{asset('assets/imgs/santa12.png')}} class='santaImg image santa-dp4 border-class' alt="sample image" id="scale-element">
+                        <div id="canvas-border-hide">
+                            <div class="right santa-border"></div>
+                            <div class="bottom santa-border"></div>
+                            <div class="top santa-border"></div>
+                            <div class="left santa-border"></div>
+                            <div data-clickable="true" class="bottomRight santa-border"></div>
+                            <div data-clickable="true" class="topLeft santa-border"></div>
+                            <div data-clickable="true" class="topRight santa-border"></div>
+                            <div data-clickable="true" class="bottomLeft santa-border"></div>
+
+                            <img src="{{asset('assets/imgs/santa12.png')}}"
+                                 class='santaImg image santa-dp4 border-class' alt="sample image" id="scale-element">
                         </div>
                     </div>
                     <!-- </div> -->
@@ -323,14 +332,17 @@
         // Get the current page scroll position
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-        $('.loader').show();
-            // if any scroll is attempted, set this to the previous value
-            window.onscroll = function() {
-                window.scrollTo(scrollLeft, scrollTop);
-            };
+            $('.loader').show();
+        // if any scroll is attempted, set this to the previous value
+        window.onscroll = function () {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
     }
+
     btn.onclick = function () {
-        $('#canvas-border-hide').hide();
+        // $('#canvas-border-hide').hide();
+        $('.santa-border').hide();
+        $('.border-class').css('border', 'none');
         let myimg = document.getElementById('my-node');
         /*var elem,
             style;
@@ -343,8 +355,8 @@
 
         disableScroll();
         domtoimage.toBlob(myimg, {
-           /* height:780,
-            width: 1000*/
+            /* height:780,
+             width: 1000*/
         })
             .then(dataUrl => {
                 // Safari hack https://github.com/tsayen/dom-to-image/issues/343
@@ -362,14 +374,14 @@
                         reader.onloadend = function () {
                             var base64data = reader.result;
                             $.ajax({
-                                method:'post',
-                                url:"{{route('store.image',['height'=>request()->query("h"),'width'=>request()->query("w")])}}",
-                                data:{"_token": "{{ csrf_token() }}", download_image:base64data},
-                                success:function (response) {
+                                method: 'post',
+                                url: "{{route('store.image',['height'=>request()->query("h"),'width'=>request()->query("w")])}}",
+                                data: {"_token": "{{ csrf_token() }}", download_image: base64data},
+                                success: function (response) {
                                     window.location.href = response.path;
                                 }
                             });
-                        //window.saveAs(dataUrl2, 'myimage.png');
+                            //window.saveAs(dataUrl2, 'myimage.png');
                         }
                     });
             });
@@ -394,7 +406,8 @@
 <script>
     $(document).ready(function () {
         init();
-            $('.loader').hide();
+        $('.loader').hide();
+
         function touchHandler(event) {
             var touch = event.changedTouches[0];
             var simulatedEvent = document.createEvent("MouseEvent");
@@ -434,15 +447,15 @@
         });
     });
     $(document).ready(function () {
-          $('.selectSanta').on('click', function () {
-              let img = $(this).attr("src");
-              $(".santaImg").attr("src", img);
-          });
-      });
-    $( function() {
+        $('.selectSanta').on('click', function () {
+            let img = $(this).attr("src");
+            $(".santaImg").attr("src", img);
+        });
+    });
+    $(function () {
         $('#draggable').resizable();
-        $( "#draggable" ).draggable();
-    } );
+        $("#draggable").draggable();
+    });
 </script>
 <script>
     function blur() {
@@ -605,70 +618,71 @@
 
 </script>
 <script>
-        function dragMoveListener (event) {
-    var target = event.target,
-        // keep the dragged position in the data-x/data-y attributes
-        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
-        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+    function dragMoveListener(event) {
+        var target = event.target,
+            // keep the dragged position in the data-x/data-y attributes
+            x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+            y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
-    // translate the element
-    target.style.webkitTransform =
-    target.style.transform =
-      'translate(' + x + 'px, ' + y + 'px)';
+        // translate the element
+        target.style.webkitTransform =
+            target.style.transform =
+                'translate(' + x + 'px, ' + y + 'px)';
 
-    // update the posiion attributes
-    target.setAttribute('data-x', x);
-    target.setAttribute('data-y', y);
-  }
-//   ----
-        var angleScale = {
-  angle: 0,
-  scale: 1
-}
-var gestureArea = document.getElementById('gesture-area')
-var scaleElement = document.getElementById('scale-element')
-var resetTimeout
-
-interact(gestureArea)
-  .gesturable({
-    listeners: {
-      start (event) {
-        angleScale.angle -= event.angle
-
-        clearTimeout(resetTimeout)
-        scaleElement.classList.remove('reset')
-      },
-      move (event) {
-        // document.body.appendChild(new Text(event.scale))
-        var currentAngle = event.angle + angleScale.angle
-        var currentScale = event.scale * angleScale.scale
-
-        scaleElement.style.transform =
-          'rotate(' + currentAngle + 'deg)' + 'scale(' + currentScale + ')'
-
-        // uses the dragMoveListener from the draggable demo above
-        dragMoveListener(event)
-      },
-      end (event) {
-        angleScale.angle = angleScale.angle + event.angle
-        angleScale.scale = angleScale.scale * event.scale
-
-        // resetTimeout = setTimeout(reset, 1000)
-        // scaleElement.classList.add('reset')
-      }
+        // update the posiion attributes
+        target.setAttribute('data-x', x);
+        target.setAttribute('data-y', y);
     }
-  })
-  .draggable({
-    listeners: { move: dragMoveListener }
-  })
 
-function reset () {
-  scaleElement.style.transform = 'scale(1)'
+    //   ----
+    var angleScale = {
+        angle: 0,
+        scale: 1
+    }
+    var gestureArea = document.getElementById('gesture-area')
+    var scaleElement = document.getElementById('scale-element')
+    var resetTimeout
 
-  angleScale.angle = 0
-  angleScale.scale = 1
-}
+    interact(gestureArea)
+        .gesturable({
+            listeners: {
+                start(event) {
+                    angleScale.angle -= event.angle
 
- </script>
+                    clearTimeout(resetTimeout)
+                    scaleElement.classList.remove('reset')
+                },
+                move(event) {
+                    // document.body.appendChild(new Text(event.scale))
+                    var currentAngle = event.angle + angleScale.angle
+                    var currentScale = event.scale * angleScale.scale
+
+                    scaleElement.style.transform =
+                        'rotate(' + currentAngle + 'deg)' + 'scale(' + currentScale + ')'
+
+                    // uses the dragMoveListener from the draggable demo above
+                    dragMoveListener(event)
+                },
+                end(event) {
+                    angleScale.angle = angleScale.angle + event.angle
+                    angleScale.scale = angleScale.scale * event.scale
+
+                    // resetTimeout = setTimeout(reset, 1000)
+                    // scaleElement.classList.add('reset')
+                }
+            }
+        })
+        .draggable({
+            listeners: {move: dragMoveListener}
+        })
+
+    function reset() {
+        scaleElement.style.transform = 'scale(1)'
+
+        angleScale.angle = 0
+        angleScale.scale = 1
+    }
+
+</script>
 </body>
 </html>
