@@ -25,6 +25,9 @@ Route::get('test/paypal', function () {
 Route::get('/privacyPolicy', function () {
     return view('privacyPolicy');
 });
+Route::get('/termCondition', function () {
+    return view('termCondition');
+});
 Route::get('/', function () {
     return view('index');
 });

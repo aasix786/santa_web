@@ -17,12 +17,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <style>
-        body p, ol li,h2,strong,a,h1{
-            line-height: 22px;
-            font-family: calibri;
+        body p, ul li,h2,strong,a,h1{
+            line-height: 22px;            
+            font-family: Arial;
+            color: #6b6b6b;
         }
         p{
-            margin-bottom:6px;
+            font-size: 16px;
+            margin-bottom: 18px;
         }
         h2{
             font-size:22px;
@@ -42,206 +44,125 @@
         <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
     </header>
     <div class="container" style="padding-top: 40px">
-                <h1 class="font-weight-bold py-2" >Privacy Policy</h1> <hr>
-                <p>Onism Solution ("us", "we", or "our") operates the <a href="https://www.onismsolution.com/">www.onismsolution.com</a> website and the mobile application (hereinafter referred to as the "Service").</p>
-                <p>Your privacy is important to us. Onism Solution is committed to respect your privacy while using our website and mobile application. This Policy defines the requirements to ensure compliance with the applicable data privacy laws and regulations applicable to Onism Solution’s collection, use, and transmission of Personal Data for information collected by us on our website.</p>
-                <p>We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, the terms used in this Privacy Policy have the same meanings as in our Terms and Conditions.</p>
-                <p>For residents (data subjects) of the European Union, when we collect and use personal data (information) about you, we may be subject to the General Data Protection Regulation (‘GDPR’) of the European Union and responsible as a ‘data controller’ for such personal data.</p>
-                <p>For residents (consumers) of the United States, when we collect and use personal information about you, we may be subject to the California Consumer Protection Act (CCPA) and responsible as a ‘business’ or ‘service provider’ for such personal data.</p>
-                <ol>
-                    <li>
-                        <h2>
-                             Definitions
-                        </h2>
+                        <h1 class="py-3">Privacy Policy for B3 Events INC</h1>
+                        <hr>
+                        <p>At We Caught Santa, accessible from WeCaughtSanta.com, one of our main priorities is the privacy
+                            of our visitors. This Privacy Policy document contains types of information that is collected and
+                            recorded by We Caught Santa and how we use it.</p>
+                        <p>
+                            If you have additional questions or require more information about our Privacy Policy, do not hesitate
+                            to contact us.</p>
+                        <p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with
+                            regards to the information that they shared and/or collect in We Caught Santa. This policy is not
+                            applicable to any information collected offline or via channels other than this website. Our Privacy
+                            Policy was created with the help of the Free Privacy Policy Generator.</p>
+                        <h2>Consent</h2>
+                        <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+                        <h2>Information we collect</h2>
+                        <p>The personal information that you are asked to provide, and the reasons why you are asked to
+                        provide it, will be made clear to you at the point we ask you to provide your personal information.</p>
+                        <p>If you contact us directly, we may receive additional information about you such as your name, email
+                        address, phone number, the contents of the message and/or attachments you may send us, and any
+                        other information you may choose to provide.</p>
+                        <p>When you register for an Account, we may ask for your contact information, including items such as
+                        name, company name, address, email address, and telephone number.</p>
+                         <!-- ----- -->
+                        <h2>How we use your information</h2>
+                        <p>We use the information we collect in various ways, including to:</p>
                         <ul>
-                            <li>
-                                <h5>Services</h5>
-                                <p>Service means the <a href="https://www.onismsolution.com/">www.onismsolution.com</a> website and the mobile application operated by Onism Solution.</p>
-                            </li>
-                            <li>
-                                <h5>Personal Data</h5>
-                                <p>Personal Data means data about a living individual who can be identified from those data (or from those and other information either in our possession or likely to come into our possession).</p>
-                            </li>
-                            <li>
-                                <h5>Usage Data</h5>
-                                <p>Usage Data is data collected automatically either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</p>
-                            </li>
-                            <li>
-                                <h5>Cookies</h5>
-                                <p>UsagCookies are small files stored on your device (computer or mobile device).</p>
-                            </li>
-                            <li>
-                                <h5>Data Controller</h5>
-                                <p>Data Controller means the natural or legal person who (either alone or jointly or in common with other persons) determines the purposes for which and the manner in which any personal information are, or are to be, processed.</p>
-                                <p>For the purpose of this Privacy Policy, we are a Data Controller of your Personal Data.</p>
-                            </li>
-                            <li>
-                                <h5>Data Processors (or Service Providers)</h5>
-                                <p>Data Processor (or Service Provider) means any natural or legal person who processes the data on behalf of the Data Controller. We may use the services of various Service Providers in order to process your data more effectively.</p>
-                            </li>
-                            <li>
-                                <h5>Data Subject (or User)</h5>
-                                <p>Data Subject is any living individual who is using our Service and is the subject of Personal Data.</p>
-                            </li>
+                            <li>Provide, operate, and maintain our website</li>
+                            <li>Improve, personalize, and expand our website</li>
+                            <li>Understand and analyze how you use our website</li>
+                            <li>Develop new products, services, features, and functionality</li>
+                            <li>Communicate with you, either directly or through one of our partners, including for customer
+                                service, to provide you with updates and other information relating to the website, and for
+                                marketing and promotional purposes</li>
+                            <li>Send you emails</li>
+                            <li>Find and prevent fraud</li>
                         </ul>
-                    </li>
-                    <li>
-                        <h2>Information Collection and Use</h2>
-                        <p>We collect several different types of information for various purposes to provide and improve our Service to you.</p>
-                    </li>
-                    <li>
-                        <h2>Types of Data Collected</h2>
-                        <ul>
-                            <li>
-                                <h5>Personal Data</h5>
-                                <p>While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally, identifiable information may include, but is not limited to:</p>
-                                <ul class="privacy-inner-listing">
-                                    <li>Email address</li>
-                                    <li>First name and last name</li>
-                                    <li>Phone number</li>
-                                    <li>Cookies and Usage Data</li>
-                                </ul>
-                                <p>We may use your Personal Data to contact you with newsletters, marketing or promotional materials and other information that may be of interest to you. You may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or the instructions provided in any email we send.</p>
-                            </li>
-                            <li>
-                                <h5>Usage Data</h5>
-                                <p>We may also collect information that your browser sends whenever you visit our Service or when you access the Service by or through a mobile device ("Usage Data").</p>
-                                <p>This Usage Data may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
-                                <p>When you access the Service with a mobile device, this Usage Data may include information such as the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browser you use, unique device identifiers and other diagnostic data.</p>
-                                <p>We may also obtain data from third parties including:</p>
-                                <p>Social networks, when you grant permission to us to access your data on one or more networks through our website.</p>
-                                <p>Service providers that help us determine a location based on your IP address in order to customize offerings and content to your location.</p>
-                            </li>
-                            <li>
-                                <h5>Tracking Cookies Data</h5>
-                                <p>We use cookies and similar tracking technologies to track the activity on our Service and we hold certain information.</p>
-                                <p>Cookies are files with a small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Other tracking technologies are also used such as beacons, tags and scripts to collect and track information and to improve and analyze our Service.</p>
-                                <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.</p>
-                                <p>Examples of Cookies we use:</p>
-                                <ul class="privacy-inner-listing">
-                                    <li>Session Cookies. We use Session Cookies to operate our Service.</li>
-                                    <li>Preference Cookies. We use Preference Cookies to remember your preferences and various settings.</li>
-                                    <li>Security Cookies. We use Security Cookies for security purposes.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li><li>
-                        <h2>Use of Data</h2>
-                        <p>Onism Solution uses the collected data for various purposes:</p>
-                        <ul class="privacy-inner-listing">
-                            <li>To provide and maintain our Service</li>
-                            <li>To notify you about changes to our Service</li>
-                            <li>To allow you to participate in interactive features of our Service when you choose to do so</li>
-                            <li>To provide customer support</li>
-                            <li>To gather analysis or valuable information so that we can improve our Service</li>
-                            <li>To monitor the usage of our Service</li>
-                            <li>To detect, prevent and address technical issues</li>
-                            <li>To provide you with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless you have opted not to receive such information</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h2>Legal Basis for Processing Personal Data under the General Data Protection Regulation (GDPR)</h2>
-                        <p>If you are from the European Economic Area (EEA), Onism Solution legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Data we collect and the specific context in which we collect it.</p>
-                        <p>Onism Solution may process your Personal Data because:</p>
-                        <ul class="privacy-inner-listing">
-                            <li>We need to perform a contract with you</li>
-                            <li>You have given us permission to do so</li>
-                            <li>The processing is in our legitimate interests and it is not overridden by your rights</li>
-                            <li>To comply with the law</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h2>Retention of Data</h2>
-                        <p>Onism Solution will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes and enforce our legal agreements and policies.</p>
-                        <p>Onism Solution will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of our Service, or we are legally obligated to retain this data for longer periods.</p>
-                    </li>
-                    <li>
-                        <h2>Transfer of Data</h2>
-                        <p>Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction.</p>
-                        <p>If you are located outside United States and choose to provide information to us, please note that we transfer the data, including Personal Data, to United States and process it there.</p>
-                        <p>Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.</p>
-                        <p>Onism Solution will take all the steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.</p>
-                    </li>
-                    <li>
-                        <h2>Disclosure of Data</h2>
-                        <ul>
-                            <li>
-                                <h5>Business Transaction</h5>
-                                <p>Onism Solution is involved in a merger, acquisition or asset sale, your Personal Data may be transferred. We will provide notice before your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
-                            </li>
-                            <li>
-                                <h5>Disclosure for Law Enforcement</h5>
-                                <p>Under certain circumstances, Onism Solution may be required to disclose your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
-                            </li>
-                            <li>
-                                <h5>Legal Requirements</h5>
-                                <p>Onism Solution may disclose your Personal Data in the good faith belief that such action is necessary to:</p>
-                                <ul class="privacy-inner-listing">
-                                    <li>To comply with a legal obligation</li>
-                                    <li>To protect and defend the rights or property of Onism Solution</li>
-                                    <li>To prevent or investigate possible wrongdoing in connection with the Service</li>
-                                    <li>To protect the personal safety of users of the Service or the public</li>
-                                    <li>To protect against legal liability</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h2>Security of Data</h2>
-                        <p>The security of your data is important to us but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
-                    </li>
-                    <li>
-                        <h2>Our Policy on "Do Not Track" Signals under the California Online Protection Act (CalOPPA)</h2>
-                        <p>We do not support Do Not Track ("DNT"). Do Not Track is a preference you can set in your web browser to inform websites that you do not want to be tracked.</p>
-                        <p>You can enable or disable Do Not Track by visiting the Preferences or Settings page of your web browser.</p>
-                    </li>
-                    <li>
-                        <h2>CCPA</h2>
-                        <p>Your data privacy and security are very important to us. In support of the California Consumer Privacy Act (CCPA), we updated this Privacy Policy effective as of January 1, 2020.</p>
-                        <p>The CCPA is a new data privacy law that applies to certain businesses which collect personal information from California residents. The new law went into effect on January 1, 2020. Learn more here:<a href="https://oag.ca.gov/privacy/ccpa"> https://oag.ca.gov/privacy/ccpa</a>.</p>
-                        <p>We hope you’ll find these updates improve your experience and reinforce our commitment to your data privacy and security.</p>
-                    </li>
-                    <li>
-                        <h2>Your Data Protection Rights under the General Data Protection Regulation (GDPR)</h2>
-                        <p>If you are a resident of the European Economic Area (EEA), you have certain data protection rights. Onism Solution aims to take reasonable steps to allow you to correct, amend, delete or limit the use of your Personal Data.</p>
-                        <p>If you wish to be informed about what Personal Data, we hold about you and if you want it to be removed from our systems, please contact us.</p>
-                        <p>In certain circumstances, you have the following data protection rights:</p>
-                        <p><strong>The right to access, update or delete the information we have on you. </strong>Whenever made possible, you can access, update or request deletion of your Personal Data directly within your account settings section. If you are unable to perform these actions yourself, please contact us to assist you.</p>
-                        <p><strong>The right of rectification. </strong>You have the right to have your information rectified if that information is inaccurate or incomplete.</p>
-                        <p><strong>The right to object. </strong>You have the right to object to our processing of your Personal Data.The right of restriction. You have the right to request that we restrict the processing of your personal information.</p>
-                        <p><strong>The right to data portability. </strong>You have the right to be provided with a copy of the information we have on you in a structured, machine-readable and commonly used format.</p>
-                        <p><strong>The right to withdraw consent. </strong>You also have the right to withdraw your consent at any time where Onism Solution relied on your consent to process your personal information.</p>
-                        <p>Please note that we may ask you to verify your identity before responding to such requests.</p>
-                        <p>You have the right to complain to a Data Protection Authority about our collection and use of your Personal Data. For more information, please contact your local data protection authority in the European Economic Area (EEA).</p>
-                    </li>
-                    <li>
-                        <h2>Service Providers</h2>
-                        <p>We may employ third party companies and individuals to facilitate our Service ("Service Providers"), provide the Service on our behalf, perform Service-related services or assist us in analysing how our Service is used.</p>
-                        <p>These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
-                    </li>
-                    <li>
-                        <h2>Links to Other Sites</h2>
-                        <p>Our Service may contain links to other sites that are not operated by us. If you click a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit.</p>
-                        <p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third-party sites or services.</p>
-                    </li>
-                    <li>
-                        <h2> Children's Privacy</h2>
-                        <p>Our Service does not address anyone under the age of 18 ("Children").</p>
-                        <p>We do not knowingly collect personally identifiable information from anyone under the age of 18. If you are a parent or guardian and you are aware that your Child has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.</p>
-                    </li>
-                    <li>
-                        <h2> Changes to This Privacy Policy</h2>
-                        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
-                        <p>We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy.</p>
-                        <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
-                    </li>
-                    <li>
-                        <h2> Contact Us</h2>
-                        <p class="selectable">For any legal concern/question, please contact us on <a href="mailto:info@onsimsolution.com">info@onsimsolution.com</a></p>
-                    </li>
-                </ol>
+                        <!-- ------ -->
+                        <h2>Log Files</h2>
+                        <p>We Caught Santa follows a standard procedure of using log files. These files log visitors when they
+                            visit websites. All hosting companies do this and a part of hosting services' analytics. The
+                            information collected by log files include internet protocol (IP) addresses, browser type, Internet
+                            Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks.
+                            These are not linked to any information that is personally identifiable. The purpose of the information
+                            is for analyzing trends, administering the site, tracking users' movement on the website, and
+                            gathering demographic information.</p>
+                        <h2>Cookies and Web Beacons</h2>
+                        <p>Like any other website, We Caught Santa uses 'cookies'. These cookies are used to store
+                            information including visitors' preferences, and the pages on the website that the visitor accessed or
+                            visited. The information is used to optimize the users' experience by customizing our web page
+                            content based on visitors' browser type and/or other information.</p>
+                        <h2>Google DoubleClick DART Cookie</h2>
+                        <p> Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to
+                            serve ads to our site visitors based upon their visit to www.website.com and other sites on the
+                            internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad
+                            and content network Privacy Policy at the following URL –
+                            <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+                        <!-- -- -->
+                        <h2>Our Advertising Partners</h2>
+                        <p>Some of advertisers on our site may use cookies and web beacons. Our advertising partners are
+                            listed below. Each of our advertising partners has their own Privacy Policy for their policies on user
+                            data. For easier access, we hyperlinked to their Privacy Policies below.</p>
+                            <ul>
+                                <li>Google <br> <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></li>
+                            </ul>
+                        <!-- ------- -->
+                        <h2>Advertising Partners Privacy Policies</h2>
+                        <p>You may consult this list to find the Privacy Policy for each of the advertising partners of We Caught Santa.</p>
+                        <p>Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons
+                            that are used in their respective advertisements and links that appear on We Caught Santa, which
+                            are sent directly to users' browser. They automatically receive your IP address when this occurs.
+                            These technologies are used to measure the effectiveness of their advertising campaigns and/or to
+                            personalize the advertising content that you see on websites that you visit.</p>
+                        <p>Note that We Caught Santa has no access to or control over these cookies that are used by third-party advertisers.</p>
+                        <!-- -------- -->
+                        <h2>Third Party Privacy Policies</h2>
+                        <p>We Caught Santa's Privacy Policy does not apply to other advertisers or websites. Thus, we are
+                            advising you to consult the respective Privacy Policies of these third-party ad servers for more
+                            detailed information. It may include their practices and instructions about how to opt-out of certain
+                            options.</p>
+                            <p>You can choose to disable cookies through your individual browser options. To know more detailed
+                                information about cookie management with specific web browsers, it can be found at the browsers'
+                                respective websites.</p>
+                        <!-- --- -->
+                        <h2>CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
+                        <p>Under the CCPA, among other rights, California consumers have the right to:</p>
+                        <p>Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.</p>
+                        <p>Request that a business delete any personal data about the consumer that a business has collected.</p>
+                        <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
+                        <p>Request that a business that sells a consumer's personal data, not sell the consumer's personal data.</p>
+                        <!-- ------- -->
+                        <h2> GDPR Data Protection Rights</h2>
+                            <p>We would like to make sure you are fully aware of all of your data protection rights. Every user is
+                                entitled to the following:</p>
+                            <p>The right to access – You have the right to request copies of your personal data. We may charge
+                                you a small fee for this service.</p>
+                            <p>The right to rectification – You have the right to request that we correct any information you believe is
+                                inaccurate. You also have the right to request that we complete the information you believe is
+                                incomplete.</p>
+                            <p> The right to erasure – You have the right to request that we erase your personal data, under certain
+                                conditions.</p>
+                            <p>The right to data portability – You have the right to request that we transfer the data that we have
+                                collected to another organization, or directly to you, under certain conditions.</p>
+                            <p>The right to restrict processing – You have the right to request that we restrict the processing of your
+                                personal data, under certain conditions.</p>
+                            <p>The right to object to processing – You have the right to object to our processing of your personal
+                                data, under certain conditions.</p>
+                                <p>If you make a request, we have one month to respond to you. If you would like to exercise any of
+                            these rights, please contact us.
+                            </p>
+                  
+                        <h2>Children's Information</h2>
+                        <p>Another part of our priority is adding protection for children while using the internet. We encourage
+                                parents and guardians to observe, participate in, and/or monitor and guide their online activity. </p>
+                        <p> We Caught Santa does not knowingly collect any Personal Identifiable Information from children
+                            under the age of 13. If you think that your child provided this kind of information on our website, we
+                            strongly encourage you to contact us immediately and we will do our best efforts to promptly remove
+                            such information from our records</p>
+                 
                 <hr>
-            </div>
     </div>
 
 </body>
