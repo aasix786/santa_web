@@ -22,6 +22,9 @@ Route::get('/clear-cache', function () {
 Route::get('test/paypal', function () {
     return view('test-paypal');
 });
+Route::get('/privacyPolicy', function () {
+    return view('privacyPolicy');
+});
 Route::get('/', function () {
     return view('index');
 });
