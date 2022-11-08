@@ -16,35 +16,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <style>
-        body p, ul li,h2,strong,a,h1{
-            line-height: 22px;            
-            font-family: Arial;
-            color: #6b6b6b;
-        }
-        p{
-            font-size: 16px;
-            margin-bottom: 18px;
-        }
-        h2{
-            font-size:22px;
-            font-weight:bold;
-            margin-top:27px;
-        }
-        h5{
-            font-weight:600px;
-        }
-        
-        </style>
+   
 </head>
 <body>
-<div class="main-boody">
+<div class="main-boody termsPolicy">
     <header
         class="main-header">
         <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
     </header>
     <div class="container" style="padding-top: 40px">
-                        <h1 class="py-3">Privacy Policy for B3 Events INC</h1>
+                        <h1>Privacy Policy for B3 Events INC</h1>
                         <hr>
                         <p>At We Caught Santa, accessible from WeCaughtSanta.com, one of our main priorities is the privacy
                             of our visitors. This Privacy Policy document contains types of information that is collected and

@@ -508,6 +508,23 @@ font-size: 45px!important;
     background-color: #e3dfdc;
     top: 0;
 }
+.termsPolicy p, .termsPolicy ul li, .termsPolicy h2, .termsPolicy strong,.termsPolicy a, .termsPolicy h1{
+    line-height: 22px;            
+    font-family: Arial;
+    color: #6b6b6b;
+}
+.termsPolicy p{
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+.termsPolicy h2{
+    font-size:22px;
+    font-weight:bold;
+    margin-top:27px;
+}
+.termsPolicy h1{
+    padding: 15px 0;
+}
             .rotingtxt1 {
                 -webkit-transform: rotate(331deg);
                 -moz-transform: rotate(331deg);
