@@ -104,6 +104,9 @@
     .downloadImage img {
         height: 250px;
     }
+    .img-down{
+        height: auto!important;
+    }
 .font-text {
     font-size: 20px!important;
 }
