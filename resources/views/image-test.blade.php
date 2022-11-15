@@ -230,18 +230,12 @@
             <div class="itro-text padding">
                 <h1 class="text3">CHOOSE A SANTA IMAGE</h1>
                 <div class="row imgs20">
-                    <div class="col-md-3 col-3">
-                        <img src="{{asset("assets/imgs/santa12.png")}}" class="santa-dp2 selectSanta">
-                    </div>
-                    <div class="col-md-3 col-3 col-3">
-                        <img src="{{asset("assets/imgs/santa9.png")}}" class="santa-dp2 selectSanta">
-                    </div>
-                    <div class="col-md-3 col-3">
-                        <img src="{{asset("assets/imgs/santa13.png")}}" class="santa-dp2 selectSanta">
-                    </div>
-                    <div class="col-md-3 col-3">
-                        <img src="{{asset("assets/imgs/santa12.png")}}" class="santa-dp2 selectSanta">
-                    </div>
+                   @foreach($images as $image)
+                        <div class="col-md-3 col-3">
+                            <img src="{{$_ENV['IMAGE_URL'].$image->image}}" class="santa-dp2 selectSanta">
+                        </div>
+                    @endforeach
+
                 </div>
             </div>
             <div class="container1">
