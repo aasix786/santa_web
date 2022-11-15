@@ -107,7 +107,9 @@ dd($width , $height);
     public function image()
     {
         $water_mark = Watermark::select('watermark')->first();
-        return view('image-test', ['watermark' => $water_mark->watermark]);
+
+        $santa_images = \App\Models\Image::all();
+        return view('image-test', ['watermark' => $water_mark->watermark,'images'=>$santa_images]);
     }
 
     public function download(Request $request)
