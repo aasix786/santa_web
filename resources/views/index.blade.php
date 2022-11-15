@@ -22,7 +22,7 @@
 <div class="main-boody">
     <header
         class="main-header">
-        <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
+        <img src="{{asset('assets/imgs/header.jpg')}}" class="w-100" alt="">
     </header>
     <div class="main-area">
         <div class="overlay-clr">
@@ -60,9 +60,9 @@
                     <!-- Button trigger modal -->
                     <button type="button" class="btn red font-text bg-transparent w-100" data-toggle="modal"
                             data-target="#exampleModalCenter">
-                        CATCH SANTA NOW!
+                            <img src="{{asset('assets/imgs/catchsantanow.png')}}" class="w-100" alt="missing">
+                        <!-- CATCH SANTA NOW! -->
                     </button>
-
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
                          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

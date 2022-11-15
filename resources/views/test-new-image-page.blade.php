@@ -206,7 +206,7 @@
 <body>
 <div class="main-boody">
     <header class="main-header">
-        <img src="assets/imgs/header.jpeg" class="w-100" alt="">
+        <img src="assets/imgs/header.jpg" class="w-100" alt="">
     </header>
     <div class="main-area">
         <div class="overlay-clr">

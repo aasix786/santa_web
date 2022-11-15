@@ -34,6 +34,9 @@ Route::get('/', function () {
 Route::get('/drag', function () {
     return view('drag');
 });
+// Route::get('/download', function () {
+//     return view('download');
+// });
 
 Route::get('/download', [Homecontroller::class, 'download'])->name('download');
 Route::get('/effects', function () {

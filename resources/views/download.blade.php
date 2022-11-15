@@ -162,13 +162,13 @@ height:<?php echo $height;?>px;
         <div class="main-boody">
             <header
                 class="main-header">
-                <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
+                <img src="{{asset('assets/imgs/header.jpg')}}" class="w-100" alt="">
             </header>
             <div class="main">
-                <div class="downloadImage w-100">
+                <div class="downloadImage w-100 text-center">
                     <img src="{{$_ENV['IMAGE_URL'].$custom_image->image}}" class="w-100" alt="">
                     <a href="{{$custom_image->image }}"download><button type="button" class="btn red font-text bg-transparent w-100" data-toggle="modal" data-target="#exampleModalCenter">
-                     DOWNLOAD
+                    <img src="{{asset('assets/imgs/finalimg.png')}}" class="w-100 img-down" alt="missing">
                     </button></a>
                 </div>
             </div>
