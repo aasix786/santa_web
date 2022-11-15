@@ -215,7 +215,7 @@
         <header class="main-header">
             <!-- <h1 class="text1">WE CAUGHT SANTA!</h1>
             <h1 class="text2">Custom Pictures of Santa under YOUR TREE!</h1> -->
-            <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
+            <img src="{{asset('assets/imgs/header.jpg')}}" class="w-100" alt="">
             </header>
 
         <div class="main-area">
@@ -273,7 +273,7 @@
                         <div class=""></div>
                            </div>
                            <div class="catch radius mbottom">
-                               <a href="{{url()->previous()}}"><button type="button" class="btn red font-text bg-transparent w-100">OR RETURN TO EDITOR </button> </a>
+                               <a href="{{url()->previous()}}"><button type="button" class="btn red font-text bg-transparent w-100"><img src="{{asset('assets/imgs/returntoeditor.png')}}" alt="missing"> </button> </a>
                             </div>
                   </div>
             </div>

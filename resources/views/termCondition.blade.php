@@ -21,7 +21,7 @@
 <div class="main-boody termsPolicy">
     <header
         class="main-header">
-        <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
+        <img src="{{asset('assets/imgs/header.jpg')}}" class="w-100" alt="">
     </header>
     <div class="container" style="padding-top: 40px">
                         <h1>Terms and Conditions</h1>

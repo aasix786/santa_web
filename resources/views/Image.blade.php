@@ -165,7 +165,7 @@
 <body>
 <div class="main-boody" oncontextmenu="return true">
     <header class="main-header">
-        <img src="{{asset('assets/imgs/header.jpeg')}}" class="w-100" alt="">
+        <img src="{{asset('assets/imgs/header.jpg')}}" class="w-100" alt="">
     </header>
     <div class="main-area">
         <div class="overlay-clr">
@@ -230,7 +230,9 @@
             </div>`
 
             <div class="catch radius" id="img-button-section">
-                <button type="button" class="btn text5 red bg-transparent tap-btn">CLICK HERE TO SAVE IMAGE</button>
+                <button type="button" class="btn text5 red bg-transparent tap-btn">
+                    <img src="{{asset('assets/imgs/saveimage.png')}}" alt="missing">
+                </button>
             </div>
 
             <div class="save-img" id="save-img-section"></div>

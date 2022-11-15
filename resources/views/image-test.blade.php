@@ -223,7 +223,7 @@
 <body>
 <div class="main-boody">
     <header class="main-header">
-        <img src="assets/imgs/header.jpeg" class="w-100" alt="">
+        <img src="assets/imgs/header.jpg" class="w-100" alt="">
     </header>
     <div class="main-area">
         <div class="overlay-clr">
@@ -300,7 +300,9 @@
                 </div>
             </div>
             <div class="catch radius">
-                <button class="btn text5 red bg-transparent tap-btn" id="btn">CLICK HERE TO SAVE IMAGE</button>
+                <button class="btn text5 red bg-transparent tap-btn" id="btn">
+                    <img src="{{asset('assets/imgs/saveimage.png')}}" alt="missing">
+                </button>
             </div>
             {{-- <form id="formImg" method="post"
                    action="{{route('store.image',['height'=>request()->query("h"),'width'=>request()->query("w")])}}">

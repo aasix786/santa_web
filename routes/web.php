@@ -34,11 +34,14 @@ Route::get('/', function () {
 Route::get('/drag', function () {
     return view('drag');
 });
-
-Route::get('/download', [Homecontroller::class, 'download'])->name('download');
-Route::get('/effects', function () {
-    return view('effects');
+Route::get('/download', function () {
+    return view('download');
 });
+
+// Route::get('/download', [Homecontroller::class, 'download'])->name('download');
+// Route::get('/effects', function () {
+//     return view('effects');
+// });
 //
 Route::get('/image', [Homecontroller::class, 'image'])->name('image');
 Route::get('/paypal', [Homecontroller::class, 'paypal'])->name('paypal');
