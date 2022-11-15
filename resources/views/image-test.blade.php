@@ -295,7 +295,7 @@
             </div>
             <div class="catch radius">
                 <button class="btn text5 red bg-transparent tap-btn" id="btn">
-                    <img src="{{asset('assets/imgs/saveimage.png')}}" alt="missing">
+                    <img src="{{asset('assets/imgs/saveimage.png')}}" class="w-100" alt="missing">
                 </button>
             </div>
             {{-- <form id="formImg" method="post"

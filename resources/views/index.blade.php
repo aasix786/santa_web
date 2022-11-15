@@ -60,7 +60,7 @@
                     <!-- Button trigger modal -->
                     <button type="button" class="btn red font-text bg-transparent w-100" data-toggle="modal"
                             data-target="#exampleModalCenter">
-                            <img src="{{asset('assets/imgs/catchsantanow.png')}}" alt="missing">
+                            <img src="{{asset('assets/imgs/catchsantanow.png')}}" class="w-100" alt="missing">
                         <!-- CATCH SANTA NOW! -->
                     </button>
                     <!-- Modal -->

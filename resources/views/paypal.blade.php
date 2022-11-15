@@ -273,7 +273,7 @@
                         <div class=""></div>
                            </div>
                            <div class="catch radius mbottom">
-                               <a href="{{url()->previous()}}"><button type="button" class="btn red font-text bg-transparent w-100"><img src="{{asset('assets/imgs/returntoeditor.png')}}" alt="missing"> </button> </a>
+                               <a href="{{url()->previous()}}"><button type="button" class="btn red font-text bg-transparent w-100"><img src="{{asset('assets/imgs/returntoeditor.png')}}" alt="missing" class="w-100"> </button> </a>
                             </div>
                   </div>
             </div>
