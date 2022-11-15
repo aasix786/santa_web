@@ -303,7 +303,7 @@
                  @csrf
                  <input type="hidden" name="download_image" id="download_image">
              </form>--}}
-            <div class="notes">
+            {{--<div class="notes">
                 <h1 class="text3">NOTES:
                     <ul>
                         <li>Taken or choosen image appears in editor as background</li>
@@ -315,7 +315,7 @@
                         <li>Watermark should be similar to above</li>
                     </ul>
                 </h1>
-            </div>
+            </div>--}}
         </div>
 
     </div>

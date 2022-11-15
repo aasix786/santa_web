@@ -72,7 +72,7 @@
                                     @csrf
                                     <div class="modal-body">
                                         <div class="add-img pt-2">
-                                            <button type="button" class="uploadbtn">Click here to upload</button>
+                                            <button type="button" class="uploadbtn">Click Here to Take / Choose a Picture of your Christmas Tree</button>
                                             <input class="input-type" type='file' name="image" required id="test"
                                                    onchange="readURL(this);"/>
                                             <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="py-3 w-100"
