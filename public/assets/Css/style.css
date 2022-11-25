@@ -499,7 +499,7 @@ font-size: 45px!important;
                 font-family: 'Denk One', sans-serif;
             }
 #stickytypeheader{
-    z-index: 99999;
+    z-index: 1;
     position: sticky;
     background-color: #e3dfdc;
     top: 0;

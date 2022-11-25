@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta name = "description" content = "Keep the Magic of Christmas ALIVE! Show the kids Santa in front of YOUR TREE caught on camera!" />
+    <title>We Caught Santa - Catch Santa in YOUR Home!</title>
     <link rel="stylesheet" href="{{asset('assets/Css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/Css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('assets/external/bootstrap.min.css')}}">
@@ -22,14 +23,17 @@
 <div class="main-boody">
     <header
         class="main-header">
-        <img src="{{asset('assets/imgs/header.jpg')}}" class="w-100" alt="">
+        <img src="{{asset('assets/imgs/header.jpg')}}" class="w-100" alt="missing">
     </header>
     <div class="main-area">
         <div class="overlay-clr">
+            <div class="">
+                <img src="{{asset('assets/imgs/homepage.jpg')}}" class="w-100" alt="missing">
+            </div>
             {{--   @if (session()->has('newurl'))
                {{ \Illuminate\Support\Facades\Session::get('newurl'),"_blank" }}
                @endif--}}
-            <div class="itro-text">
+            <!-- <div class="itro-text">
                 <h1 class="text3">INTRO PARAGRAGH</h1>
                 <h3 class="text3">{{$introduction->description}}</h3>
 
@@ -54,12 +58,11 @@
                 <h1 class="text3">2. EASILY ADD & EDIT SANTA IMAGE</h1>
                 <h1 class="text3">3. JUST PAY $5 TO SAVE YOUR IMAGE</h1>
                 <h1 class="text3">4. SHOW THE KIDZ "WE CAUGHT SANTA!</h1>
-            </div>
+            </div> -->
             <div class="catch-santa">
                 <div class="catch">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn red font-text bg-transparent w-100" data-toggle="modal"
-                            data-target="#exampleModalCenter">
+                    <button type="button" class="btn red font-text bg-transparent w-100" data-toggle="modal" data-target="#exampleModalCenter">
                             <img src="{{asset('assets/imgs/catchsantanow.png')}}" class="w-100" alt="missing">
                         <!-- CATCH SANTA NOW! -->
                     </button>
@@ -72,7 +75,7 @@
                                     @csrf
                                     <div class="modal-body">
                                         <div class="add-img pt-2">
-                                            <button type="button" class="uploadbtn">Click Here to Take / Choose a Picture of your Christmas Tree</button>
+                                            <button type="button" class="uploadbtn">TAP HERE TO TAKE or CHOOSE A PICTURE OF YOUR ROOM & TREE</button>
                                             <input class="input-type" type='file' name="image" required id="test"
                                                    onchange="readURL(this);"/>
                                             <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="py-3 w-100"
