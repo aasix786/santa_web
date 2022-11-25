@@ -40,7 +40,7 @@
                     $height = "620";
                 }else
                     {
-                      $height ='250';
+                      $height ='260';
                     }
 
                 ?>
@@ -211,6 +211,7 @@
     </style>
 </head>
 <body oncontextmenu="return true">
+
     <div class="main-boody">
         <header class="main-header">
             <!-- <h1 class="text1">WE CAUGHT SANTA!</h1>
@@ -304,9 +305,10 @@
                 purchase_units: [
                     {
                         amount: {
-                            value: "0.05"
+                            value: "{{$price}}"
                         }
                     }
+
                 ]
             };
 

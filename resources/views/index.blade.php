@@ -100,11 +100,17 @@
 
 
 <script>
+
     $(document).on('click','.save-btn',function(){
 
         $('.save-btn').text('Loading ...');
 
     });
+    $(document).on('click','.uploadbtn',function(){
+        $('#test').trigger('click');
+
+    });
+
     function readURL(input) {
 
         if (input.files && input.files[0]) {

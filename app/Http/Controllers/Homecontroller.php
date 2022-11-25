@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\CustomerImage;
 use App\Models\Introduction;
+use App\Models\Payment;
 use App\Models\Watermark;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -99,24 +100,39 @@ dd($width , $height);
 
     public function paypal()
     {
-        $introduction = Introduction::select('custom_text')->first();
-        $water_mark = Watermark::select('watermark')->first();
-        return view('paypal', ['custom_text' => $introduction, 'watermark' => $water_mark->watermark]);
-    }
+        $url = request()->query("a");
+        if($url){
+            $price = Payment::query()->pluck('price')->first();
+            $introduction = Introduction::select('custom_text')->first();
+            $water_mark = Watermark::select('watermark')->first();
+            return view('paypal', ['custom_text' => $introduction, 'watermark' => $water_mark->watermark,'price' => $price]);
+        }else{
+            return redirect()->back();
+        }
+     }
 
     public function image()
     {
-        $water_mark = Watermark::select('watermark')->first();
+        $url = request()->query("a");
+        if($url){
+            $water_mark = Watermark::select('watermark')->first();
+            $santa_images = \App\Models\Image::all();
+            return view('image-test', ['watermark' => $water_mark->watermark,'images'=>$santa_images]);
 
-        $santa_images = \App\Models\Image::all();
-        return view('image-test', ['watermark' => $water_mark->watermark,'images'=>$santa_images]);
-    }
+        }else{
+            return redirect()->back();
+        }
+       }
 
     public function download(Request $request)
     {
-        $customer_image = CustomerImage::where('image', $request->a)->first();
-        return view('download', ['custom_image' => $customer_image
-        ]);
-
+        $url = request()->query("a");
+        if($url){
+            $customer_image = CustomerImage::where('image', $request->a)->first();
+            return view('download', ['custom_image' => $customer_image
+            ]);
+        }else{
+            return redirect()->back();
+        }
     }
 }

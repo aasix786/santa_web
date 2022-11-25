@@ -162,9 +162,9 @@ height:<?php echo $height;?>px;
     </header>
     <div class="main">
 
-        <div class="downloadImage w-100">
+        <div class=" w-100">
 
-            <img src="{{$_ENV['IMAGE_URL'].$custom_image->image}}" class="w-100" style="width: 100%; height: 100%" alt="">
+            <img src="{{$_ENV['IMAGE_URL'].$custom_image->image}}" class="w-100 downloadImage" style="width: 100%; height: 100%" alt="">
 
         </div>
         <a href="{{$_ENV['IMAGE_URL'].$custom_image->image }}"download><button type="button" class="btn red font-text bg-transparent w-100" data-toggle="modal" data-target="#exampleModalCenter">

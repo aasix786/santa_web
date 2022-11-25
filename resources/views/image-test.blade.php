@@ -38,7 +38,7 @@
                     $height = "620";
                 }else
                     {
-                      $height ='250';
+                      $height ='260';
                     }
 
                 ?>

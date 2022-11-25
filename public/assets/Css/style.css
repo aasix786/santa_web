@@ -306,10 +306,10 @@ font-size: 45px!important;
         width: 210px;
     }
     .input-type {
-        position: absolute;
-        right: 21%;
+        /*position: absolute;*/
+        /*right: 21%;*/
         opacity: 0;
-        cursor: pointer;
+        /*cursor: pointer;*/
     }
     .uploadbtn{
         position: relative;
@@ -505,7 +505,7 @@ font-size: 45px!important;
     top: 0;
 }
 .termsPolicy p, .termsPolicy ul li, .termsPolicy h2, .termsPolicy strong,.termsPolicy a, .termsPolicy h1{
-    line-height: 22px;            
+    line-height: 22px;
     font-family: Arial;
     color: #6b6b6b;
 }
