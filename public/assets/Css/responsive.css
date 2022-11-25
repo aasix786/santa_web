@@ -18,7 +18,9 @@
     .main-boody {
         width: 100%;
     }
-
+    .main-header {
+        padding: 0px;
+    }
     .overlay-clr {
         padding: 10px;
     }

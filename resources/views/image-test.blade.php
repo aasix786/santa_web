@@ -21,6 +21,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+    
+    <script src="{{asset('assets/external/jquery-3.3.1.slim.min.js')}}"></script>
+    <script src="{{asset('assets/external/popper.min.js')}}"></script>
+    <script src="{{asset('assets/external/bootstrap.min.js')}}"></script>
     <style>
         @media only screen and (min-width: 320px) {
             .bg-santa-img {
@@ -242,28 +246,67 @@
                 <div class="loader">
                 </div>
             </div>
-            <div class="itro-text padding margin-top " id="stickytypeheader">
+            <div class="replaceImg">
+            <div class="catch">
+                    <!-- Button trigger modal -->
+                    <button type="button" class=" py-0 btn red font-text bg-transparent" data-toggle="modal" data-target="#exampleModalCenter">
+                            <img src="{{asset('assets/imgs/takenewpicture.png')}}" class="w-100" alt="missing">
+                        <!-- CATCH SANTA NOW! -->
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <form method="post" action="{{route('store.image')}}" enctype="multipart/form-data">
+                                    <!-- @csrf -->
+                                    <div class="modal-body">
+                                        <div class="add-img pt-2">
+                                            <button type="button" class="uploadbtn">TAP HERE TO TAKE or CHOOSE A PICTURE OF YOUR ROOM & TREE</button>
+                                            <input class="input-type" type='file' name="image" required id="test"
+                                            />
+                                                   <!-- onchange="readURL(this);" -->
+                                            <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="py-3 w-100"
+                                                 alt=""/>
+                                            <!-- <input type="hidden" name="image_position" id="image_position">
+                                            <input type="hidden" name="image_width" id="image_width">
+                                            <input type="hidden" name="image_height" id="image_height"> -->
+                                        </div>
+                                        <button type="button" class="btn cancel-btn mb-2" data-dismiss="modal">Cancel
+                                        </button>
+                                        <button type="submit" class="btn btn-primary save-btn mb-2 loader"> Continue
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="itro-text padding margin-top mt-1" id="stickytypeheader">
                 <div class="row p-1">
-                    <div class="col-md-4 col-4">
+                    <div class="col-md-6 col-6">
                         <h1 class="text-shade">BRIGHTNESS</h1>
                     </div>
-                    <div class="col-md-4 col-4 left-border">
+                    <div class="col-md-6 col-6 left-border">
                         <h1 class="text-shade">CONTRAST</h1>
                     </div>
-                    <div class="col-md-4 col-4 left-border">
-                        <h1 class="text-shade">RESET</h1>
-                    </div>
-                    <div class="col-md-4 col-4">
+                    <!-- <div class="col-md-2 col-4 left-border">
+                        <h2 class="font-weight-bold text-shade">RESET</h2>
+                    </div> -->
+                    <div class="col-md-6 col-6">
                         <img src="{{asset("assets/imgs/bright.png")}}" class="santa-dp3" id="brightness-pic">
                         <div id="brightness"></div>
                     </div>
-                    <div class="col-md-4 col-4">
+                    <div class="col-md-6 col-6">
                         <img src="{{asset("assets/imgs/contrast.png")}}" class="santa-dp3" id="contrast-pic">
                         <div id="contrast"></div>
                     </div>
-                    <div class="col-md-4 col-4">
+                    <!-- <div class="col-md-2 col-4">
                         <img src="{{asset("assets/imgs/reset.png")}}" class="santa-dp3" id="reset">
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
