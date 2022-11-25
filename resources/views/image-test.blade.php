@@ -21,7 +21,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
-    
+
     <script src="{{asset('assets/external/jquery-3.3.1.slim.min.js')}}"></script>
     <script src="{{asset('assets/external/popper.min.js')}}"></script>
     <script src="{{asset('assets/external/bootstrap.min.js')}}"></script>
@@ -259,22 +259,21 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <form method="post" action="{{route('store.image')}}" enctype="multipart/form-data">
-                                    <!-- @csrf -->
+                                    @csrf
                                     <div class="modal-body">
                                         <div class="add-img pt-2">
                                             <button type="button" class="uploadbtn">TAP HERE TO TAKE or CHOOSE A PICTURE OF YOUR ROOM & TREE</button>
-                                            <input class="input-type" type='file' name="image" required id="test"
+                                            <input class="input-type" type='file' name="image" required id="test" onchange="readURL(this);"
                                             />
-                                                   <!-- onchange="readURL(this);" -->
                                             <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="py-3 w-100"
                                                  alt=""/>
-                                            <!-- <input type="hidden" name="image_position" id="image_position">
+                                            <input type="hidden" name="image_position" id="image_position">
                                             <input type="hidden" name="image_width" id="image_width">
-                                            <input type="hidden" name="image_height" id="image_height"> -->
+                                            <input type="hidden" name="image_height" id="image_height">
                                         </div>
                                         <button type="button" class="btn cancel-btn mb-2" data-dismiss="modal">Cancel
                                         </button>
-                                        <button type="submit" class="btn btn-primary save-btn mb-2 loader"> Continue
+                                        <button type="submit" class="btn btn-primary save-btn mb-2"> Continue
                                         </button>
                                     </div>
                                 </form>
@@ -529,6 +528,10 @@
         $("#brightness").slider("value", 95);
         $("#contrast").slider("value", 150);
     });
+    $(document).on('click','.uploadbtn',function(){
+        $('#test').trigger('click');
+
+    });
 </script>
 
 
@@ -721,7 +724,33 @@
         angleScale.angle = 0
         angleScale.scale = 1
     }
+    function readURL(input) {
 
+        if (input.files && input.files[0]) {
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+                var image = new Image();
+                image.src = e.target.result;
+                image.onload = function () {
+                    var height = this.height;
+                    var width = this.width;
+                    $('#image_width').val(width);
+                    $('#image_height').val(height);
+                    if (height > width) {
+
+                        $('#image_position').val('vertical')
+                    } else {
+                        $('#image_position').val('horizantal')
+                    }
+                };
+
+
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
 </script>
 </body>
 </html>
