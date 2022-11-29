@@ -236,6 +236,7 @@
                         <img src="{{asset('assets/imgs/santa12.png')}}"  class="santa-dp4">
                     </div> -->
                     <div class="bg-santa-img">
+<<<<<<< HEAD
 
                             <p class="rotingtxt">{{$watermark}} </p>
 
@@ -251,6 +252,23 @@
 
                          <i class="fab fa-paypal"></i>
                      Pay<span class="sky-clr">Pal</span></a>
+=======
+                        <img src="assets/imgs/santa12.jpeg"  class="santa-dp4">    
+                        <p class="rotingtxt">we caught santa we caught santa we caught santa we caught santa we caught santa  </p>
+                            
+                    </div>
+                    <div class="container d-none">
+                        <div class="bg-img-setion">     
+                            <div class="santabg-img">
+                                <p class="rotingtxt">we caught santa we caught santa we caught santa we caught santa we caught santa  </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paypal">
+                        <!-- <i class="fa-brands fa-paypal"></i> -->
+                        <i class="fab fa-paypal"></i>
+                     Pay<span class="sky-clr">Pal</span>
+>>>>>>> stripe-payment
                     </div>
                     <div class="paypal text-white venmo">
                      <a id="venmo-button" href="">Venmo</a>
@@ -274,11 +292,19 @@
                         <div class=""></div>
                         <div class=""></div>
                            </div>
+<<<<<<< HEAD
                            <div class="catch radius mbottom">
                                <a href="{{url()->previous()}}"><button type="button" class="btn red font-text bg-transparent w-100"><img src="{{asset('assets/imgs/returntoeditor.png')}}" alt="missing" class="w-100"> </button> </a>
                             </div>
                   </div>
             </div>
+=======
+                    <div class="catch radius">
+                        <a href="{{url('image')}}" class="red text5">OR RETURN TO EDITOR</a>
+                        </div>
+                  </div>    
+            </div>      
+>>>>>>> stripe-payment
         </div>
     </div>
 </body>

@@ -252,9 +252,12 @@ font-size: 45px!important;
         background-blend-mode: darken;
         position: relative;
         overflow: hidden;
+<<<<<<< HEAD
     }
     .pinch-zoom-container{
         position: static!important;
+=======
+>>>>>>> stripe-payment
     }
     .santa-dp2 {
         height: 160px;
@@ -473,9 +476,15 @@ font-size: 45px!important;
                 bottom: 0;
             }
             #container img {
+<<<<<<< HEAD
                 width: 97%;
                 height: 97%;
 
+=======
+                width: 100%;
+                height: 100%;
+                
+>>>>>>> stripe-payment
             }
             @import url(https://fonts.googleapis.com/css?family=Denk+One);
             .rotingtxt {
@@ -483,8 +492,13 @@ font-size: 45px!important;
                 -moz-transform: rotate(331deg);
                 -o-transform: rotate(331deg);
                 transform: rotate(338deg);
+<<<<<<< HEAD
                 font-size: 72px;
                 color: #d6d6d680;
+=======
+                font-size: 65px;
+                color: #d6d6d6ab;
+>>>>>>> stripe-payment
                 font-family: 'Denk One', sans-serif;
                 text-transform: uppercase;
                 font-weight: 900;
@@ -492,6 +506,7 @@ font-size: 45px!important;
                 line-height: 144px;
                 position: absolute;
                 right: -34px;
+<<<<<<< HEAD
             }
 
 
@@ -580,3 +595,6 @@ font-size: 45px!important;
                 font-size: 25px;
                 margin-top: 15px;
             }
+=======
+            }
+>>>>>>> stripe-payment

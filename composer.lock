@@ -898,6 +898,7 @@
             "time": "2022-10-26T14:07:24+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "intervention/image",
             "version": "2.7.2",
             "source": {
@@ -1128,6 +1129,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/abf198e443e06696af3f356b44de67c0fa516107",
                 "reference": "abf198e443e06696af3f356b44de67c0fa516107",
+=======
+            "name": "laravel/framework",
+            "version": "v9.27.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "27572f45120fd3977d92651a71d8c711a9aaa790"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/27572f45120fd3977d92651a71d8c711a9aaa790",
+                "reference": "27572f45120fd3977d92651a71d8c711a9aaa790",
+>>>>>>> stripe-payment
                 "shasum": ""
             },
             "require": {
@@ -1300,7 +1314,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
+<<<<<<< HEAD
             "time": "2022-11-01T14:05:55+00:00"
+=======
+            "time": "2022-08-30T13:34:43+00:00"
+>>>>>>> stripe-payment
         },
         {
             "name": "laravel/sanctum",
@@ -1369,6 +1387,7 @@
         },
         {
             "name": "laravel/serializable-closure",
+<<<<<<< HEAD
             "version": "v1.2.2",
             "source": {
                 "type": "git",
@@ -1379,6 +1398,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/47afb7fae28ed29057fdca37e16a84f90cc62fae",
                 "reference": "47afb7fae28ed29057fdca37e16a84f90cc62fae",
+=======
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/serializable-closure.git",
+                "reference": "d78fd36ba031a1a695ea5a406f29996948d7011b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/d78fd36ba031a1a695ea5a406f29996948d7011b",
+                "reference": "d78fd36ba031a1a695ea5a406f29996948d7011b",
+>>>>>>> stripe-payment
                 "shasum": ""
             },
             "require": {
@@ -1425,7 +1456,11 @@
                 "issues": "https://github.com/laravel/serializable-closure/issues",
                 "source": "https://github.com/laravel/serializable-closure"
             },
+<<<<<<< HEAD
             "time": "2022-09-08T13:45:54+00:00"
+=======
+            "time": "2022-08-26T15:25:27+00:00"
+>>>>>>> stripe-payment
         },
         {
             "name": "laravel/tinker",
@@ -5962,6 +5997,7 @@
         },
         {
             "name": "laravel/pint",
+<<<<<<< HEAD
             "version": "v1.2.0",
             "source": {
                 "type": "git",
@@ -5972,6 +6008,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/pint/zipball/1d276e4c803397a26cc337df908f55c2a4e90d86",
                 "reference": "1d276e4c803397a26cc337df908f55c2a4e90d86",
+=======
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/pint.git",
+                "reference": "ebfe95b446e4395eba1eefb8615214fb55163165"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/ebfe95b446e4395eba1eefb8615214fb55163165",
+                "reference": "ebfe95b446e4395eba1eefb8615214fb55163165",
+>>>>>>> stripe-payment
                 "shasum": ""
             },
             "require": {
@@ -5982,6 +6030,7 @@
                 "php": "^8.0"
             },
             "require-dev": {
+<<<<<<< HEAD
                 "friendsofphp/php-cs-fixer": "^3.11.0",
                 "illuminate/view": "^9.27",
                 "laravel-zero/framework": "^9.1.3",
@@ -5989,6 +6038,15 @@
                 "nunomaduro/larastan": "^2.2",
                 "nunomaduro/termwind": "^1.14.0",
                 "pestphp/pest": "^1.22.1"
+=======
+                "friendsofphp/php-cs-fixer": "^3.10.0",
+                "illuminate/view": "^9.26.0",
+                "laravel-zero/framework": "^9.1.3",
+                "mockery/mockery": "^1.5.0",
+                "nunomaduro/larastan": "^2.1.12",
+                "nunomaduro/termwind": "^1.14.0",
+                "pestphp/pest": "^1.22.0"
+>>>>>>> stripe-payment
             },
             "bin": [
                 "builds/pint"
@@ -6024,7 +6082,11 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
+<<<<<<< HEAD
             "time": "2022-09-13T15:07:15+00:00"
+=======
+            "time": "2022-08-30T15:28:20+00:00"
+>>>>>>> stripe-payment
         },
         {
             "name": "laravel/sail",
@@ -6418,6 +6480,7 @@
         },
         {
             "name": "phpunit/php-code-coverage",
+<<<<<<< HEAD
             "version": "9.2.18",
             "source": {
                 "type": "git",
@@ -6428,6 +6491,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/12fddc491826940cf9b7e88ad9664cf51f0f6d0a",
                 "reference": "12fddc491826940cf9b7e88ad9664cf51f0f6d0a",
+=======
+            "version": "9.2.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
+                "reference": "aa94dc41e8661fe90c7316849907cba3007b10d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/aa94dc41e8661fe90c7316849907cba3007b10d8",
+                "reference": "aa94dc41e8661fe90c7316849907cba3007b10d8",
+>>>>>>> stripe-payment
                 "shasum": ""
             },
             "require": {
@@ -6483,7 +6558,11 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.18"
+=======
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.17"
+>>>>>>> stripe-payment
             },
             "funding": [
                 {
@@ -6491,7 +6570,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-10-27T13:35:33+00:00"
+=======
+            "time": "2022-08-30T12:24:04+00:00"
+>>>>>>> stripe-payment
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -6736,6 +6819,7 @@
         },
         {
             "name": "phpunit/phpunit",
+<<<<<<< HEAD
             "version": "9.5.26",
             "source": {
                 "type": "git",
@@ -6746,6 +6830,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/851867efcbb6a1b992ec515c71cdcf20d895e9d2",
                 "reference": "851867efcbb6a1b992ec515c71cdcf20d895e9d2",
+=======
+            "version": "9.5.24",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit.git",
+                "reference": "d0aa6097bef9fd42458a9b3c49da32c6ce6129c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d0aa6097bef9fd42458a9b3c49da32c6ce6129c5",
+                "reference": "d0aa6097bef9fd42458a9b3c49da32c6ce6129c5",
+>>>>>>> stripe-payment
                 "shasum": ""
             },
             "require": {
@@ -6774,7 +6870,11 @@
                 "sebastian/global-state": "^5.0.1",
                 "sebastian/object-enumerator": "^4.0.3",
                 "sebastian/resource-operations": "^3.0.3",
+<<<<<<< HEAD
                 "sebastian/type": "^3.2",
+=======
+                "sebastian/type": "^3.1",
+>>>>>>> stripe-payment
                 "sebastian/version": "^3.0.2"
             },
             "suggest": {
@@ -6818,7 +6918,11 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.26"
+=======
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.24"
+>>>>>>> stripe-payment
             },
             "funding": [
                 {
@@ -6834,7 +6938,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-10-28T06:00:21+00:00"
+=======
+            "time": "2022-08-30T07:42:16+00:00"
+>>>>>>> stripe-payment
         },
         {
             "name": "sebastian/cli-parser",

@@ -176,6 +176,7 @@
                     <div class="col-md-3 col-3">
                         <img src="{{asset('assets/imgs/santa12.png')}}" class="santa-dp2 selectSanta">
                     </div>
+<<<<<<< HEAD
                     <div class="col-md-3 col-3 col-3">
                         <img src="{{asset('assets/imgs/santa9.png')}}" class="santa-dp2 selectSanta">
                     </div>
@@ -184,6 +185,61 @@
                     </div>
                     <div class="col-md-3 col-3">
                         <img src="{{asset('assets/imgs/santa12.png')}}" class="santa-dp2 selectSanta">
+=======
+                    <div class="itro-text padding margin-top">
+                        <div class="row p-1">
+                            <div class="col-md-4 col-4">
+                                <h1 class="text-shade">BRIGHTNESS</h1>
+                            </div>
+                            <div class="col-md-4 col-4 left-border">
+                                <h1 class="text-shade">CONTRAST</h1>
+                            </div>
+                            <div class="col-md-4 col-4 left-border">
+                                <h1 class="text-shade">RESET</h1>
+                            </div>
+                            <div class="col-md-4 col-4">
+                                <img src="assets/imgs/bright.png" class="santa-dp3" id="brightness-pic">
+                                <div id="brightness"></div>
+                            </div>
+                            <div class="col-md-4 col-4">
+                                <img src="assets/imgs/contrast.PNG" class="santa-dp3" id="contrast-pic">
+                                <div id="contrast"></div>
+                            </div>
+                            <div class="col-md-4 col-4">
+                                <img src="assets/imgs/reset.png" class="santa-dp3" id="reset">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-santa-img showimg w-100" id="my-node">
+                        <!-- <div id="draggable" class="ui-widget-content">
+                            <img src="assets/imgs/santa12.jpeg"  id="santaImg" class="image santa-dp4 border-class">
+                        </div> -->
+                        <div id="container">
+                            <div class="right"></div>
+                            <div class="bottom"></div>
+                            <div class="top"></div>
+                            <div class="left"></div>
+                            <div data-clickable="true" class="bottomRight"></div>
+                            <div data-clickable="true" class="topLeft"></div>
+                            <div data-clickable="true" class="topRight"></div>
+                            <div data-clickable="true" class="bottomLeft"></div>
+                            <img src="assets/imgs/santa12.jpeg" id="santaImg"  class="image santa-dp4 border-class" alt="missing">
+                        </div>
+                    </div>
+                    <div class="catch radius">
+                        <a href="{{url('paypal')}}" class="text5 red">CLICK HERE TO SAVE IMAGE</a>
+                    </div>
+                    <div class="notes">
+                        <h1 class="text3">NOTES:
+                            <ul>
+                                <li>Taken or choosen image appears in editor as background</li>
+                                <li>Santa overlay appearsin editor when santa image is choosen</li>
+                                <li>Santa should swap out if another santa image is choosen after orignal</li>
+                                <li>User should be able to DRAG (move) Santa overlay, Resize by dragging corners, and use the Brightness/Contrast/Hue Sliders</li>
+                                <li>Watermark should be similar to above</li>
+                            </ul>
+                        </h1>
+>>>>>>> stripe-payment
                     </div>
                 </div>
             </div>
@@ -261,6 +317,7 @@
             <button id="btn">Preview</button>
             <img src="" id="image1" alt="">
         </div>
+<<<<<<< HEAD
     </div>
 </div>
 <script src="https://cdn.bootcss.com/dom-to-image/2.6.0/dom-to-image.min.js"></script>
@@ -281,6 +338,31 @@
             });
     }
 </script>--}}
+=======
+        <script src="https://cdn.bootcss.com/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+        <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
+        <script>
+            var node = document.getElementById('my-node');
+                var btn = document.getElementById('btn');
+                btn.onclick = function() {
+                $("#my-node #container>div").hide();
+                domtoimage.toBlob(document.getElementById('my-node'))
+                    .then(function(blob) {
+                        console.log(blob);
+                        const blobUrl = URL.createObjectURL(blob)
+                        console.log(blobUrl)
+                        document.getElementById('image1').src=blobUrl
+                        $("#my-node #container>div").show();
+                    // window.saveAs(blob, 'my-node.png');
+                    });
+                }
+
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
+>>>>>>> stripe-payment
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -373,16 +455,26 @@
     $('#brightness-pic').click(function () {
         $('#brightness').show()
         $('#brightness-pic').hide()
+<<<<<<< HEAD
     });
     $('#contrast-pic').click(function () {
         $('#contrast').show()
         $('#contrast-pic').hide()
     });
     $('#rotate-pic').click(function () {
+=======
+  });
+  $('#contrast-pic').click(function(){
+        $('#contrast').show()
+        $('#contrast-pic').hide()
+  });
+  $('#rotate-pic').click(function(){
+>>>>>>> stripe-payment
         $('#rotate').show()
         $('#rotate-pic').hide()
     });
 
+<<<<<<< HEAD
     //});
     $(document).ready(function () {
         $('.selectSanta').on('click', function () {
@@ -392,6 +484,39 @@
     });
 </script>
 <script>
+=======
+});
+            $(document).ready(function() {
+                $('.selectSanta').on('click', function() {
+                   let img = $(this).attr("src");
+                   $("#santaImg").attr("src",img);
+                });
+            });
+
+            // $( function() {
+            //     $('#draggable').resizable();
+            //     $( "#draggable" ).draggable();
+            // } );
+
+        </script>
+         <script>
+            function blur() {
+                var brightness = $("#brightness").slider("value");
+                var contrast = $("#contrast").slider("value");
+                // var rotate = $("#rotate").slider("value");
+                $(".image").css("-webkit-filter", "brightness(" + brightness + "%)"  + "contrast(" + contrast + "%)");
+            }
+            // ***********SLIDERS*************//
+            $(function () {
+                $("#brightness").slider({
+                    orientation: "horizontal",
+                    min: 100,
+                    max: 200,
+                    value: 0,
+                    slide: blur,
+                    change: blur
+                });
+>>>>>>> stripe-payment
 
     // ***********SLIDERS*************//
     $(function () {
@@ -404,6 +529,7 @@
             change: blur
         });
 
+<<<<<<< HEAD
         $("#contrast").slider({
             orientation: "horizontal",
             min: 0,
@@ -412,6 +538,15 @@
             slide: blur,
             change: blur
         });
+=======
+            });
+            $("#reset").click(function(){
+                $("#contrast").slider("value", 100);
+                $("#brightness").slider("value", 0);
+            });
+        </script>
+
+>>>>>>> stripe-payment
 
     });
     $("#reset").click(function () {

@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
+<<<<<<< HEAD
 </head>
 <body>
 <div class="main-boody">
@@ -43,8 +44,26 @@
                     <div class="banner-text">
                         <h1 class="text4 top-heading">YOUR</h1>
                         <h1 class="text4 bottom-heading">YOUR</h1>
+=======
+    </head>
+    <body>
+        <div class="main-boody">
+            <header
+                class="main-header">
+                <!-- <h1 class="text1">WE CAUGHT SANTA!</h1>
+                          <h1 class="text2">Custom Pictures of Santa under YOUR TREE!</h1> -->
+                <img src="assets/imgs/header.jpeg" class="w-100" alt="">
+            </header>
+            <div class="main-area">
+                <div class="overlay-clr">
+                    <div class="itro-text">
+                        <h1 class="text3">INTRO PARAGRAGH [EDITABLE]</h1>
+                        <h1>" "</h1>
+                        <h1>" "</h1>
+>>>>>>> stripe-payment
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div class="second-section">
                     <div class="banner-text">
                         <h1 class="text4 top-heading1">ROOM!</h1>
@@ -94,6 +113,14 @@
 
                         </div>
 
+=======
+          <button type="button" class="btn cancel-btn" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary save-btn"> <a href="{{url('image')}}" class="text-white">Continue</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+>>>>>>> stripe-payment
                     </div>
                 </div>
             </div>
