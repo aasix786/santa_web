@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <meta name = "description" content = "Keep the Magic of Christmas ALIVE! Show the kids Santa in front of YOUR TREE caught on camera!" />
+        <title>We Caught Santa - Catch Santa in YOUR Home!</title>
         <style>
             .imgs20 img {
                 width: 20%;
@@ -19,7 +20,7 @@
             .showimg img{
                 cursor: pointer;
             }
-        </style>  
+        </style>
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
@@ -45,12 +46,12 @@
                    let img = $(this).attr("src");
                    $("#santaImg").attr("src",img);
                 });
-            }); 
-            
+            });
+
             $( function() {
                 $( "#draggable" ).draggable();
             } );
-               
+
         </script>
     </body>
 </html>

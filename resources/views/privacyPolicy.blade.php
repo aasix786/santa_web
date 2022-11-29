@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta name = "description" content = "Keep the Magic of Christmas ALIVE! Show the kids Santa in front of YOUR TREE caught on camera!" />
+    <title>We Caught Santa - Catch Santa in YOUR Home!</title>
     <link rel="stylesheet" href="{{asset('assets/Css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/Css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('assets/external/bootstrap.min.css')}}">
@@ -16,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-   
+
 </head>
 <body>
 <div class="main-boody termsPolicy">
@@ -134,7 +135,7 @@
                                 <p>If you make a request, we have one month to respond to you. If you would like to exercise any of
                             these rights, please contact us.
                             </p>
-                  
+
                         <h2>Children's Information</h2>
                         <p>Another part of our priority is adding protection for children while using the internet. We encourage
                                 parents and guardians to observe, participate in, and/or monitor and guide their online activity. </p>
@@ -142,7 +143,7 @@
                             under the age of 13. If you think that your child provided this kind of information on our website, we
                             strongly encourage you to contact us immediately and we will do our best efforts to promptly remove
                             such information from our records</p>
-                 
+
                 <hr>
     </div>
 

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta name = "description" content = "Keep the Magic of Christmas ALIVE! Show the kids Santa in front of YOUR TREE caught on camera!" />
+    <title>We Caught Santa - Privacy Policy!</title>
     <link rel="stylesheet" href="{{asset('assets/Css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/Css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('assets/external/bootstrap.min.css')}}">
@@ -163,9 +164,9 @@ shopping malls, and charity fundraising groups which may not hyperlink to our We
                             </ul>
                                 <p>The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are
                                     subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer,
-                                    including liabilities arising in contract, in tort and for breach of statutory duty.</p>               
+                                    including liabilities arising in contract, in tort and for breach of statutory duty.</p>
                                     <p>As long as the website and the information and services on the website are provided free of charge,
-                                        we will not be liable for any loss or damage of any nature.</p> 
+                                        we will not be liable for any loss or damage of any nature.</p>
             <hr>
     </div>
 

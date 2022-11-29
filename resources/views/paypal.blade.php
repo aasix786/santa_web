@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paypal</title>
+    <meta name = "description" content = "Keep the Magic of Christmas ALIVE! Show the kids Santa in front of YOUR TREE caught on camera!" />
+    <title>We Caught Santa - Catch Santa in YOUR Home!</title>
     <link rel="stylesheet" href="{{asset('assets/Css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/Css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('assets/external/bootstrap.min.css')}}">
@@ -228,7 +229,7 @@
                 </div>
                     <div class="santa-profile">
                         <img src="{{asset('assets/imgs/santa12.png')}}" class="santa-dp">
-                        <h1 class="text6">$5.00</h1>
+                        <h1 class="text6">${{$price}}</h1>
                     </div>
 
                     <!-- <div class="bg-santa-img">

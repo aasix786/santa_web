@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content = "Keep the Magic of Christmas ALIVE! Show the kids Santa in front of YOUR TREE caught on camera!" />
+    <title>We Caught Santa - Privacy Policy!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset('assets/Css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/Css/responsive.css')}}">
@@ -24,7 +26,7 @@
 </script>
 </head>
 <body>
-    
+
     <div class="main-boody">
         <header class="main-header">
             <img src="{{asset('assets/imgs/header.jpg')}}" class="w-100" alt="">
@@ -36,8 +38,8 @@
                 <img id="blah" src="{{asset('assets/imgs/camera1.png')}}" class="camera-img" alt="" />
                 <input class="input-type" type='file' onchange="readURL(this);" />
             </div>
-             
-            </div>      
+
+            </div>
         </div>
     </div>
     <script>

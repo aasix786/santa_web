@@ -3,7 +3,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>PayPal Standard Payments Integration | Client Demo</title>
+    <meta name = "description" content = "Keep the Magic of Christmas ALIVE! Show the kids Santa in front of YOUR TREE caught on camera!" />
+    <title>We Caught Santa - Catch Santa in YOUR Home!</title>
 </head>
 
 <body>

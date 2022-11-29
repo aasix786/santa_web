@@ -8,7 +8,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js"></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> -->
-        <title>Document</title>
+        <meta name = "description" content = "Keep the Magic of Christmas ALIVE! Show the kids Santa in front of YOUR TREE caught on camera!" />
+        <title>We Caught Santa - Catch Santa in YOUR Home!</title>
         <style>
             @import url('https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Montserrat:300,400,700');
             @import url('//fonts.googleapis.com/icon?family=Material+Icons');
