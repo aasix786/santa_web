@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Homecontroller;
 use App\Http\Controllers\PayPalController;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\StripeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,7 +64,7 @@ Route::get('payment/success/{id}', [PayPalController::class, 'success'])->name('
 Route::get('/success', function () {
     return view('success');
 })->name('success');
-
-/*Route::get('/test-image',function (){
-    return view('image-test');
-});*/
+Route::post('/stripe', [StripeController::class,'payment'])->name('stripe.post');
+Route::get('/stripe/page',function (){
+    return view('stripe');
+});
