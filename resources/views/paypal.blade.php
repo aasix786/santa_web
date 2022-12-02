@@ -12,17 +12,18 @@
     <link rel="stylesheet" href="{{asset('assets/external/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/external/all.css')}}"/>
     <link rel="stylesheet" href="{{asset('assets/external/jquery.fancybox.min.css')}}">
-    <script src="{{asset('assets/external/jquery-3.3.1.slim.min.js')}}"></script>
-    <script src="{{asset('assets/external/popper.min.js')}}"></script>
-    <script src="{{asset('assets/external/bootstrap.min.js')}}"></script>
+    <!-- <script src="{{asset('assets/external/jquery-3.3.1.slim.min.js')}}"></script> -->
+    <!-- <script src="{{asset('assets/external/bootstrap.min.js')}}"></script>
+    <script src="{{asset('assets/external/popper.min.js')}}"></script> -->
     <script src="https://js.braintreegateway.com/web/3.57.0/js/client.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.57.0/js/venmo.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.57.0/js/data-collector.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
           integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script>
 
@@ -251,157 +252,87 @@
 
                 </div>
 
-                <div style="padding: 15px 15px 0 15px;" id="paypal-button-container"></div>
-
-                {{-- stripe --}}
-                <div class="container">
-
-                    <div class="row">
-
-                        <div class="col-md-6 col-md-offset-3">
-
-                            <div class="panel panel-default credit-card-box">
-
-                                <div class="panel-heading display-table">
-
-                                    <h3 class="panel-title">Payment Details</h3>
-
-                                </div>
-
-                                <div class="panel-body">
-
-
-                                    @if (Session::has('success'))
-
-                                        <div class="alert alert-success text-center">
-
-                                            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-
-                                            <p>{{ Session::get('success') }}</p>
-
-                                        </div>
-
-                                    @endif
-
-                                    <form
-
-                                        role="form"
-
-                                        action="{{ route('stripe.post')}}"
-
-                                        method="post"
-
-                                        class="require-validation"
-
-                                        data-cc-on-file="false"
-
-                                        data-stripe-publishable-key="{{ env('STRIPE_KEY') }}"
-
-                                        id="payment-form">
-
-                                        @csrf
-                                        <div class='form-row row'>
-
-                                            <div class='col-xs-12 form-group required'>
-                                             <input type="hidden" name="image" value="{{request()->query("a")}}">
-                                                <label class='control-label'>Name on Card</label> <input
-
-                                                    class='form-control' size='4' type='text'>
-
-                                            </div>
-
-                                        </div>
-
-
-                                        <div class='form-row row'>
-
-                                            <div class='col-xs-12 form-group card required'>
-
-                                                <label class='control-label'>Card Number</label> <input
-
-                                                    autocomplete='off' class='form-control card-number' size='20'
-
-                                                    type='text'>
-
-                                            </div>
-
-                                        </div>
-
-                                        <div class='form-row row'>
-
-                                            <div class='col-xs-12 col-md-4 form-group cvc required'>
-
-                                                <label class='control-label'>CVC</label> <input autocomplete='off'
-
-                                                                                                class='form-control card-cvc'
-                                                                                                placeholder='ex. 311'
-                                                                                                size='4'
-
-                                                                                                type='text'>
-
-                                            </div>
-
-                                            <div class='col-xs-12 col-md-4 form-group expiration required'>
-
-                                                <label class='control-label'>Expiration Month</label> <input
-
-                                                    class='form-control card-expiry-month' placeholder='MM' size='2'
-
-                                                    type='text'>
-
-                                            </div>
-
-                                            <div class='col-xs-12 col-md-4 form-group expiration required'>
-
-                                                <label class='control-label'>Expiration Year</label> <input
-
-                                                    class='form-control card-expiry-year' placeholder='YYYY' size='4'
-
-                                                    type='text'>
-
-                                            </div>
-
-                                        </div>
-
-                                        <div class='form-row row'>
-
-                                            <div class='col-md-12 error form-group hide'>
-
-                                                <div class='alert-danger alert'>Please correct the errors and try
-
-                                                    again.
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-                                        <div class="row">
-
-                                            <div class="col-xs-12">
-
-                                                <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now
-                                                    ($5)
-                                                </button>
-
-                                            </div>
-
-                                        </div>
-
-
-                                    </form>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
+                <div style="padding: 15px 15px 0 15px;" id="paypal-button-container">
                 </div>
-                {{--stripe end--}}
+                <!-- Button trigger modal -->
+                <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary card-paymnet-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Card Payment</button>
+                        <!-- Modal -->
+                        <div class="modal fade card-payment" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-dark" id="exampleModalLabel"><strong>Payment Details</strong></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="panel panel-default credit-card-box">
+                                            <!-- <div class="panel-heading display-table">
+                                                <h3 class="panel-title"></h3>
+                                            </div> -->
+                                            <div class="panel-body">
+                                                @if (Session::has('success'))
+                                                    <div class="alert alert-success text-center">
+                                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                                                        <p>{{ Session::get('success') }}</p>
+                                                    </div>
+                                                @endif
+                                                <form
+                                                    role="form" action="{{ route('stripe.post')}}" method="post" class="require-validation"
+                                                    data-cc-on-file="false" data-stripe-publishable-key="{{ env('STRIPE_KEY') }}" id="payment-form">
+                                                    @csrf
+                                                    <div class='form-row row'>
+                                                        <div class='col-xs-12 col-12 form-group required text-start'>
+                                                            <input type="hidden" name="image" value="{{request()->query("a")}}">
+                                                            <label class='control-label'>Name on Card</label> <input class='form-control' size='4' type='text'>
+                                                        </div>
+                                                    </div>
+                                                    <div class='form-row row'>
+                                                         <div class='col-xs-12 form-group required text-start'>
+                                                            <label class='control-label'>Card Number</label> <input autocomplete='off' class='form-control card-number' size='20' type='text'>
+                                                        </div>
+                                                    </div>
+                                                    <div class='form-row row'>
+                                                        <div class='col-xs-12 col-md-4 form-group cvc required'>
+                                                            <label class='control-label'>CVC</label>
+                                                            <input autocomplete='off' class='form-control card-cvc' placeholder='ex. 311' size='4' type='text'>
+                                                        </div>
+                                                        <div class='col-xs-12 col-md-4 form-group expiration required'>
+                                                            <label class='control-label'>Expiration Month</label> 
+                                                            <input class='form-control card-expiry-month' placeholder='MM' size='2' type='text'>
+                                                        </div>
+                                                        <div class='col-xs-12 col-md-4 form-group expiration required'>
+                                                            <label class='control-label'>Expiration Year</label>
+                                                            <input class='form-control card-expiry-year' placeholder='YYYY' size='4' type='text'>
+                                                        </div>
+                                                    </div>
+                                                    <div class='form-row row'>
+                                                        <div class='col-md-12 error form-group hide'>
+                                                            <div class='alert-danger alert'>Please correct the errors and try again.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now
+                                                                ($5)
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                <!-- Card payment End -->               
 
                 <div class="payment-method mt-0">
                     <div class="payment-cards"><img src="{{asset('assets/imgs/card1.png')}}" class="img-size"></div>

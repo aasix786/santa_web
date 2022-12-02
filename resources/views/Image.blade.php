@@ -214,7 +214,7 @@
 
             <div class="bg-santa-img showimg w-100">
                 <p class="rotingtxt1">{{$watermark}}</p>
-                < id="container">
+                <div id="container">
                     <div id="canvas-border-hide">
                         <div class="right"></div>
                         <div class="bottom"></div>
@@ -228,7 +228,7 @@
                         <img src="{{asset('assets/imgs/santa12.png')}}" id="santaImg" class="image santa-dp4 border-class"
                          alt="missing">
                 </div>
-            </div>`
+            </div>
 
             <div class="catch radius" id="img-button-section">
                 <button type="button" class="btn text5 red bg-transparent tap-btn">
@@ -423,7 +423,6 @@
 
 <script>
     var $container = document.getElementById("container");
-
     // Proxies
     var $right = document.createElement("div");
     var $bottom = document.createElement("div");

@@ -11,6 +11,21 @@
     background-color: #232020a6;
     background-blend-mode: darken;
 }
+.card-payment label, .card-payment strong{
+    color: black!important;
+    font-family: arial;
+}
+button.card-paymnet-btn {
+    width: 78%;
+    height: 55px;
+    font-family: arial;
+    font-size: 22px;
+    border-radius: 51px;
+    margin-bottom: 20px;
+}
+.card-payment{
+    font-family: arial;
+}
 .text1 {
     color: #D1FFFE;
     text-align: right;
