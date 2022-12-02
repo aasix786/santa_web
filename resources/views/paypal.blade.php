@@ -253,10 +253,10 @@
                 </div>
 
                 <div style="padding: 15px 15px 0 15px;" id="paypal-button-container">
+                    <button type="button" class="btn btn-primary  w-100 card-paymnet-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Card Payment</button>
                 </div>
                 <!-- Button trigger modal -->
                 <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary card-paymnet-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Card Payment</button>
                         <!-- Modal -->
                         <div class="modal fade card-payment" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
