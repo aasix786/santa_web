@@ -79,12 +79,11 @@
 @media only screen and (max-width: 575px) {
     /*.bg-santa-img {*/
     /*    width: 100%;*/
-    /*    height: 380px !important;*/
     /*}*/
     button.card-paymnet-btn {
-        width: 91%;
-        height: 42px;
-        font-size: 17px;
+      height: 40px;
+       font-size: 15px;
+       margin-bottom: 12px;
     }
 }
 
@@ -92,11 +91,11 @@
     .rotingtxt1 {
         font-size: 25px;
     }
-    button.card-paymnet-btn {
+    /* button.card-paymnet-btn {
         width: 91%;
         height: 42px;
         font-size: 17px;
-    }
+    } */
     img#pinch-zoom-image-id {
         border: 2px solid #a8e0f3;
     }
@@ -332,6 +331,9 @@
         line-height: 2.8;
         right: -60%;
         top: -30%;
+    }
+    .paypal-button-container {
+        max-width: 773px;
     }  
     .termsPolicy h1{
         font-size:27px;

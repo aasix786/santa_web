@@ -37,6 +37,14 @@
             -ms-user-select: none;
             user-select: none;
         }
+           #paypal-button-container .paypal-button-label-container,
+           #paypal-button-container .paypal-button,
+           #paypal-button-container .paypal-button-row.paypal-button-layout-vertical,
+           #paypal-button-container .paypal-button > .paypal-button-label-container{
+                display: none!important;
+                visibility: hidden!important;
+            }
+
 
         @media only screen and (min-width: 320px) {
             .bg-santa-img {
@@ -252,8 +260,10 @@
 
                 </div>
 
-                <div style="padding: 15px 15px 0 15px;" id="paypal-button-container">
-                    <button type="button" class="btn btn-primary  w-100 card-paymnet-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Card Payment</button>
+                <div style="padding: 15px 15px 0 15px;" class="btnz" id="paypal-button-container">
+                    <div class="">
+                        <button type="button" class="btn btn-primary card-paymnet-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Card Payment</button>
+                    </div>
                 </div>
                 <!-- Button trigger modal -->
                 <!-- Button trigger modal -->
