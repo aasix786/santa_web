@@ -25,10 +25,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script>
-       $(document).ready(function () {
-           $('.paypal-button-number-0').hide();
-           $('.paypal-button-number-2').hide();
-       });
+
    </script>
     <style>
        /* body {
@@ -551,7 +548,7 @@
 </script>
 {{--&enable-funding=venmo--}}
 <script
-    src="https://www.paypal.com/sdk/js?client-id={{ env('PAYPAL_CLIENT_ID') }}&currency=USD&intent=capture&disable-funding=credit&enable-funding=venmo"
+    src="https://www.paypal.com/sdk/js?client-id={{ env('PAYPAL_CLIENT_ID') }}&currency=USD&intent=capture&disable-funding=credit,card,paylater,bancontact,ideal&enable-funding=venmo"
     data-sdk-integration-source="integrationbuilder"></script>
 <script>
 
@@ -604,7 +601,11 @@
         .render("#paypal-button-container")
         .catch((err) => {
             console.error('PayPal Buttons failed to render');
-        });
+        }).finally(() => {
+
+
+    });
+
     /*$(window).on('keydown', function (event) {
         if (event.keyCode == 123) {
             return false; //Disable F12

@@ -29,9 +29,9 @@ Route::get('/privacyPolicy', function () {
 Route::get('/termCondition', function () {
     return view('termCondition');
 });
-Route::get('/', function () {
-    return view('index');
-});
+//Route::get('/', function () {
+//    return view('index');
+//});
 Route::get('/drag', function () {
     return view('drag');
 });
@@ -44,7 +44,7 @@ Route::get('/effects', function () {
     return view('effects');
 });
 //
-Route::get('/image', [Homecontroller::class, 'image'])->name('image');
+Route::get('image', [Homecontroller::class, 'image'])->name('image');
 Route::get('/paypal', [Homecontroller::class, 'paypal'])->name('paypal');
 Route::get('/plugin', function () {
     return view('plugin');

@@ -116,8 +116,13 @@ dd($width , $height);
         $url = request()->query("a");
         if($url){
             $water_mark = Watermark::select('watermark')->first();
+
             $santa_images = \App\Models\Image::all();
-            return view('image-test', ['watermark' => $water_mark->watermark,'images'=>$santa_images]);
+
+            $watermark = $water_mark->watermark;
+            $images = $santa_images;
+
+            return view('image-test', compact("watermark","images"));
 
         }else{
             return redirect()->back();
