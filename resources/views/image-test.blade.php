@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -499,9 +500,12 @@
 </script>
 <script>
     function blur() {
+        console.log("az  ")
         var brightness = $("#brightness").slider("value");
         var contrast = $("#contrast").slider("value");
-        $(".image").css("-webkit-filter", "brightness(" + brightness + "%)" + "contrast(" + contrast + "%)");
+        // var rotate = $("#rotate").slider("value");
+        $("#container").css("-webkit-filter", "brightness(" + brightness + "%)" + "contrast(" + contrast + "%)");
+
     }
     // var rotate = $("#rotate").slider("value");
 
@@ -599,8 +603,14 @@
             min: 50,
             max: 140,
             value: 95,
-            slide: blur,
-            change: blur
+            slide: function( event, ui ) {
+                console.log("az  ")
+                var brightness = $("#brightness").slider("value");
+                var contrast = $("#contrast").slider("value");
+                // var rotate = $("#rotate").slider("value");
+                $("#container").css("-webkit-filter", "brightness(" + brightness + "%)" + "contrast(" + contrast + "%)");
+               
+            }
         });
         $("#contrast").slider({
             orientation: "horizontal",
@@ -608,7 +618,7 @@
             max: 300,
             value: 150,
             slide: blur,
-            change: blur
+            // change: blur
         });
     });
     // $("#reset").click(function () {
@@ -768,7 +778,7 @@
         angle: 0,
         scale: 1
     }
-    var gestureArea = document.getElementById('gesture-area')
+    var gestureArea = document.getElementById('container')
     var scaleElement = document.getElementById('scale-element')
     var resetTimeout
 
