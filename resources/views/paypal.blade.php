@@ -29,14 +29,14 @@
 
    </script>
     <style>
-       /* body {
+    body {
             -webkit-touch-callout: none;
             -webkit-user-select: none;
             -khtml-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-        }*/
+        }
            #paypal-button-container .paypal-button-label-container,
            #paypal-button-container .paypal-button,
            #paypal-button-container .paypal-button-row.paypal-button-layout-vertical,
@@ -44,6 +44,7 @@
                 display: none!important;
                 visibility: hidden!important;
             }
+
 
         @media only screen and (min-width: 320px) {
             .bg-santa-img {
@@ -229,7 +230,7 @@
 
     </style>
 </head>
-<body oncontextmenu="return false">
+<body oncontextmenu="return true">
 
 <div class="main-boody">
     <header class="main-header">
@@ -310,7 +311,7 @@
                                                             <input autocomplete='off' class='form-control card-cvc' placeholder='ex. 311' size='4' type='text'>
                                                         </div>
                                                         <div class='col-xs-12 col-md-4 form-group expiration required'>
-                                                            <label class='control-label'>Expiration Month</label> 
+                                                            <label class='control-label'>Expiration Month</label>
                                                             <input class='form-control card-expiry-month' placeholder='MM' size='2' type='text'>
                                                         </div>
                                                         <div class='col-xs-12 col-md-4 form-group expiration required'>
@@ -327,7 +328,7 @@
                                                     <div class="row">
                                                         <div class="col-xs-12">
                                                             <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now
-                                                                ($5)
+                                                                (${{$price}})
                                                             </button>
                                                         </div>
                                                     </div>
@@ -341,7 +342,7 @@
                         </div>
                     </div>
                     </div>
-                <!-- Card payment End -->               
+                <!-- Card payment End -->
 
                 <div class="payment-method mt-0">
                     <div class="payment-cards"><img src="{{asset('assets/imgs/card1.png')}}" class="img-size"></div>
