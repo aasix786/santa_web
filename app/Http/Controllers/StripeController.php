@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Payment;
 use Illuminate\Http\Request;
 use Stripe;
 use App\Models\CustomerImage;
@@ -35,11 +36,11 @@ class StripeController extends Controller
 
         ));
 
-
+        $price = Payment::select('price')->first();
 
       $charges =  Stripe\Charge::create ([
 
-            "amount" => 100 * 5,
+            "amount" => 100 * $price->price,
 
             "currency" => "usd",
 

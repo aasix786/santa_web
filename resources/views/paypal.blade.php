@@ -230,7 +230,7 @@
 
     </style>
 </head>
-<body oncontextmenu="return false">
+<body oncontextmenu="return true">
 
 <div class="main-boody">
     <header class="main-header">
@@ -328,7 +328,7 @@
                                                     <div class="row">
                                                         <div class="col-xs-12">
                                                             <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now
-                                                                ($5)
+                                                                (${{$price}})
                                                             </button>
                                                         </div>
                                                     </div>
