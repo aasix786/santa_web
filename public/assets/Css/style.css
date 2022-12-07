@@ -28,6 +28,9 @@ button.card-paymnet-btn {
     min-width: 200px;
     max-width: 750px;
 }
+.main-header{
+    display: none;
+}
 .paypal-button-label-container,
 .paypal-button,
 .paypal-button-row.paypal-button-layout-vertical,
