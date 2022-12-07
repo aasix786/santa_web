@@ -226,7 +226,9 @@
             text-align: center;
             padding-top: 50px;
         }
-
+.hide{
+    display: none;
+}
 
     </style>
 </head>
