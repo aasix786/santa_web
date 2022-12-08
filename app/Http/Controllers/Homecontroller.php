@@ -28,27 +28,12 @@ class Homecontroller extends Controller
 
         $customer_image = new CustomerImage();
         if ($request->download_image) {
-
-            /*
-                        $image = new Imagick();
-                        $image->readImageBlob($request->download_image);*/
-            /* $image->setImageFormat('png24');
-
-             header('Content-type: image/png');
-             ob_clean();
-            // echo $image->getImageBlob();
-             dd($image->getImageBlob());
-             dd($request->download_image);*/
             $fileName = uniqid() . '.png';
-            /* $abc=  Image::make($request->download_image)->resize(60,60)->save('public/customerImages/'.$fileName);
-               dd($abc);
-              Image::make();*/
             $image_64 = $request->download_image; //your base64 encoded data
             $img = $request->download_image;
             $img = str_replace('data:image/png;base64,', '', $img);
             $img = str_replace(' ', '+', $img);
             $data = base64_decode($img);
-
 
             $file = public_path('public/customerImages/') . $fileName;
             $success = file_put_contents($file, $data);
@@ -65,31 +50,11 @@ class Homecontroller extends Controller
             $file = $request->file('image');
             $width=$request['image_width'];
             $height=$request['image_height'];
-         /*   $width = getimagesize($file)[0]; // getting the image width
-            $height = getimagesize($file)[1]; // getting the image height
-dd($width , $height);
-            $agent = new Agent();
-            $mobileResult = $agent->isMobile();
-            if ($mobileResult) {
 
-                if ($request->image_position == 'vertical') {
-                    $customer_image->image_width = $height;
-                    $customer_image->image_height = $width;
-
-                } else {
-
-                    $customer_image->image_width = $width;
-                    $customer_image->image_height = $height;
-                }
-
-            } else {
-
-                $customer_image->image_width = $width;
-                $customer_image->image_height = $height;
-            }*/
             $customer_image->image_width = $width;
             $customer_image->image_height = $height;
-            $filename = date('YmdHi') . $file->getClientOriginalName();
+           // $filename = date('YmdHi') . $file->getClientOriginalName();
+            $filename = uniqid() . '.png';
             $file->move(public_path('public/customerImages'), $filename);
             $customer_image->image = 'public/customerImages' . '/' . $filename;
             $customer_image->save();

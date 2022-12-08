@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
-<!-- 
+<!--
     <script src="{{asset('assets/external/jquery-3.3.1.slim.min.js')}}"></script>
     <script src="{{asset('assets/external/popper.min.js')}}"></script>
     <script src="{{asset('assets/external/bootstrap.min.js')}}"></script> -->
@@ -265,7 +265,7 @@
                                     <div class="modal-body">
                                         <div class="add-img pt-2">
                                             <button type="button" class="uploadbtn">TAP HERE TO TAKE or CHOOSE A PICTURE OF YOUR ROOM & TREE</button>
-                                            <input class="input-type" type='file' name="image" required id="test" onchange="readURL(this);"
+                                            <input class="input-type" type='file' name="image" required id="test" accept="image/*" onchange="readURL(this);"
                                             />
                                             <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="py-3 w-100"
                                                  alt=""/>
@@ -609,7 +609,7 @@
                 var contrast = $("#contrast").slider("value");
                 // var rotate = $("#rotate").slider("value");
                 $("#container").css("-webkit-filter", "brightness(" + brightness + "%)" + "contrast(" + contrast + "%)");
-               
+
             }
         });
         $("#contrast").slider({
