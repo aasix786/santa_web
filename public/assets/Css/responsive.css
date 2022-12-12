@@ -85,6 +85,10 @@
        font-size: 15px;
        margin-bottom: 12px;
     }
+    
+.santachoose{
+    padding: 4px 8px;
+}
 }
 
 @media only screen and (max-width: 425px) {
@@ -210,12 +214,15 @@
 }
 
 .input-type {
-    height: 100px;
+    height: 0px;
 }
 .add-img .input-type {
     right: 7%;
     top: 22px;
     width: 85%;
+}
+.add-img img {
+    padding-top: 0!important;
 }
 }
 

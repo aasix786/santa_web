@@ -24,7 +24,7 @@
             .downloadImage {
 
                 border: 3px solid gray;
-                margin-top: 20px !important;
+                /* margin-top: 20px !important; */
                 margin: auto;
                 width: 85%;
                 <?php
@@ -51,7 +51,7 @@ height:<?php echo $height;?>px;
         @media only screen and (min-width: 425px) {
             .downloadImage {
                 border: 3px solid gray;
-                margin-top: 20px !important;
+                /* margin-top: 20px !important; */
                 margin: auto;
                 width: 85%;
                 <?php
@@ -77,7 +77,7 @@ height:<?php echo $height;?>px;
         @media only screen and (min-width: 768px) {
             .downloadImage {
                 border: 3px solid gray;
-                margin-top: 20px !important;
+                /* margin-top: 20px !important; */
                 margin: auto;
                 width: 85%;
                 <?php
@@ -103,7 +103,7 @@ height:<?php echo $height;?>px;
         @media only screen and (min-width: 1024px) {
             .downloadImage {
                 border: 3px solid gray;
-                margin-top: 20px !important;
+                /* margin-top: 20px !important; */
                 margin: auto;
                 width: 85%;
                 <?php
@@ -129,7 +129,7 @@ height:<?php echo $height;?>px;
         @media only screen and (min-width: 1900px) {
             .downloadImage {
                 border: 3px solid gray;
-                margin-top: 20px !important;
+                /* margin-top: 20px !important; */
                 margin: auto;
                 width: 85%;
                 <?php
@@ -159,8 +159,8 @@ height:<?php echo $height;?>px;
 <div class="main-boody">
     <header
         class="main-header">
-        <img src="{{asset('assets/imgs/header.jpg')}}" class="w-100" alt="">
     </header>
+    <img src="{{asset('assets/imgs/ins.jpeg')}}" class="w-100" alt="">
     <div class="main">
 
         <div class=" w-100">
@@ -168,8 +168,8 @@ height:<?php echo $height;?>px;
             <img src="{{$_ENV['IMAGE_URL'].$custom_image->image}}" class="w-100 downloadImage" style="width: 100%; height: 100%" alt="">
 
         </div>
-        <a href="{{$_ENV['IMAGE_URL'].$custom_image->image }}"download><button type="button" class="btn red font-text bg-transparent w-100" data-toggle="modal" data-target="#exampleModalCenter">
-                <img src="{{asset('assets/imgs/finalimg.png')}}" class="w-100 img-down" alt="missing"></button></a>
+        <!-- <a href="{{$_ENV['IMAGE_URL'].$custom_image->image }}"download><button type="button" class="btn red font-text bg-transparent w-100" data-toggle="modal" data-target="#exampleModalCenter">
+                <img src="{{asset('assets/imgs/finalimg.png')}}" class="w-100 img-down" alt="missing"></button></a> -->
     </div>
 </div>
 

@@ -15,6 +15,14 @@
     color: black!important;
     font-family: arial;
 }
+.santachoose{
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+}
+.imgs20{
+    width: 20%;
+}
 button.card-paymnet-btn {
     /* width: 78%; */
     font-family: arial;
