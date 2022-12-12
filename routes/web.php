@@ -18,6 +18,7 @@ use App\Http\Controllers\StripeController;
 */
 Route::get('/clear-cache', function () {
     Artisan::call('cache:clear');
+    \Illuminate\Support\Facades\Cache::flush();
 
 });
 Route::get('test/paypal', function () {
