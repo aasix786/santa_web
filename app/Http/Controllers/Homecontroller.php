@@ -45,8 +45,8 @@ class Homecontroller extends Controller
             return response()->json(['path' => $path]);
             //return redirect()->route('paypal', ['a' => $customer_image->image, 'w' => $request->width, 'h' => $request->height]);
         }
-        if ($request->hasFile('image')) {
-
+        if ($request->hasFile('image'))
+        {
             $file = $request->file('image');
             $width=$request['image_width'];
             $height=$request['image_height'];
