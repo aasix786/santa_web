@@ -481,14 +481,14 @@
             $('.image1').show()
             //$('.bg-santa-img').hide()
         });
-        $('#brightness-pic').click(function () {
-            $('#brightness').show()
-            $('#brightness-pic').hide()
-        });
-        $('#contrast-pic').click(function () {
-            $('#contrast').show()
-            $('#contrast-pic').hide()
-        });
+        // $('#brightness-pic').click(function () {
+        //     $('#brightness').show()
+        //     $('#brightness-pic').hide()
+        // });
+        // $('#contrast-pic').click(function () {
+        //     $('#contrast').show()
+        //     $('#contrast-pic').hide()
+        // });
         $('#rotate-pic').click(function () {
             $('#rotate').show()
             $('#rotate-pic').hide()
