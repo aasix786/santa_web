@@ -168,6 +168,10 @@ height:<?php echo $height;?>px;
             <img src="{{$_ENV['IMAGE_URL'].$custom_image->image}}" class="w-100 downloadImage" style="width: 100%; height: 100%" alt="">
 
         </div>
+        
+    <footer class="bg-dark text-center py-2 ">
+        <p class="text-white mb-0">"Having trouble?  E-mail: <a href=" info@b3events.net">info@b3events.net</a></p>
+    </footer>
         <!-- <a href="{{$_ENV['IMAGE_URL'].$custom_image->image }}"download><button type="button" class="btn red font-text bg-transparent w-100" data-toggle="modal" data-target="#exampleModalCenter">
                 <img src="{{asset('assets/imgs/finalimg.png')}}" class="w-100 img-down" alt="missing"></button></a> -->
     </div>

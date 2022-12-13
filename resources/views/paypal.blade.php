@@ -363,6 +363,9 @@
             </div>
         </div>
     </div>
+    <footer class="bg-dark text-center py-2 ">
+        <p class="text-white mb-0">"Having trouble?  E-mail: <a href=" info@b3events.net">info@b3events.net</a></p>
+    </footer>
 </div>
 </body>
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
