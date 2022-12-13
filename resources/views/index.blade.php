@@ -77,7 +77,7 @@
                                         <div class="add-img pt-2">
                                             <button type="button" class="uploadbtn">TAP HERE TO TAKE or CHOOSE A PICTURE OF YOUR ROOM & TREE</button>
                                             <input class="input-type" type='file' name="image" required id="test"
-                                                   onchange="readURL(this);" accept="image/*"/>
+                                                   onchange="readURL(this);" accept="image/*" style="display:none;"/>
                                             <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="py-3 w-100"
                                                  alt=""/>
                                             <input type="hidden" name="image_position" id="image_position">

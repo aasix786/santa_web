@@ -235,8 +235,10 @@
         <div class="overlay-clr">
             <div class="itro-text padding">
                 <h1 class="text3">CHOOSE A SANTA IMAGE</h1>
-                <div class="santachoose">
-                   @foreach($images as $image)
+                <div style="display: flex;
+    justify-content: space-between;
+    padding: 4px;" class="santachoose">
+                    @foreach($images as $image)
                         <div class=" imgs20">
                             <img src="{{$_ENV['IMAGE_URL'].$image->image}}" class="santa-dp2 selectSanta">
                         </div>
@@ -249,10 +251,10 @@
                 </div>
             </div>
             <div class="replaceImg">
-            <div class="catch">
+                <div class="catch">
                     <!-- Button trigger modal -->
                     <button type="button" class=" py-0 btn red font-text bg-transparent" data-toggle="modal" data-target="#exampleModalCenter">
-                            <img src="{{asset('assets/imgs/takenewpicture.png')}}" class="w-100" alt="missing">
+                        <img src="{{asset('assets/imgs/takenewpicture.png')}}" class="w-100" alt="missing">
                         <!-- CATCH SANTA NOW! -->
                     </button>
                     <!-- Modal -->
@@ -265,7 +267,8 @@
                                     <div class="modal-body">
                                         <div class="add-img pt-2">
                                             <button type="button" class="uploadbtn">TAP HERE TO TAKE or CHOOSE A PICTURE OF YOUR ROOM & TREE</button>
-                                            <input class="input-type" type='file' name="image" required id="test" accept="image/*" onchange="readURL(this);"
+                                            <input class="input-type" type='file' name="image" required id="test" accept="image/*" onchange="readURL(this);" style="display:none;
+"
                                             />
                                             <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="py-3 w-100"
                                                  alt=""/>
@@ -298,14 +301,14 @@
                         <h2 class="font-weight-bold text-shade">RESET</h2>
                     </div> -->
                     <div class="col-md-6 col-6">
-                        <img src="{{asset('assets/imgs/bright.png')}}" class="santa-dp3" id="brightness-pic">
-                        <div id="brightness"></div>
+                        <img src="{{asset('assets/imgs/bright.png')}}" class="santa-dp3" style="display:none" id="brightness-pic">
+                        <div style="display:block" id="brightness"></div>
                     </div>
                     <div class="col-md-6 col-6">
-                        <img src="{{asset('assets/imgs/contrast.png')}}" class="santa-dp3" id="contrast-pic">
-                        <div id="contrast"></div>
+                        <img src="{{asset('assets/imgs/contrast.png')}}" style="display:none" class="santa-dp3" id="contrast-pic">
+                        <div style="display:block" id="contrast"></div>
                     </div>
-                    <!-- <div class="col-md-2 col-4">
+                <!-- <div class="col-md-2 col-4">
                         <img src="{{asset("assets/imgs/reset.png")}}" class="santa-dp3" id="reset">
                     </div> -->
                 </div>
@@ -342,12 +345,12 @@
                     <img src="{{asset('assets/imgs/saveimage.png')}}" class="w-100" alt="missing">
                 </button>
             </div>
-            <!-- {{-- <form id="formImg" method="post"
+        <!-- {{-- <form id="formImg" method="post"
                    action="{{route('store.image',['height'=>request()->query("h"),'width'=>request()->query("w")])}}">
                  @csrf
                  <input type="hidden" name="download_image" id="download_image">
              </form>--}} -->
-            <!-- {{--<div class="notes">
+        <!-- {{--<div class="notes">
                 <h1 class="text3">NOTES:
                     <ul>
                         <li>Taken or choosen image appears in editor as background</li>
@@ -566,7 +569,7 @@
             canvas.crossOrigin = "Anonymous";
             dataURL = canvas.toDataURL("image/png");
             $('#download_image').val(dataURL);
-           // $("#formImg").submit();
+            // $("#formImg").submit();
         });
     }
     $('#img-button-section').click(function () {
