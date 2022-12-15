@@ -289,7 +289,7 @@
                     </div>
                 </div>
             </div>
-            <div class="itro-text padding margin-top mt-1" id="stickytypeheader">
+            <div class="itro-text padding margin-top mt-1 mb-3" id="stickytypeheader">
                 <div class="row p-1">
                     <div class="col-md-6 col-6">
                         <h1 class="text-shade">BRIGHTNESS</h1>
@@ -319,7 +319,7 @@
 
                 <h1 class="text-overlay">Please wait Image is being processed ...</h1>
             </div>
-            <div class="bg-santa-img showimg w-100" id="my-node">
+            <div class="bg-santa-img showimg w-100 m-0" style="margin:0!important;" id="my-node">
                 <p class="rotingtxt1">{{$watermark}}</p>
                 <div id="container">
                     <div id="gesture-area">
@@ -337,7 +337,6 @@
                                  class='santaImg image santa-dp4 border-class' alt="sample image" id="scale-element">
                         </div>
                     </div>
-                    <!-- </div> -->
                 </div>
             </div>
             <div class="catch radius">
