@@ -238,7 +238,7 @@
                 <div style="display: flex;
     justify-content: space-between;
     padding: 4px;" class="santachoose">
-                    @foreach($images as $image)
+                      @foreach($images as $image)
                         <div class=" imgs20">
                             <img src="{{$_ENV['IMAGE_URL'].$image->image}}" class="santa-dp2 selectSanta">
                         </div>
@@ -365,7 +365,7 @@
         </div>
 
     </div>
-    
+
     <footer class="bg-dark text-center py-2 ">
         <p class="text-white mb-0">"Having trouble?  E-mail: <a href=" info@b3events.net">info@b3events.net</a></p>
     </footer>
