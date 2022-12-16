@@ -238,7 +238,7 @@
                 <div style="display: flex;
     justify-content: space-between;
     padding: 4px;" class="santachoose">
-                      @foreach($images as $image)
+                    @foreach($images as $image)
                         <div class=" imgs20">
                             <img src="{{$_ENV['IMAGE_URL'].$image->image}}" class="santa-dp2 selectSanta">
                         </div>

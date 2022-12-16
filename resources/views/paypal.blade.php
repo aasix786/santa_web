@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="{{asset('assets/external/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/external/all.css')}}"/>
     <link rel="stylesheet" href="{{asset('assets/external/jquery.fancybox.min.css')}}">
-    <!-- <script src="{{asset('assets/external/jquery-3.3.1.slim.min.js')}}"></script> -->
-    <!-- <script src="{{asset('assets/external/bootstrap.min.js')}}"></script>
+<!-- <script src="{{asset('assets/external/jquery-3.3.1.slim.min.js')}}"></script> -->
+<!-- <script src="{{asset('assets/external/bootstrap.min.js')}}"></script>
     <script src="{{asset('assets/external/popper.min.js')}}"></script> -->
     <script src="https://js.braintreegateway.com/web/3.57.0/js/client.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.57.0/js/venmo.min.js"></script>
@@ -29,15 +29,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-   <script>
+    <script>
 
-   </script>
+    </script>
     <style>
         footer p{
-           
-    font-family: 'Bebas Neue', cursive; 
+
+            font-family: 'Bebas Neue', cursive;
         }
-    body {
+        body {
             -webkit-touch-callout: none;
             -webkit-user-select: none;
             -khtml-user-select: none;
@@ -45,13 +45,13 @@
             -ms-user-select: none;
             user-select: none;
         }
-           #paypal-button-container .paypal-button-label-container,
-           #paypal-button-container .paypal-button,
-           #paypal-button-container .paypal-button-row.paypal-button-layout-vertical,
-           #paypal-button-container .paypal-button > .paypal-button-label-container{
-                display: none!important;
-                visibility: hidden!important;
-            }
+        #paypal-button-container .paypal-button-label-container,
+        #paypal-button-container .paypal-button,
+        #paypal-button-container .paypal-button-row.paypal-button-layout-vertical,
+        #paypal-button-container .paypal-button > .paypal-button-label-container{
+            display: none!important;
+            visibility: hidden!important;
+        }
 
 
         @media only screen and (min-width: 320px) {
@@ -234,9 +234,9 @@
             text-align: center;
             padding-top: 50px;
         }
-.hide{
-    display: none;
-}
+        .hide{
+            display: none;
+        }
 
     </style>
 </head>
@@ -252,7 +252,7 @@
     <div class="main-area">
         <div class="overlay-clr">
             <div class="itro-text padding">
-                <!-- <div class="pt-1">
+            <!-- <div class="pt-1">
                     <h1 class="text5">{{$custom_text->custom_text}}</h1>
 
                 </div>
@@ -278,81 +278,81 @@
                 </div>
                 <!-- Button trigger modal -->
                 <!-- Button trigger modal -->
-                        <!-- Modal -->
-                        <div class="modal fade card-payment" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
+                <!-- Modal -->
+                <div class="modal fade card-payment" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title text-dark" id="exampleModalLabel"><strong>Payment Details</strong></h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="panel panel-default credit-card-box">
-                                            <!-- <div class="panel-heading display-table">
-                                                <h3 class="panel-title"></h3>
-                                            </div> -->
-                                            <div class="panel-body">
-                                                @if (Session::has('success'))
-                                                    <div class="alert alert-success text-center">
-                                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-                                                        <p>{{ Session::get('success') }}</p>
-                                                    </div>
-                                                @endif
-                                                <form
-                                                    role="form" action="{{ route('stripe.post')}}" method="post" class="require-validation"
-                                                    data-cc-on-file="false" data-stripe-publishable-key="{{ env('STRIPE_KEY') }}" id="payment-form">
-                                                    @csrf
-                                                    <div class='form-row row'>
-                                                        <div class='col-xs-12 col-12 form-group required text-start'>
-                                                            <input type="hidden" name="image" value="{{request()->query("a")}}">
-                                                            <label class='control-label'>Name on Card</label> <input class='form-control' size='4' type='text'>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel panel-default credit-card-box">
+                                                <!-- <div class="panel-heading display-table">
+                                                    <h3 class="panel-title"></h3>
+                                                </div> -->
+                                                <div class="panel-body">
+                                                    @if (Session::has('success'))
+                                                        <div class="alert alert-success text-center">
+                                                            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                                                            <p>{{ Session::get('success') }}</p>
                                                         </div>
-                                                    </div>
-                                                    <div class='form-row row'>
-                                                         <div class='col-xs-12 form-group required text-start'>
-                                                            <label class='control-label'>Card Number</label> <input autocomplete='off' class='form-control card-number' size='20' type='text'>
-                                                        </div>
-                                                    </div>
-                                                    <div class='form-row row'>
-                                                        <div class='col-xs-12 col-md-4 form-group cvc required'>
-                                                            <label class='control-label'>CVC</label>
-                                                            <input autocomplete='off' class='form-control card-cvc' placeholder='ex. 311' size='4' type='text'>
-                                                        </div>
-                                                        <div class='col-xs-12 col-md-4 form-group expiration required'>
-                                                            <label class='control-label'>Expiration Month</label>
-                                                            <input class='form-control card-expiry-month' placeholder='MM' size='2' type='text'>
-                                                        </div>
-                                                        <div class='col-xs-12 col-md-4 form-group expiration required'>
-                                                            <label class='control-label'>Expiration Year</label>
-                                                            <input class='form-control card-expiry-year' placeholder='YYYY' size='4' type='text'>
-                                                        </div>
-                                                    </div>
-                                                    <div class='form-row row'>
-                                                        <div class='col-md-12 error form-group hide'>
-                                                            <div class='alert-danger alert'>Please correct the errors and try again.
+                                                    @endif
+                                                    <form
+                                                        role="form" action="{{ route('stripe.post')}}" method="post" class="require-validation"
+                                                        data-cc-on-file="false" data-stripe-publishable-key="{{ env('STRIPE_KEY') }}" id="payment-form">
+                                                        @csrf
+                                                        <div class='form-row row'>
+                                                            <div class='col-xs-12 col-12 form-group required text-start'>
+                                                                <input type="hidden" name="image" value="{{request()->query("a")}}">
+                                                                <label class='control-label'>Name on Card</label> <input class='form-control' size='4' type='text'>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-xs-12">
-                                                            <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now
-                                                                (${{$price}})
-                                                            </button>
+                                                        <div class='form-row row'>
+                                                            <div class='col-xs-12 form-group required text-start'>
+                                                                <label class='control-label'>Card Number</label> <input autocomplete='off' class='form-control card-number' size='20' type='text'>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </form>
+                                                        <div class='form-row row'>
+                                                            <div class='col-xs-12 col-md-4 form-group cvc required'>
+                                                                <label class='control-label'>CVC</label>
+                                                                <input autocomplete='off' class='form-control card-cvc' placeholder='ex. 311' size='4' type='text'>
+                                                            </div>
+                                                            <div class='col-xs-12 col-md-4 form-group expiration required'>
+                                                                <label class='control-label'>Expiration Month</label>
+                                                                <input class='form-control card-expiry-month' placeholder='MM' size='2' type='text'>
+                                                            </div>
+                                                            <div class='col-xs-12 col-md-4 form-group expiration required'>
+                                                                <label class='control-label'>Expiration Year</label>
+                                                                <input class='form-control card-expiry-year' placeholder='YYYY' size='4' type='text'>
+                                                            </div>
+                                                        </div>
+                                                        <div class='form-row row'>
+                                                            <div class='col-md-12 error form-group hide'>
+                                                                <div class='alert-danger alert'>Please correct the errors and try again.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now
+                                                                    (${{$price}})
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        </div>
                     </div>
-                    </div>
+                </div>
                 <!-- Card payment End -->
 
                 <div class="payment-method mt-0">
@@ -516,7 +516,7 @@
             shape: "pill",
             layout: "vertical"
         },
-   // set up the transaction
+        // set up the transaction
         createOrder: (data, actions) => {
             // pass in any options from the v2 orders create call:
             // https://developer.paypal.com/api/orders/v2/#orders-create-request-body
