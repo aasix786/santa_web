@@ -252,15 +252,16 @@
     <div class="main-area">
         <div class="overlay-clr">
             <div class="itro-text padding">
-                <div class="pt-1">
+                <!-- <div class="pt-1">
                     <h1 class="text5">{{$custom_text->custom_text}}</h1>
 
                 </div>
                 <div class="santa-profile">
                     <img src="{{asset('assets/imgs/santa12.png')}}" class="santa-dp">
                     <h1 class="text6">${{$price}}</h1>
-                </div>
+                </div> -->
 
+                <img src="{{asset('assets/imgs/paymentheader.jpeg')}}" class="w-100" alt="missing">
             <!-- <div class="bg-santa-img">
                         <img src="{{asset('assets/imgs/santa12.png')}}"  class="santa-dp4">
                     </div> -->
