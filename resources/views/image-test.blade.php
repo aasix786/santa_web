@@ -319,11 +319,11 @@
 
                 <h1 class="text-overlay">Please wait Image is being processed ...</h1>
             </div>
-            <div class="bg-santa-img showimg w-100 m-0" style="margin:0!important;" id="my-node">
+            <div class="bg-santa-img showimg w-100 m-0" style="margin:0!important; overflow:hidden!important;" id="my-node">
                 <p class="rotingtxt1">{{$watermark}}</p>
-                <div id="container">
-                    <div id="gesture-area">
-                        <div id="canvas-border-hide">
+                <div id="container" style="overflow:hidden!important;">
+                    <div id="gesture-area" style="overflow:hidden!important;">
+                        <div id="canvas-border-hide"  style="overflow:hidden!important;">
                             <div class="right santa-border"></div>
                             <div class="bottom santa-border"></div>
                             <div class="top santa-border"></div>
@@ -334,7 +334,8 @@
                             <div data-clickable="true" class="bottomLeft santa-border"></div>
 
                             <img src="{{asset('assets/imgs/santa12.png')}}"
-                                 class='santaImg image santa-dp4 border-class' alt="sample image" id="scale-element">
+                                 class='santaImg image santa-dp4 border-class'
+                                 style="overflow:hidden!important;" alt="sample image" id="scale-element">
                         </div>
                     </div>
                 </div>
