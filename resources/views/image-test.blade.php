@@ -54,7 +54,7 @@
                 position: relative;
                 background-repeat: no-repeat;
                 background-color: transparent;
-                background-size: cover;
+                background-size: 100% 100%;
             }
 
         }
@@ -83,7 +83,7 @@
                 position: relative;
                 background-repeat: no-repeat;
                 background-color: transparent;
-                background-size: cover;
+                background-size: 100% 100%;
             }
         }
 
@@ -111,7 +111,7 @@
                 position: relative;
                 background-repeat: no-repeat;
                 background-color: transparent;
-                background-size: cover;
+                background-size: 100% 100%;
             }
         }
 
@@ -167,7 +167,7 @@
                 position: relative;
                 background-repeat: no-repeat;
                 background-color: transparent;
-                background-size: cover;
+                background-size: 100% 100%;
             }
         }
 
@@ -366,7 +366,7 @@
         </div>
 
     </div>
-    
+
     <footer class="bg-dark text-center py-2 ">
         <p class="text-white mb-0">"Having trouble?  E-mail: <a href=" info@b3events.net">info@b3events.net</a></p>
     </footer>
@@ -401,17 +401,16 @@
         window.scrollTo(0, 0);
 
         disableScroll();
+       
         domtoimage.toBlob(myimg, {
-            /* height:780,
-             width: 1000*/
+            height: $(".bg-santa-img").height()
         })
             .then(dataUrl => {
                 // Safari hack https://github.com/tsayen/dom-to-image/issues/343
                 domtoimage
                     .toBlob(myimg, {
-                        // you need height and width for safari
-                        /*height: 780,
-                        width: 1000*/
+                      height: $(".bg-santa-img").height()
+                        
                     })
                     .then(dataUrl2 => {
                         const blobUrl = URL.createObjectURL(dataUrl2)
@@ -545,7 +544,7 @@
         html2canvas(document.querySelector('.bg-santa-img'), {
             letterRendering: 1, allowTaint: true, useCORS: true, logging: true,
             scale: 2, removeContainer: true,
-            backgroundColor: null,
+            backgroundColor: null
         }).then(canvas => {
             document.getElementById('save-img-section').appendChild(canvas);
             $('#save-img-section').show();
