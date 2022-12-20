@@ -1,66 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="Keep the Magic of Christmas ALIVE! Show the kids Santa in front of YOUR TREE caught on camera!"/>
+    <meta name = "description" content = "Keep the Magic of Christmas ALIVE! Show the kids Santa in front of YOUR TREE caught on camera!" />
     <title>We Caught Santa - Catch Santa in YOUR Home!</title>
     <link rel="stylesheet" href="{{asset('assets/Css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/Css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('assets/external/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/external/all.css')}}"/>
     <link rel="stylesheet" href="{{asset('assets/external/jquery.fancybox.min.css')}}">
-<!-- <script src="{{asset('assets/external/jquery-3.3.1.slim.min.js')}}"></script> -->
-<!-- <script src="{{asset('assets/external/bootstrap.min.js')}}"></script>
-    <script src="{{asset('assets/external/popper.min.js')}}"></script> -->
-    <script src="https://js.braintreegateway.com/web/3.57.0/js/client.min.js"></script>
-    <script src="https://js.braintreegateway.com/web/3.57.0/js/venmo.min.js"></script>
-    <script src="https://js.braintreegateway.com/web/3.57.0/js/data-collector.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
-          integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" /> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="{{asset('assets/external/popper.min.js')}}"></script>
+    <script src="{{asset('assets/external/bootstrap.min.js')}}"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-    <script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+<!--
+    <script src="{{asset('assets/external/jquery-3.3.1.slim.min.js')}}"></script>
+    <script src="{{asset('assets/external/popper.min.js')}}"></script>
+    <script src="{{asset('assets/external/bootstrap.min.js')}}"></script> -->
     <style>
-        footer p{
-
-            font-family: 'Bebas Neue', cursive;
-        }
-        body {
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        #paypal-button-container .paypal-button-label-container,
-        #paypal-button-container .paypal-button,
-        #paypal-button-container .paypal-button-row.paypal-button-layout-vertical,
-        #paypal-button-container .paypal-button > .paypal-button-label-container{
-            display: none!important;
-            visibility: hidden!important;
-        }
-
-
         @media only screen and (min-width: 320px) {
             .bg-santa-img {
                 background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
-                border: 3px solid gray;
+                /*
+                                border: 3px solid gray;
+                */
                 margin-top: 20px !important;
                 margin: auto;
-                width: 100%;
+                width: 85%;
                 <?php
 
                 if (request()->query("h") > request()->query("w"))
@@ -78,7 +54,7 @@
                 position: relative;
                 background-repeat: no-repeat;
                 background-color: transparent;
-                background-size: cover;
+                background-size: 100% 100%;
             }
 
         }
@@ -86,10 +62,10 @@
         @media only screen and (min-width: 425px) {
             .bg-santa-img {
                 background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
-                border: 3px solid gray;
+                /*    border: 3px solid gray;*/
                 margin-top: 20px !important;
                 margin: auto;
-                width: 100%;
+                width: 85%;
                 <?php
 
                 if (request()->query("h") > request()->query("w"))
@@ -107,17 +83,17 @@
                 position: relative;
                 background-repeat: no-repeat;
                 background-color: transparent;
-                background-size: cover;
+                background-size: 100% 100%;
             }
         }
 
         @media only screen and (min-width: 768px) {
             .bg-santa-img {
                 background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
-                border: 3px solid gray;
+                /*  border: 3px solid gray;*/
                 margin-top: 20px !important;
                 margin: auto;
-                width: 100%;
+                width: 85%;
                 <?php
 
                 if (request()->query("h") > request()->query("w"))
@@ -135,17 +111,17 @@
                 position: relative;
                 background-repeat: no-repeat;
                 background-color: transparent;
-                background-size: cover;
+                background-size: 100% 100%;
             }
         }
 
         @media only screen and (min-width: 1024px) {
             .bg-santa-img {
                 background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
-                border: 3px solid gray;
+                /*    border: 3px solid gray;*/
                 margin-top: 20px !important;
                 margin: auto;
-                width: 100%;
+                width: 85%;
                 <?php
 
                 if (request()->query("h") > request()->query("w"))
@@ -170,10 +146,10 @@
         @media only screen and (min-width: 1900px) {
             .bg-santa-img {
                 background-image: url(<?php echo  $_ENV['IMAGE_URL'].request()->query("a"); ?>);
-                border: 3px solid gray;
+                /*  border: 3px solid gray;*/
                 margin-top: 20px !important;
                 margin: auto;
-                width: 100%;
+                width: 85%;
                 <?php
 
                 if (request()->query("h") > request()->query("w"))
@@ -191,12 +167,12 @@
                 position: relative;
                 background-repeat: no-repeat;
                 background-color: transparent;
-                background-size: cover;
+                background-size: 100% 100%;
             }
         }
 
         .name {
-            border: 3px solid gray;
+            /* border: 3px solid gray;*/
             margin-top: 20px !important;
             margin: auto;
             padding: 50px;
@@ -210,11 +186,23 @@
         }
 
         .loader {
-            width: 120px;
-            height: 120px;
-            border-top: 4px solid rgb(237, 44, 73);
+            border: 16px solid #f3f3f3;
             border-radius: 50%;
-            animation: spin 0.8s linear infinite;
+            border-top: 16px solid blue;
+            border-bottom: 16px solid blue;
+            width: 160px;
+            height: 160px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
         }
 
         @keyframes spin {
@@ -234,9 +222,7 @@
             text-align: center;
             padding-top: 50px;
         }
-        .hide{
-            display: none;
-        }
+
 
     </style>
 </head>
