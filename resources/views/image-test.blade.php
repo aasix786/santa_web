@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name = "description" content = "Keep the Magic of Christmas ALIVE! Show the kids Santa in front of YOUR TREE caught on camera!" />
+    <meta name="description"
+          content="Keep the Magic of Christmas ALIVE! Show the kids Santa in front of YOUR TREE caught on camera!"/>
     <title>We Caught Santa - Catch Santa in YOUR Home!</title>
     <link rel="stylesheet" href="{{asset('assets/Css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/Css/responsive.css')}}">
@@ -48,7 +49,7 @@
                     }
 
                 ?>
-    height: <?php echo $height;?>px;
+     height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -77,7 +78,7 @@
                     }
 
                 ?>
-    height: <?php echo $height;?>px;
+     height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -105,7 +106,7 @@
                     }
 
                 ?>
-    height: <?php echo $height;?>px;
+     height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -133,7 +134,7 @@
                     }
 
                 ?>
-    height: <?php echo $height;?>px;
+     height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -161,7 +162,7 @@
                     }
 
                 ?>
-    height: <?php echo $height;?>px;
+     height: <?php echo $height;?>px;
                 background-color: transparent;
                 background-blend-mode: darken;
                 position: relative;
@@ -247,13 +248,14 @@
                 </div>
             </div>
             <div class="container1">
-                <div class="loader">
+                <div class="loader" style="margin: 60px">
                 </div>
             </div>
             <div class="replaceImg">
                 <div class="catch">
                     <!-- Button trigger modal -->
-                    <button type="button" class=" py-0 btn red font-text bg-transparent" data-toggle="modal" data-target="#exampleModalCenter">
+                    <button type="button" class=" py-0 btn red font-text bg-transparent" data-toggle="modal"
+                            data-target="#exampleModalCenter">
                         <img src="{{asset('assets/imgs/takenewpicture.png')}}" class="w-100" alt="missing">
                         <!-- CATCH SANTA NOW! -->
                     </button>
@@ -266,8 +268,11 @@
                                     @csrf
                                     <div class="modal-body">
                                         <div class="add-img pt-2">
-                                            <button type="button" class="uploadbtn">TAP HERE TO TAKE or CHOOSE A PICTURE OF YOUR ROOM & TREE</button>
-                                            <input class="input-type" type='file' name="image" required id="test" accept="image/*" onchange="readURL(this);" style="display:none;
+                                            <button type="button" class="uploadbtn">TAP HERE TO TAKE or CHOOSE A PICTURE
+                                                OF YOUR ROOM & TREE
+                                            </button>
+                                            <input class="input-type" type='file' name="image" required id="test"
+                                                   accept="image/*" onchange="readURL(this);" style="display:none;
 "
                                             />
                                             <img id="blah" src="{{asset('assets/imgs/upload.png')}}" class="py-3 w-100"
@@ -301,11 +306,13 @@
                         <h2 class="font-weight-bold text-shade">RESET</h2>
                     </div> -->
                     <div class="col-md-6 col-6">
-                        <img src="{{asset('assets/imgs/bright.png')}}" class="santa-dp3" style="display:none" id="brightness-pic">
+                        <img src="{{asset('assets/imgs/bright.png')}}" class="santa-dp3" style="display:none"
+                             id="brightness-pic">
                         <div style="display:block" id="brightness"></div>
                     </div>
                     <div class="col-md-6 col-6">
-                        <img src="{{asset('assets/imgs/contrast.png')}}" style="display:none" class="santa-dp3" id="contrast-pic">
+                        <img src="{{asset('assets/imgs/contrast.png')}}" style="display:none" class="santa-dp3"
+                             id="contrast-pic">
                         <div style="display:block" id="contrast"></div>
                     </div>
                 <!-- <div class="col-md-2 col-4">
@@ -319,11 +326,12 @@
 
                 <h1 class="text-overlay">Please wait Image is being processed ...</h1>
             </div>
-            <div class="bg-santa-img showimg w-100 m-0" style="margin:0!important; overflow:hidden!important;" id="my-node">
+            <div class="bg-santa-img showimg w-100 m-0" style="margin:0!important; overflow:hidden!important;"
+                 id="my-node">
                 <p class="rotingtxt1">{{$watermark}}</p>
                 <div id="container" style="overflow:hidden!important;">
                     <div id="gesture-area" style="overflow:hidden!important;">
-                        <div id="canvas-border-hide"  style="overflow:hidden!important;">
+                        <div id="canvas-border-hide" style="overflow:hidden!important;">
                             <div class="right santa-border"></div>
                             <div class="bottom santa-border"></div>
                             <div class="top santa-border"></div>
@@ -368,7 +376,7 @@
     </div>
 
     <footer class="bg-dark text-center py-2 ">
-        <p class="text-white mb-0">"Having trouble?  E-mail: <a href=" info@b3events.net">info@b3events.net</a></p>
+        <p class="text-white mb-0">"Having trouble? E-mail: <a href=" info@b3events.net">info@b3events.net</a></p>
     </footer>
 </div>
 
@@ -401,7 +409,7 @@
         window.scrollTo(0, 0);
 
         disableScroll();
-       
+
         domtoimage.toBlob(myimg, {
             height: $(".bg-santa-img").height()
         })
@@ -409,8 +417,8 @@
                 // Safari hack https://github.com/tsayen/dom-to-image/issues/343
                 domtoimage
                     .toBlob(myimg, {
-                      height: $(".bg-santa-img").height()
-                        
+                        height: $(".bg-santa-img").height()
+
                     })
                     .then(dataUrl2 => {
                         const blobUrl = URL.createObjectURL(dataUrl2)
@@ -448,7 +456,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/utils/Draggable.min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
     $(document).ready(function () {
@@ -513,6 +523,7 @@
         $("#container").css("-webkit-filter", "brightness(" + brightness + "%)" + "contrast(" + contrast + "%)");
 
     }
+
     // var rotate = $("#rotate").slider("value");
 
     var dataURL;
@@ -534,12 +545,14 @@
 
         touch.target.dispatchEvent(simulatedEvent);
     }
+
     function init() {
         document.addEventListener("touchstart", touchHandler, true);
         document.addEventListener("touchmove", touchHandler, true);
         document.addEventListener("touchend", touchHandler, true);
         document.addEventListener("touchcancel", touchHandler, true);
     }
+
     const download = () => {
         html2canvas(document.querySelector('.bg-santa-img'), {
             letterRendering: 1, allowTaint: true, useCORS: true, logging: true,
@@ -609,7 +622,7 @@
             min: 50,
             max: 140,
             value: 95,
-            slide: function( event, ui ) {
+            slide: function (event, ui) {
                 console.log("az  ")
                 var brightness = $("#brightness").slider("value");
                 var contrast = $("#contrast").slider("value");
@@ -631,7 +644,7 @@
     //     $("#brightness").slider("value", 95);
     //     $("#contrast").slider("value", 150);
     // });
-    $(document).on('click','.uploadbtn',function(){
+    $(document).on('click', '.uploadbtn', function () {
         $('#test').trigger('click');
     });
 </script>
@@ -827,6 +840,7 @@
         angleScale.angle = 0
         angleScale.scale = 1
     }
+
     function readURL(input) {
 
         if (input.files && input.files[0]) {
@@ -854,6 +868,17 @@
             reader.readAsDataURL(input.files[0]);
         }
     }
+
+    $(document).on('click', '.save-btn', function () {
+
+        var file = $('#test').val();
+        if (file == '') {
+            alert('please upload photo or Image');
+        } else {
+            $('.save-btn').text('Loading ...');
+        }
+
+    });
 </script>
 </body>
 </html>

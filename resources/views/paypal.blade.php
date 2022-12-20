@@ -34,8 +34,8 @@
    </script>
     <style>
         footer p{
-           
-    font-family: 'Bebas Neue', cursive; 
+
+    font-family: 'Bebas Neue', cursive;
         }
     body {
             -webkit-touch-callout: none;

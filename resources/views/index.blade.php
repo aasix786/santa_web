@@ -107,8 +107,13 @@
 <script>
 
     $(document).on('click','.save-btn',function(){
-
-        $('.save-btn').text('Loading ...');
+        var file = $('#test').val();
+        if(file=='')
+        {
+            alert('please upload photo or Image');
+        }else{
+            $('.save-btn').text('Loading ...');
+        }
 
     });
     $(document).on('click','.uploadbtn',function(){
